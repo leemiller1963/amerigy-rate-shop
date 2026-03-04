@@ -1,0 +1,96 @@
+name: Update Electricity Rates
+
+on:
+  schedule:
+    # 7:00 AM Central Time  (UTC-6 standard / UTC-5 daylight)
+    - cron: '0 13 * * *'   # 1 PM UTC = 7 AM CT (standard time)
+    # 7:00 PM Central Time
+    - cron: '0 1 * * *'    # 1 AM UTC = 7 PM CT (standard time)
+  
+  # Allow manual trigger from GitHub Actions UI
+  workflow_dispatch:
+    inputs:
+      area:
+        description: 'Service area to scrape (leave blank for all)'
+        required: false
+
+jobs:
+  scrape-rates:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+
+      - name: Install Python dependencies
+        run: |
+          pip install playwright requests python-dateutil
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Run rate scraper
+        run: |
+          python amerigy_rate_scraper.py ${{ github.event.inputs.area && format('--area {0}', github.event.inputs.area) || '' }}
+        env:
+          PYTHONUNBUFFERED: "1"
+
+      - name: Verify output
+        run: |
+          if [ ! -f "rates.json" ]; then
+            echo "ERROR: rates.json not generated"
+            exit 1
+          fi
+          echo "Plans scraped:"
+          python -c "import json; d=json.load(open('rates.json')); print(f'  {len(d[\"plans\"])} plans from {len(set(p[\"supplier\"] for p in d[\"plans\"]))} suppliers')"
+          echo "Errors:"
+          python -c "import json; d=json.load(open('rates.json')); [print(f'  {e}') for e in d['errors']]"
+
+      # ── DEPLOY OPTIONS (choose one) ──────────────────────────────────────
+
+      # OPTION A: Upload to your web server via FTP/SFTP
+      # - name: Deploy to web server
+      #   uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+      #   with:
+      #     server: ${{ secrets.FTP_SERVER }}
+      #     username: ${{ secrets.FTP_USERNAME }}
+      #     password: ${{ secrets.FTP_PASSWORD }}
+      #     local-dir: ./
+      #     server-dir: /public_html/shop/
+      #     include: "index.html rates.json"
+
+      # OPTION B: Deploy to GitHub Pages (free hosting)
+      - name: Deploy to GitHub Pages
+        if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: gh-pages
+          include_files: "index.html rates.json"
+
+      # OPTION C: Push rates.json to WordPress via REST API
+      # - name: Push to WordPress
+      #   run: |
+      #     python push_to_wordpress.py
+      #   env:
+      #     WP_URL: ${{ secrets.WP_URL }}
+      #     WP_USER: ${{ secrets.WP_USER }}
+      #     WP_APP_PASSWORD: ${{ secrets.WP_APP_PASSWORD }}
+
+      - name: Notify on failure
+        if: failure()
+        run: |
+          echo "Rate scrape failed at $(date)"
+          # Add Slack/email notification here if desired
