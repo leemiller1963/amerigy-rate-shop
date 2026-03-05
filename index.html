@@ -3,82 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Amerigy Energy — Shop Texas Electricity Rates</title>
+<title>Shop Texas Electricity Rates — Amerigy Energy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
+  /* ─── BRAND TOKENS — matched to amerigyenergy.com ─── */
+  /* Primary: #8c1e1e (deep burgundy) · Font: Quicksand / Montserrat */
   :root {
-    --navy: #0a1628;
-    --navy2: #112240;
-    --electric: #00d4ff;
-    --electric2: #0099cc;
-    --gold: #f5a623;
-    --green: #00c896;
-    --red: #ff4757;
-    --text: #e8f4f8;
-    --muted: #7da5b8;
-    --card: rgba(17, 34, 64, 0.85);
-    --border: rgba(0, 212, 255, 0.15);
+    --primary:    #8c1e1e;
+    --primary-dk: #7f1111;
+    --primary-lt: #f9eded;
+    --navy:       #8c1e1e;
+    --navy-soft:  #a82828;
+    --orange:     #8c1e1e;
+    --orange-dk:  #7f1111;
+    --orange-lt:  #f9eded;
+    --white:      #ffffff;
+    --off-white:  #f8f8f8;
+    --gray-light: #eaeaea;
+    --gray-mid:   #c5c5c5;
+    --gray-text:  #666666;
+    --body-text:  #000000;
+    --green:      #2e7d32;
+    --green-lt:   #e8f5e9;
+    --border:     #e0e0e0;
+    --shadow-sm:  0 1px 4px rgba(140,30,30,0.08);
+    --shadow-md:  0 4px 16px rgba(140,30,30,0.12);
+    --shadow-lg:  0 8px 32px rgba(140,30,30,0.15);
+    --radius:     3px;
+    --radius-lg:  6px;
   }
 
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
   body {
-    font-family: 'DM Sans', sans-serif;
-    background: var(--navy);
-    color: var(--text);
+    font-family: 'Quicksand', sans-serif;
+    background: var(--off-white);
+    color: var(--body-text);
     min-height: 100vh;
-    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.875;
+    font-weight: 400;
+    letter-spacing: 0px;
   }
 
-  /* ANIMATED GRID BACKGROUND */
-  body::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    background-image: 
-      linear-gradient(rgba(0,212,255,0.03) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(0,212,255,0.03) 1px, transparent 1px);
-    background-size: 40px 40px;
-    pointer-events: none;
-    z-index: 0;
-  }
-
-  body::after {
-    content: '';
-    position: fixed;
-    top: -50%;
-    left: -20%;
-    width: 60%;
-    height: 80%;
-    background: radial-gradient(ellipse, rgba(0,212,255,0.06) 0%, transparent 70%);
-    pointer-events: none;
-    z-index: 0;
-    animation: pulse 8s ease-in-out infinite;
-  }
-
-  @keyframes pulse {
-    0%, 100% { opacity: 0.5; transform: scale(1); }
-    50% { opacity: 1; transform: scale(1.1); }
-  }
-
-  /* HEADER */
+  /* ─── HEADER ─────────────────────────────────────────────────── */
   header {
-    position: relative;
-    z-index: 10;
-    border-bottom: 1px solid var(--border);
-    background: rgba(10,22,40,0.9);
-    backdrop-filter: blur(20px);
+    background: var(--navy);
+    border-bottom: 3px solid var(--orange);
+    position: sticky;
+    top: 0;
+    z-index: 100;
   }
 
   .header-inner {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 24px;
+    height: 70px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
+    gap: 20px;
   }
 
   .logo {
@@ -86,198 +72,256 @@
     align-items: center;
     gap: 12px;
     text-decoration: none;
+    flex-shrink: 0;
   }
 
-  .logo-icon {
-    width: 42px;
-    height: 42px;
-    background: linear-gradient(135deg, var(--electric), var(--electric2));
-    border-radius: 10px;
+  .logo-mark {
+    background: var(--orange);
+    color: var(--white);
+    width: 38px;
+    height: 38px;
+    border-radius: 8px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 20px;
+    font-size: 18px;
+    font-weight: 800;
   }
 
-  .logo-text {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 26px;
-    color: var(--text);
-    letter-spacing: 1px;
+  .logo-name {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: -0.3px;
   }
 
-  .logo-text span { color: var(--electric); }
+  .logo-name span { color: var(--orange); }
+
+  .header-center {
+    flex: 1;
+    text-align: center;
+  }
+
+  .live-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 100px;
+    padding: 5px 14px;
+    font-size: 12px;
+    color: rgba(255,255,255,0.75);
+  }
+
+  .live-dot {
+    width: 6px;
+    height: 6px;
+    background: #4ade80;
+    border-radius: 50%;
+    animation: blink 2s infinite;
+    flex-shrink: 0;
+  }
+
+  @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0.3} }
 
   .header-right {
     display: flex;
     align-items: center;
-    gap: 24px;
+    gap: 12px;
+    flex-shrink: 0;
   }
 
-  .last-updated {
-    font-family: 'DM Mono', monospace;
+  .updated-text {
     font-size: 11px;
-    color: var(--muted);
+    color: rgba(255,255,255,0.5);
     text-align: right;
+    line-height: 1.4;
   }
 
-  .last-updated strong {
-    display: block;
-    color: var(--green);
-    font-size: 12px;
-  }
+  .updated-text strong { color: #4ade80; display: block; }
 
-  .phone-cta {
-    background: linear-gradient(135deg, var(--electric), var(--electric2));
-    color: var(--navy);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 14px;
+  .btn-call-header {
+    background: var(--orange);
+    color: var(--white);
     text-decoration: none;
+    padding: 9px 18px;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-weight: 600;
     white-space: nowrap;
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition: background 0.2s, transform 0.15s;
   }
 
-  .phone-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 24px rgba(0,212,255,0.3);
+  .btn-call-header:hover {
+    background: var(--orange-dk);
+    transform: translateY(-1px);
   }
 
-  /* HERO */
-  .hero {
-    position: relative;
-    z-index: 5;
+  /* ─── NAV STRIP ───────────────────────────────────────────────── */
+  .nav-strip {
+    background: var(--white);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-inner {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 64px 24px 48px;
-    text-align: center;
-  }
-
-  .hero-badge {
-    display: inline-flex;
+    padding: 0 24px;
+    display: flex;
     align-items: center;
-    gap: 8px;
-    background: rgba(0,212,255,0.1);
-    border: 1px solid rgba(0,212,255,0.3);
-    color: var(--electric);
-    padding: 6px 16px;
-    border-radius: 100px;
-    font-size: 12px;
+    gap: 4px;
+    height: 46px;
+  }
+
+  .nav-link {
+    color: var(--gray-text);
+    text-decoration: none;
+    font-size: 13px;
     font-weight: 500;
-    letter-spacing: 0.5px;
-    margin-bottom: 24px;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: color 0.15s, background 0.15s;
   }
 
-  .hero-badge::before {
+  .nav-link:hover { color: var(--primary); background: var(--primary-lt); }
+  .nav-link.active { color: var(--primary); font-weight: 700; }
+
+  /* ─── HERO ────────────────────────────────────────────────────── */
+  .hero {
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
+    padding: 56px 24px 48px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero::after {
     content: '';
-    width: 6px;
-    height: 6px;
-    background: var(--green);
-    border-radius: 50%;
-    animation: blink 2s infinite;
+    position: absolute;
+    bottom: -1px;
+    left: 0; right: 0;
+    height: 40px;
+    background: var(--off-white);
+    clip-path: ellipse(55% 100% at 50% 100%);
   }
 
-  @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
-
-  h1 {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(48px, 8vw, 96px);
-    line-height: 0.95;
-    letter-spacing: 2px;
+  .hero-eyebrow {
+    display: inline-block;
+    background: rgba(244,120,32,0.15);
+    border: 1px solid rgba(244,120,32,0.3);
+    color: var(--orange);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    padding: 5px 14px;
+    border-radius: 100px;
     margin-bottom: 20px;
   }
 
-  h1 span { color: var(--electric); }
+  .hero h1 {
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.15;
+    letter-spacing: -0.5px;
+    margin-bottom: 14px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .hero h1 span { color: var(--orange); }
 
   .hero-sub {
-    font-size: 18px;
-    color: var(--muted);
-    max-width: 560px;
-    margin: 0 auto 40px;
-    line-height: 1.6;
-    font-weight: 300;
-  }
-
-  /* ZIP SEARCH */
-  .zip-form {
-    display: flex;
-    gap: 0;
-    max-width: 480px;
-    margin: 0 auto 16px;
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    overflow: hidden;
-    background: var(--card);
-    box-shadow: 0 0 40px rgba(0,212,255,0.1);
-  }
-
-  .zip-form input {
-    flex: 1;
-    background: transparent;
-    border: none;
-    color: var(--text);
-    font-family: 'DM Mono', monospace;
-    font-size: 20px;
-    padding: 16px 20px;
-    outline: none;
-    letter-spacing: 3px;
-    width: 100%;
-  }
-
-  .zip-form input::placeholder {
-    color: var(--muted);
-    letter-spacing: 1px;
+    color: rgba(255,255,255,0.65);
     font-size: 16px;
+    font-weight: 400;
+    max-width: 520px;
+    margin: 0 auto 32px;
   }
 
-  .zip-form button {
-    background: linear-gradient(135deg, var(--electric), var(--electric2));
-    color: var(--navy);
+  /* ─── ZIP SEARCH ──────────────────────────────────────────────── */
+  .zip-wrap {
+    max-width: 460px;
+    margin: 0 auto 20px;
+    display: flex;
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+  }
+
+  .zip-wrap input {
+    flex: 1;
     border: none;
-    padding: 16px 28px;
-    font-family: 'DM Sans', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    cursor: pointer;
-    transition: opacity 0.2s;
-    white-space: nowrap;
+    background: var(--white);
+    color: var(--navy);
+    font-size: 18px;
+    font-weight: 600;
+    padding: 14px 20px;
+    font-family: 'Quicksand', sans-serif;
   }
 
-  .zip-form button:hover { opacity: 0.9; }
+  .zip-wrap input::placeholder {
+    color: var(--gray-mid);
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-size: 15px;
+  }
 
-  .quick-areas {
+  .zip-wrap button {
+    background: var(--orange);
+    border: none;
+    color: var(--white);
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    padding: 14px 24px;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.2s;
+    letter-spacing: 0.3px;
+  }
+
+  .zip-wrap button:hover { background: var(--orange-dk); }
+
+  .area-pills {
     display: flex;
     gap: 8px;
     justify-content: center;
     flex-wrap: wrap;
-    margin-bottom: 48px;
+    padding-bottom: 16px;
   }
 
-  .quick-area {
-    background: transparent;
-    border: 1px solid var(--border);
-    color: var(--muted);
+  .area-pill {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.7);
     padding: 6px 14px;
     border-radius: 100px;
     font-size: 12px;
+    font-weight: 600;
     cursor: pointer;
     transition: all 0.2s;
+    white-space: nowrap;
+    font-family: 'Quicksand', sans-serif;
   }
 
-  .quick-area:hover, .quick-area.active {
-    border-color: var(--electric);
-    color: var(--electric);
-    background: rgba(0,212,255,0.08);
+  .area-pill:hover {
+    background: rgba(255,255,255,0.15);
+    color: var(--white);
   }
 
-  /* STATS BAR */
+  .area-pill.active {
+    background: var(--orange);
+    border-color: var(--orange);
+    color: var(--white);
+  }
+
+  /* ─── STATS BAR ───────────────────────────────────────────────── */
   .stats-bar {
-    position: relative;
-    z-index: 5;
-    background: var(--navy2);
-    border-top: 1px solid var(--border);
+    background: var(--white);
     border-bottom: 1px solid var(--border);
+    box-shadow: var(--shadow-sm);
   }
 
   .stats-inner {
@@ -286,176 +330,175 @@
     padding: 0 24px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 0;
   }
 
-  .stat-item {
-    padding: 20px 24px;
+  .stat-cell {
+    padding: 18px 20px;
     border-right: 1px solid var(--border);
     text-align: center;
   }
 
-  .stat-item:last-child { border-right: none; }
+  .stat-cell:last-child { border-right: none; }
 
-  .stat-value {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 32px;
-    color: var(--electric);
-    letter-spacing: 1px;
+  .stat-val {
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -0.5px;
+    line-height: 1;
+    margin-bottom: 3px;
+    font-family: 'Montserrat', sans-serif;
   }
 
-  .stat-label {
+  .stat-val.highlight { color: var(--primary); }
+
+  .stat-lbl {
     font-size: 11px;
-    color: var(--muted);
+    color: var(--gray-text);
+    font-weight: 500;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    margin-top: 2px;
   }
 
-  /* FILTERS */
-  .controls {
-    position: relative;
-    z-index: 5;
+  /* ─── TOOLBAR ─────────────────────────────────────────────────── */
+  .toolbar {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 32px 24px 16px;
+    padding: 24px 24px 12px;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 14px;
   }
 
-  .section-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 28px;
-    letter-spacing: 1px;
+  .toolbar-left h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: -0.3px;
+    font-family: 'Montserrat', sans-serif;
   }
 
-  .filter-group {
+  .toolbar-left p {
+    font-size: 13px;
+    color: var(--gray-text);
+    margin-top: 2px;
+  }
+
+  .toolbar-right {
     display: flex;
-    gap: 8px;
     align-items: center;
+    gap: 8px;
+    flex-wrap: wrap;
   }
 
   .filter-label {
     font-size: 12px;
-    color: var(--muted);
+    font-weight: 600;
+    color: var(--gray-text);
     text-transform: uppercase;
     letter-spacing: 0.5px;
   }
 
   .filter-btn {
-    background: transparent;
+    background: var(--white);
     border: 1px solid var(--border);
-    color: var(--muted);
+    color: var(--gray-text);
     padding: 7px 14px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-family: 'DM Sans', sans-serif;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s;
+    transition: all 0.15s;
   }
 
-  .filter-btn:hover, .filter-btn.active {
-    border-color: var(--electric);
-    color: var(--electric);
-    background: rgba(0,212,255,0.08);
+  .filter-btn:hover { border-color: var(--primary); color: var(--primary); }
+
+  .filter-btn.active {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: var(--white);
   }
 
   .sort-select {
-    background: var(--card);
+    background: var(--white);
     border: 1px solid var(--border);
-    color: var(--text);
+    color: var(--body-text);
     padding: 7px 12px;
-    border-radius: 6px;
-    font-size: 12px;
-    font-family: 'DM Sans', sans-serif;
+    border-radius: var(--radius);
+    font-size: 13px;
+    font-family: 'Quicksand', sans-serif;
     cursor: pointer;
     outline: none;
   }
 
-  /* AREA TABS */
-  .area-tabs {
-    position: relative;
-    z-index: 5;
+  /* ─── UPDATE NOTICE ───────────────────────────────────────────── */
+  .update-notice {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px 24px;
-    display: flex;
-    gap: 8px;
-    flex-wrap: wrap;
+    padding: 0 24px 16px;
   }
 
-  .area-tab {
-    background: var(--card);
-    border: 1px solid var(--border);
-    color: var(--muted);
-    padding: 10px 20px;
-    border-radius: 8px;
+  .update-notice-inner {
+    background: var(--primary-lt);
+    border: 1px solid rgba(140,30,30,0.2);
+    border-radius: var(--radius);
+    padding: 11px 16px;
     font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s;
+    color: var(--primary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
   }
 
-  .area-tab:hover { border-color: rgba(0,212,255,0.4); color: var(--text); }
-
-  .area-tab.active {
-    background: rgba(0,212,255,0.12);
-    border-color: var(--electric);
-    color: var(--electric);
-  }
-
-  /* PLANS GRID */
-  .plans-container {
-    position: relative;
-    z-index: 5;
+  /* ─── PLANS GRID ──────────────────────────────────────────────── */
+  .plans-wrap {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 24px 80px;
+    padding: 0 24px 72px;
   }
 
   .plans-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(310px, 1fr));
+    gap: 18px;
   }
 
-  /* PLAN CARD */
-  .plan-card {
-    background: var(--card);
+  /* ─── PLAN CARD ───────────────────────────────────────────────── */
+  .card {
+    background: var(--white);
     border: 1px solid var(--border);
-    border-radius: 16px;
+    border-radius: var(--radius-lg);
     overflow: hidden;
-    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
     position: relative;
-    backdrop-filter: blur(12px);
-    animation: cardIn 0.4s ease both;
+    animation: fadeUp 0.35s ease both;
   }
 
-  @keyframes cardIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(14px); }
+    to   { opacity: 1; transform: translateY(0); }
   }
 
-  .plan-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 20px 48px rgba(0,0,0,0.4), 0 0 30px rgba(0,212,255,0.1);
-    border-color: rgba(0,212,255,0.4);
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--orange);
   }
 
-  .plan-card.best-value {
-    border-color: var(--gold);
-    box-shadow: 0 0 30px rgba(245,166,35,0.15);
+  .card.best {
+    border-color: var(--orange);
+    box-shadow: 0 0 0 2px rgba(244,120,32,0.15), var(--shadow-md);
   }
 
-  .best-badge {
+  .best-ribbon {
     position: absolute;
-    top: 0;
-    right: 0;
-    background: var(--gold);
-    color: var(--navy);
+    top: 0; right: 0;
+    background: var(--orange);
+    color: var(--white);
     font-size: 10px;
     font-weight: 700;
     text-transform: uppercase;
@@ -464,113 +507,140 @@
     border-bottom-left-radius: 10px;
   }
 
-  .card-header {
-    padding: 20px 20px 16px;
-    border-bottom: 1px solid var(--border);
+  /* Card header */
+  .card-top {
+    padding: 18px 18px 14px;
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 12px;
+    border-bottom: 1px solid var(--gray-light);
   }
 
-  .supplier-logo {
-    width: 52px;
-    height: 52px;
+  .supplier-icon {
+    width: 50px;
+    height: 50px;
     border-radius: 10px;
-    background: rgba(255,255,255,0.05);
+    border: 1px solid var(--gray-light);
+    background: var(--off-white);
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 22px;
-    flex-shrink: 0;
-    border: 1px solid var(--border);
-    font-family: 'Bebas Neue', sans-serif;
-    color: var(--electric);
-    font-size: 11px;
-    text-align: center;
-    padding: 4px;
-    line-height: 1.2;
     overflow: hidden;
+    flex-shrink: 0;
   }
 
-  .supplier-logo img {
+  .supplier-icon img {
     width: 100%;
     height: 100%;
     object-fit: contain;
+    padding: 4px;
   }
 
-  .supplier-info { flex: 1; min-width: 0; }
+  .supplier-icon span {
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--primary);
+    text-align: center;
+    line-height: 1.2;
+  }
 
-  .supplier-name {
-    font-weight: 600;
+  .card-meta { flex: 1; min-width: 0; }
+
+  .card-supplier {
     font-size: 15px;
-    color: var(--text);
+    font-weight: 700;
+    color: var(--primary);
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    font-family: 'Montserrat', sans-serif;
   }
 
-  .plan-name {
+  .card-area {
     font-size: 12px;
-    color: var(--muted);
+    color: var(--gray-text);
     margin-top: 2px;
+    display: flex;
+    align-items: center;
+    gap: 4px;
   }
 
-  .card-price {
-    padding: 20px;
+  .area-dot {
+    width: 5px;
+    height: 5px;
+    background: var(--primary);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* Price section */
+  .card-price-section {
+    padding: 20px 18px 14px;
     text-align: center;
+    background: linear-gradient(180deg, var(--off-white) 0%, var(--white) 100%);
+    border-bottom: 1px solid var(--gray-light);
     position: relative;
   }
 
-  .price-main {
-    display: flex;
+  .price-display {
+    display: inline-flex;
     align-items: flex-start;
-    justify-content: center;
-    gap: 2px;
-    margin-bottom: 4px;
-  }
-
-  .price-cents-unit {
-    font-size: 14px;
-    color: var(--muted);
-    margin-top: 8px;
-    font-weight: 500;
-  }
-
-  .price-number {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 64px;
+    gap: 1px;
     line-height: 1;
-    color: var(--text);
-    letter-spacing: -1px;
   }
 
-  .price-decimal {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 32px;
-    margin-top: 12px;
-    color: var(--muted);
+  .price-symbol {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--gray-text);
+    margin-top: 8px;
+  }
+
+  .price-whole {
+    font-size: 60px;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: -2px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .price-dec {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--gray-text);
+    margin-top: 10px;
+    letter-spacing: -0.5px;
   }
 
   .price-unit {
     font-size: 12px;
-    color: var(--muted);
+    color: var(--gray-text);
     margin-top: 4px;
-  }
-
-  .price-note {
-    font-size: 11px;
-    color: var(--green);
     font-weight: 500;
   }
 
-  .card-details {
-    padding: 0 20px 16px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 8px;
+  .price-fee {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 100px;
   }
 
-  .detail-item {
+  .fee-none { background: var(--green-lt); color: var(--green); }
+  .fee-has  { background: #fff8e6; color: #b45309; }
+
+  /* Details grid */
+  .card-details {
+    padding: 14px 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border-bottom: 1px solid var(--gray-light);
+  }
+
+  .detail {
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -580,279 +650,226 @@
     font-size: 10px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    color: var(--muted);
+    font-weight: 600;
+    color: var(--gray-text);
   }
 
-  .detail-val {
+  .detail-value {
     font-size: 13px;
-    font-weight: 500;
-    color: var(--text);
+    font-weight: 700;
+    color: var(--body-text);
   }
 
+  /* Tags */
   .card-tags {
-    padding: 0 20px 16px;
+    padding: 10px 18px;
     display: flex;
-    gap: 6px;
+    gap: 5px;
     flex-wrap: wrap;
+    border-bottom: 1px solid var(--gray-light);
   }
 
   .tag {
     font-size: 10px;
-    padding: 3px 8px;
+    font-weight: 600;
+    padding: 3px 9px;
     border-radius: 100px;
-    font-weight: 500;
-    border: 1px solid;
+    border: 1px solid transparent;
   }
 
-  .tag-green { color: var(--green); border-color: rgba(0,200,150,0.3); background: rgba(0,200,150,0.08); }
-  .tag-blue { color: var(--electric); border-color: rgba(0,212,255,0.3); background: rgba(0,212,255,0.08); }
-  .tag-gold { color: var(--gold); border-color: rgba(245,166,35,0.3); background: rgba(245,166,35,0.08); }
+  .tag-green { background: #e8f5e9; color: #2e7d32; border-color: rgba(46,125,50,0.2); }
+  .tag-orange { background: var(--primary-lt); color: var(--primary); border-color: rgba(140,30,30,0.2); }
+  .tag-navy { background: #f3e9e9; color: var(--primary); border-color: rgba(140,30,30,0.15); }
 
+  /* Actions */
   .card-actions {
-    padding: 0 20px 20px;
+    padding: 14px 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .btn-enroll {
     display: block;
-    width: 100%;
-    background: linear-gradient(135deg, var(--electric), var(--electric2));
-    color: var(--navy);
-    text-decoration: none;
+    background: var(--orange);
+    color: var(--white);
     text-align: center;
-    padding: 13px;
-    border-radius: 10px;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: var(--radius);
     font-weight: 700;
     font-size: 14px;
-    letter-spacing: 0.3px;
-    transition: opacity 0.2s, transform 0.2s;
+    letter-spacing: 0.2px;
+    transition: background 0.2s, transform 0.15s;
   }
 
-  .btn-enroll:hover {
-    opacity: 0.9;
-    transform: translateY(-1px);
-  }
+  .btn-enroll:hover { background: var(--orange-dk); transform: translateY(-1px); }
 
-  .btn-call {
+  .btn-call-card {
     display: block;
-    width: 100%;
     background: transparent;
     border: 1px solid var(--border);
-    color: var(--muted);
-    text-decoration: none;
+    color: var(--gray-text);
     text-align: center;
+    text-decoration: none;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: var(--radius);
     font-size: 13px;
-    margin-top: 8px;
-    transition: all 0.2s;
+    font-weight: 500;
+    transition: all 0.15s;
   }
 
-  .btn-call:hover {
-    border-color: var(--electric);
-    color: var(--electric);
+  .btn-call-card:hover {
+    border-color: var(--primary);
+    color: var(--primary);
+    background: var(--primary-lt);
   }
 
-  /* PRICE AGE INDICATOR */
-  .price-age {
-    position: absolute;
-    top: 12px;
-    left: 12px;
-    font-family: 'DM Mono', monospace;
-    font-size: 9px;
-    color: var(--muted);
-  }
-
-  /* NO RESULTS */
+  /* ─── NO RESULTS ──────────────────────────────────────────────── */
   .no-results {
+    display: none;
     text-align: center;
     padding: 60px 20px;
-    color: var(--muted);
-    display: none;
   }
 
-  .no-results h3 { font-size: 24px; margin-bottom: 8px; color: var(--text); }
-
-  /* LOADING */
-  .loading-overlay {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background: rgba(10,22,40,0.85);
-    z-index: 100;
-    align-items: center;
-    justify-content: center;
-    backdrop-filter: blur(8px);
+  .no-results h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 8px;
+    font-family: 'Montserrat', sans-serif;
   }
 
-  .loading-overlay.show { display: flex; }
+  .no-results p { color: var(--gray-text); }
+  .no-results a { color: var(--primary); }
 
-  .loader {
-    text-align: center;
-  }
-
-  .loader-ring {
-    width: 56px;
-    height: 56px;
-    border: 3px solid var(--border);
-    border-top-color: var(--electric);
-    border-radius: 50%;
-    animation: spin 0.8s linear infinite;
-    margin: 0 auto 16px;
-  }
-
-  @keyframes spin { to { transform: rotate(360deg); } }
-
-  .loader-text {
-    font-size: 14px;
-    color: var(--muted);
-    font-family: 'DM Mono', monospace;
-  }
-
-  /* RATE UPDATE BANNER */
-  .update-banner {
-    position: relative;
-    z-index: 5;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 24px 16px;
-  }
-
-  .update-banner-inner {
-    background: rgba(0,200,150,0.08);
-    border: 1px solid rgba(0,200,150,0.2);
-    border-radius: 10px;
-    padding: 12px 16px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 13px;
-    color: var(--green);
-  }
-
-  /* FOOTER */
+  /* ─── FOOTER ──────────────────────────────────────────────────── */
   footer {
-    position: relative;
-    z-index: 5;
-    border-top: 1px solid var(--border);
+    background: var(--navy);
+    color: rgba(255,255,255,0.55);
     padding: 32px 24px;
-    text-align: center;
-    color: var(--muted);
     font-size: 12px;
-  }
-
-  footer a { color: var(--electric); text-decoration: none; }
-  footer p { margin-top: 8px; }
-
-  /* RESPONSIVE */
-  @media (max-width: 768px) {
-    .stats-inner { grid-template-columns: repeat(2, 1fr); }
-    .stat-item:nth-child(2) { border-right: none; }
-    .header-right { gap: 12px; }
-    .last-updated { display: none; }
-    h1 { font-size: 52px; }
-    .plans-grid { grid-template-columns: 1fr; }
-    .controls { flex-direction: column; align-items: flex-start; }
-  }
-
-  /* AUTO-UPDATE INDICATOR */
-  .next-update {
-    font-family: 'DM Mono', monospace;
-    font-size: 11px;
-    color: var(--muted);
     text-align: center;
-    margin-top: 16px;
-    padding-bottom: 16px;
+    line-height: 1.7;
   }
 
+  footer strong { color: rgba(255,255,255,0.85); }
+  footer a { color: #e88080; text-decoration: none; }
+
+  .next-update-bar {
+    background: var(--gray-light);
+    border-top: 1px solid var(--border);
+    padding: 10px 24px;
+    text-align: center;
+    font-size: 12px;
+    color: var(--gray-text);
+  }
+
+  /* ─── RESPONSIVE ──────────────────────────────────────────────── */
+  @media (max-width: 760px) {
+    .stats-inner { grid-template-columns: repeat(2, 1fr); }
+    .stat-cell:nth-child(2) { border-right: none; }
+    .header-center { display: none; }
+    .updated-text { display: none; }
+    .hero h1 { font-size: 28px; }
+    .plans-grid { grid-template-columns: 1fr; }
+    .toolbar { flex-direction: column; align-items: flex-start; }
+  }
 </style>
 </head>
 <body>
 
-<!-- LOADING OVERLAY -->
-<div class="loading-overlay" id="loadingOverlay">
-  <div class="loader">
-    <div class="loader-ring"></div>
-    <div class="loader-text">Fetching live rates...</div>
-  </div>
-</div>
-
-<!-- HEADER -->
+<!-- ═══ HEADER ══════════════════════════════════════════════════════════════ -->
 <header>
   <div class="header-inner">
-    <a href="https://amerigyenergy.com" class="logo">
-      <div class="logo-icon">⚡</div>
-      <div class="logo-text">AMERIGY <span>ENERGY</span></div>
+    <a href="https://amerigyenergy.com/a-new-home/" class="logo">
+      <div class="logo-mark">⚡</div>
+      <div class="logo-name">AMERIGY <span>ENERGY</span></div>
     </a>
-    <div class="header-right">
-      <div class="last-updated">
-        <strong id="updateStatus">● LIVE PRICES</strong>
-        Updated: <span id="lastUpdatedTime">Loading...</span>
+    <div class="header-center">
+      <div class="live-badge">
+        <div class="live-dot"></div>
+        <span>Prices updated twice daily — <span id="lastUpdatedTime">loading...</span></span>
       </div>
-      <a href="tel:8776318875" class="phone-cta">📞 877-631-8875</a>
+    </div>
+    <div class="header-right">
+      <div class="updated-text">
+        <strong id="updateStatus">● LIVE RATES</strong>
+        Next refresh: <span id="nextUpdateTime">—</span>
+      </div>
+      <a href="tel:8776318875" class="btn-call-header">📞 877-631-8875</a>
     </div>
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-badge">⚡ Prices update twice daily · Texas Licensed Broker PUCT #BR190721</div>
-  <h1>SHOP TEXAS<br><span>ELECTRICITY</span><br>RATES</h1>
-  <p class="hero-sub">Compare all major suppliers across every Texas service area. Fixed plans, no surprises — rates include delivery.</p>
+<!-- ═══ NAV ══════════════════════════════════════════════════════════════════ -->
+<nav class="nav-strip">
+  <div class="nav-inner">
+    <a href="https://amerigyenergy.com/a-new-home/" class="nav-link">Home</a>
+    <a href="https://amerigyenergy.com/commercial/" class="nav-link">Commercial</a>
+    <a href="https://amerigyenergy.com/residential-2/" class="nav-link">Residential</a>
+    <a href="#" class="nav-link active">Rate Shop</a>
+    <a href="https://amerigyenergy.com/about/" class="nav-link">About</a>
+    <a href="https://amerigyenergy.com/contact-2/" class="nav-link">Contact</a>
+  </div>
+</nav>
 
-  <div class="zip-form">
-    <input type="text" id="zipInput" placeholder="Enter ZIP Code" maxlength="5" inputmode="numeric" pattern="[0-9]*">
-    <button onclick="filterByZip()">FIND MY RATES</button>
+<!-- ═══ HERO ══════════════════════════════════════════════════════════════════ -->
+<section class="hero">
+  <div class="hero-eyebrow">Texas Electricity Broker · PUCT #BR190721</div>
+  <h1>Compare Texas Electricity<br><span>Rates & Plans</span></h1>
+  <p class="hero-sub">We work for you — not the suppliers. All plans are fixed-rate and include TDU delivery charges.</p>
+
+  <div class="zip-wrap">
+    <input type="text" id="zipInput" placeholder="Enter your ZIP code" maxlength="5" inputmode="numeric">
+    <button onclick="filterByZip()">FIND RATES</button>
   </div>
 
-  <div class="quick-areas">
-    <button class="quick-area active" onclick="setArea('all', this)">All Areas</button>
-    <button class="quick-area" onclick="setArea('oncor', this)">Oncor (DFW/East TX)</button>
-    <button class="quick-area" onclick="setArea('centerpoint', this)">CenterPoint (Houston)</button>
-    <button class="quick-area" onclick="setArea('aep', this)">AEP (Abilene/Tyler)</button>
-    <button class="quick-area" onclick="setArea('tnmp', this)">TNMP (Bryan/New Braunfels)</button>
-    <button class="quick-area" onclick="setArea('lubbock', this)">Lubbock Power</button>
+  <div class="area-pills">
+    <button class="area-pill active" onclick="setArea('all', this)">All Areas</button>
+    <button class="area-pill" onclick="setArea('oncor', this)">Oncor · DFW / East TX</button>
+    <button class="area-pill" onclick="setArea('centerpoint', this)">CenterPoint · Houston</button>
+    <button class="area-pill" onclick="setArea('aep', this)">AEP · West / South TX</button>
+    <button class="area-pill" onclick="setArea('tnmp', this)">TNMP · Bryan / New Braunfels</button>
+    <button class="area-pill" onclick="setArea('lubbock', this)">Lubbock Power & Light</button>
   </div>
 </section>
 
-<!-- STATS BAR -->
+<!-- ═══ STATS ══════════════════════════════════════════════════════════════════ -->
 <div class="stats-bar">
   <div class="stats-inner">
-    <div class="stat-item">
-      <div class="stat-value" id="statPlans">—</div>
-      <div class="stat-label">Available Plans</div>
+    <div class="stat-cell">
+      <div class="stat-val highlight" id="statLowest">—</div>
+      <div class="stat-lbl">Lowest Rate ¢/kWh</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-value" id="statLowest">—</div>
-      <div class="stat-label">Lowest Rate ¢/kWh</div>
+    <div class="stat-cell">
+      <div class="stat-val" id="statAvg">—</div>
+      <div class="stat-lbl">Average Rate ¢/kWh</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-value" id="statAvg">—</div>
-      <div class="stat-label">Average Rate ¢/kWh</div>
+    <div class="stat-cell">
+      <div class="stat-val" id="statPlans">—</div>
+      <div class="stat-lbl">Plans Available</div>
     </div>
-    <div class="stat-item">
-      <div class="stat-value" id="statSuppliers">—</div>
-      <div class="stat-label">Suppliers Compared</div>
+    <div class="stat-cell">
+      <div class="stat-val" id="statSuppliers">—</div>
+      <div class="stat-lbl">Suppliers Compared</div>
     </div>
   </div>
 </div>
 
-<!-- UPDATE BANNER -->
-<div class="update-banner">
-  <div class="update-banner-inner">
-    ✓ <strong>Rates last verified:</strong>&nbsp;<span id="bannerTime">Loading...</span>&nbsp;— All prices include TDU delivery charges. Tap any plan to enroll directly with supplier using Amerigy's negotiated rate code.
+<!-- ═══ TOOLBAR ════════════════════════════════════════════════════════════════ -->
+<div class="toolbar">
+  <div class="toolbar-left">
+    <h2>Available Plans</h2>
+    <p id="toolbarSub">Showing all service areas, all term lengths</p>
   </div>
-</div>
-
-<!-- CONTROLS -->
-<div class="controls">
-  <div class="section-title">AVAILABLE PLANS</div>
-  <div class="filter-group">
+  <div class="toolbar-right">
     <span class="filter-label">Term:</span>
-    <button class="filter-btn active" onclick="filterTerm('all', this)">All</button>
-    <button class="filter-btn" onclick="filterTerm('short', this)">3-6 Mo</button>
-    <button class="filter-btn" onclick="filterTerm('medium', this)">12 Mo</button>
-    <button class="filter-btn" onclick="filterTerm('long', this)">24-36 Mo</button>
-    <span class="filter-label" style="margin-left:8px">Sort:</span>
+    <button class="filter-btn active" onclick="filterTerm('all',this)">All</button>
+    <button class="filter-btn" onclick="filterTerm('short',this)">3–6 Mo</button>
+    <button class="filter-btn" onclick="filterTerm('medium',this)">12 Mo</button>
+    <button class="filter-btn" onclick="filterTerm('long',this)">24–36 Mo</button>
+    <span class="filter-label" style="margin-left:4px">Sort:</span>
     <select class="sort-select" onchange="sortPlans(this.value)">
       <option value="price">Lowest Price</option>
       <option value="term">Shortest Term</option>
@@ -861,512 +878,477 @@
   </div>
 </div>
 
-<!-- PLANS GRID -->
-<div class="plans-container">
-  <div class="plans-grid" id="plansGrid"></div>
-  <div class="no-results" id="noResults">
-    <h3>No plans found</h3>
-    <p>Try a different filter or call us at <a href="tel:8776318875" style="color:var(--electric)">877-631-8875</a> — we'll find you the best deal.</p>
+<!-- ═══ UPDATE NOTICE ══════════════════════════════════════════════════════════ -->
+<div class="update-notice">
+  <div class="update-notice-inner">
+    ✓ <span>Rates verified <strong id="bannerTime" style="display:inline;color:inherit">loading...</strong> — all prices include TDU delivery. Tap any plan to enroll online with Amerigy's negotiated promo rate.</span>
   </div>
 </div>
 
-<div class="next-update" id="nextUpdate">Next automatic rate refresh: checking...</div>
+<!-- ═══ PLANS ══════════════════════════════════════════════════════════════════ -->
+<div class="plans-wrap">
+  <div class="plans-grid" id="plansGrid"></div>
+  <div class="no-results" id="noResults">
+    <h3>No plans match your filters</h3>
+    <p>Try adjusting your area or term, or call us at <a href="tel:8776318875">877-631-8875</a> and we'll find your best deal.</p>
+  </div>
+</div>
 
-<!-- FOOTER -->
+<!-- ═══ NEXT UPDATE ════════════════════════════════════════════════════════════ -->
+<div class="next-update-bar" id="nextUpdateBar">Next automatic rate refresh: checking...</div>
+
+<!-- ═══ FOOTER ═════════════════════════════════════════════════════════════════ -->
 <footer>
-  <div>Amerigy Energy LLC · 1511 S Chestnut St, Lufkin TX 75901 · <a href="tel:8776318875">1-877-631-8875</a> · PUCT #BR190721</div>
-  <p>Rates are updated twice daily (7AM & 7PM CT). Prices shown are representative and may vary slightly by exact usage. All plans are fixed-rate and include TDU delivery charges unless noted. <a href="https://amerigyenergy.com/disclosures">Disclosures</a></p>
+  <strong>Amerigy Energy LLC</strong> · 1511 S Chestnut St, Lufkin TX 75901 · <a href="tel:8776318875">1-877-631-8875</a> · PUCT #BR190721<br>
+  Rates update twice daily (7AM &amp; 7PM CT). All plans are fixed-rate and include TDU delivery charges unless noted. <a href="https://amerigyenergy.com/disclosures">Disclosures</a>
 </footer>
 
+<!-- ═══════════════════════════════════════════════════════════════════════════
+     RATE DATA — auto-generated by amerigy_rate_scraper.py twice daily
+     Manual edit: update rateKwh values and lastUpdated timestamp
+     ═════════════════════════════════════════════════════════════════════════ -->
 <script>
-// ============================================================
-// AMERIGY ENERGY RATE DATA
-// This object is the single source of truth for all rates.
-// In production, this is generated by the automated scraper
-// (see automation-guide.md) and this file is regenerated
-// twice daily via cron job / GitHub Action.
-// ============================================================
-
 const RATE_DATA = {
-  lastUpdated: "2025-03-02T07:00:00-06:00",
-  nextUpdate: "2025-03-02T19:00:00-06:00",
-  plans: [
-    // ── ONCOR ──────────────────────────────────────────────
-    {
-      id: "bkv-oncor-12",
-      supplier: "BKV Energy",
-      logo: "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Corporation_Logo-e1704590344399.jpg",
-      planName: "BKV Fixed 12",
-      area: "oncor",
-      areaLabel: "Oncor",
-      termMonths: 12,
-      rateKwh: 10.4,
-      baseFee: 0,
-      renewable: 0,
-      tags: ["No Base Fee", "Fixed Rate"],
-      enrollUrl: "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      bestValue: false
-    },
-    {
-      id: "bkv-oncor-24",
-      supplier: "BKV Energy",
-      logo: "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Corporation_Logo-e1704590344399.jpg",
-      planName: "BKV Fixed 24",
-      area: "oncor",
-      areaLabel: "Oncor",
-      termMonths: 24,
-      rateKwh: 11.1,
-      baseFee: 0,
-      renewable: 0,
-      tags: ["No Base Fee", "Fixed Rate"],
-      enrollUrl: "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      bestValue: false
-    },
-    {
-      id: "atlantex-oncor-12",
-      supplier: "Atlantex Power",
-      logo: null,
-      planName: "Atlantex Fixed 12",
-      area: "oncor",
-      areaLabel: "Oncor",
-      termMonths: 12,
-      rateKwh: 10.1,
-      baseFee: 0,
-      renewable: 0,
-      tags: ["No Base Fee", "Fixed Rate"],
-      enrollUrl: "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      bestValue: true
-    },
-    {
-      id: "think-oncor-12",
-      supplier: "Think Energy",
-      logo: null,
-      planName: "Think Fixed 12",
-      area: "oncor",
-      areaLabel: "Oncor",
-      termMonths: 12,
-      rateKwh: 10.8,
-      baseFee: 4.95,
-      renewable: 0,
-      tags: ["Fixed Rate"],
-      enrollUrl: "http://enroll.thinkenergy.com/?referralType=amerigy",
-      bestValue: false
-    },
-    {
-      id: "chariot-oncor-12",
-      supplier: "Chariot Energy",
-      logo: null,
-      planName: "Solar Fixed 12",
-      area: "oncor",
-      areaLabel: "Oncor",
-      termMonths: 12,
-      rateKwh: 11.5,
-      baseFee: 0,
-      renewable: 100,
-      tags: ["100% Solar", "Green"],
-      enrollUrl: "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      bestValue: false
-    },
-    {
-      id: "cleansky-oncor-12",
-      supplier: "Clean Sky Energy",
-      logo: null,
-      planName: "Clean Fixed 12",
-      area: "oncor",
-      areaLabel: "Oncor",
-      termMonths: 12,
-      rateKwh: 11.8,
-      baseFee: 0,
-      renewable: 100,
-      tags: ["100% Clean", "Green"],
-      enrollUrl: "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
-      bestValue: false
-    },
-    // ── CENTERPOINT ────────────────────────────────────────
-    {
-      id: "bkv-cp-12",
-      supplier: "BKV Energy",
-      logo: "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Corporation_Logo-e1704590344399.jpg",
-      planName: "BKV Fixed 12",
-      area: "centerpoint",
-      areaLabel: "CenterPoint (Houston)",
-      termMonths: 12,
-      rateKwh: 11.2,
-      baseFee: 0,
-      renewable: 0,
-      tags: ["No Base Fee", "Fixed Rate"],
-      enrollUrl: "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      bestValue: false
-    },
-    {
-      id: "atlantex-cp-12",
-      supplier: "Atlantex Power",
-      logo: null,
-      planName: "Atlantex Fixed 12",
-      area: "centerpoint",
-      areaLabel: "CenterPoint (Houston)",
-      termMonths: 12,
-      rateKwh: 10.7,
-      baseFee: 0,
-      renewable: 0,
-      tags: ["No Base Fee", "Fixed Rate"],
-      enrollUrl: "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      bestValue: true
-    },
-    {
-      id: "think-cp-12",
-      supplier: "Think Energy",
-      logo: null,
-      planName: "Think Fixed 12",
-      area: "centerpoint",
-      areaLabel: "CenterPoint (Houston)",
-      termMonths: 12,
-      rateKwh: 11.3,
-      baseFee: 4.95,
-      renewable: 0,
-      tags: ["Fixed Rate"],
-      enrollUrl: "http://enroll.thinkenergy.com/?referralType=amerigy",
-      bestValue: false
-    },
-    {
-      id: "frontier-cp-12",
-      supplier: "Frontier Utilities",
-      logo: null,
-      planName: "Smart Budget 12",
-      area: "centerpoint",
-      areaLabel: "CenterPoint (Houston)",
-      termMonths: 12,
-      rateKwh: 11.6,
-      baseFee: 0,
-      renewable: 0,
-      tags: ["Fixed Rate", "Smart Budget"],
-      enrollUrl: "http://www.FrontierUtilities.com/Amerigy",
-      bestValue: false
-    },
-    // ── AEP ────────────────────────────────────────────────
-    {
-      id: "ironhorse-aep-12",
-      supplier: "Ironhorse Power",
-      logo: null,
-      planName: "Ironhorse Fixed 12",
-      area: "aep",
-      areaLabel: "AEP Texas",
-      termMonths: 12,
-      rateKwh: 11.0,
-      baseFee: 0,
-      renewable: 0,
-      tags: ["No Base Fee", "Fixed Rate"],
-      enrollUrl: "https://signup.ironhorsepowerservices.com/amerigy7",
-      bestValue: true
-    },
-    {
-      id: "bkv-aep-12",
-      supplier: "BKV Energy",
-      logo: "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Corporation_Logo-e1704590344399.jpg",
-      planName: "BKV Fixed 12",
-      area: "aep",
-      areaLabel: "AEP Texas",
-      termMonths: 12,
-      rateKwh: 11.4,
-      baseFee: 0,
-      renewable: 0,
-      tags: ["No Base Fee", "Fixed Rate"],
-      enrollUrl: "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      bestValue: false
-    },
-    {
-      id: "apge-aep-12",
-      supplier: "APG&E",
-      logo: null,
-      planName: "APG&E Fixed 12",
-      area: "aep",
-      areaLabel: "AEP Texas",
-      termMonths: 12,
-      rateKwh: 12.1,
-      baseFee: 0,
-      renewable: 6,
-      tags: ["Fixed Rate", "6% Renewable"],
-      enrollUrl: "https://www.apge.com/amerigy",
-      bestValue: false
-    },
-    // ── TNMP ───────────────────────────────────────────────
-    {
-      id: "atlantex-tnmp-12",
-      supplier: "Atlantex Power",
-      logo: null,
-      planName: "Atlantex Fixed 12",
-      area: "tnmp",
-      areaLabel: "TNMP",
-      termMonths: 12,
-      rateKwh: 11.5,
-      baseFee: 0,
-      renewable: 0,
-      tags: ["No Base Fee", "Fixed Rate"],
-      enrollUrl: "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      bestValue: true
-    },
-    {
-      id: "bkv-tnmp-12",
-      supplier: "BKV Energy",
-      logo: "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Corporation_Logo-e1704590344399.jpg",
-      planName: "BKV Fixed 12",
-      area: "tnmp",
-      areaLabel: "TNMP",
-      termMonths: 12,
-      rateKwh: 11.8,
-      baseFee: 0,
-      renewable: 0,
-      tags: ["No Base Fee", "Fixed Rate"],
-      enrollUrl: "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      bestValue: false
-    },
-    // ── LUBBOCK ────────────────────────────────────────────
-    {
-      id: "payless-lub-6",
-      supplier: "Payless Power",
-      logo: null,
-      planName: "Pay As You Go",
-      area: "lubbock",
-      areaLabel: "Lubbock Power & Light",
-      termMonths: 6,
-      rateKwh: 12.3,
-      baseFee: 0,
-      renewable: 0,
-      tags: ["Pay As You Go", "Prepaid"],
-      enrollUrl: "https://account.paylesspower.com/enroll/318875",
-      bestValue: false
-    },
-    {
-      id: "atlantex-lub-12",
-      supplier: "Atlantex Power",
-      logo: null,
-      planName: "Atlantex Fixed 12",
-      area: "lubbock",
-      areaLabel: "Lubbock Power & Light",
-      termMonths: 12,
-      rateKwh: 11.9,
-      baseFee: 0,
-      renewable: 0,
-      tags: ["No Base Fee", "Fixed Rate"],
-      enrollUrl: "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      bestValue: true
-    }
-  ]
+    "lastUpdated": "2025-03-02T07:00:00-06:00",
+    "nextUpdate": "2025-03-02T19:00:00-06:00",
+    "errors": [],
+    "plans": [
+        {
+            "id": "atlantex-oncor-12",
+            "supplier": "Atlantex Power",
+            "logo": null,
+            "planName": "Atlantex Fixed 12",
+            "area": "oncor",
+            "areaLabel": "Oncor",
+            "termMonths": 12,
+            "rateKwh": 10.1,
+            "baseFee": 0,
+            "renewable": 0,
+            "tags": ["No Base Fee", "Fixed Rate"],
+            "enrollUrl": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+            "bestValue": true
+        },
+        {
+            "id": "bkv-oncor-12",
+            "supplier": "BKV Energy",
+            "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Corporation_Logo-e1704590344399.jpg",
+            "planName": "BKV Fixed 12",
+            "area": "oncor",
+            "areaLabel": "Oncor",
+            "termMonths": 12,
+            "rateKwh": 10.4,
+            "baseFee": 0,
+            "renewable": 0,
+            "tags": ["No Base Fee", "Fixed Rate"],
+            "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+            "bestValue": false
+        },
+        {
+            "id": "bkv-oncor-24",
+            "supplier": "BKV Energy",
+            "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Corporation_Logo-e1704590344399.jpg",
+            "planName": "BKV Fixed 24",
+            "area": "oncor",
+            "areaLabel": "Oncor",
+            "termMonths": 24,
+            "rateKwh": 11.1,
+            "baseFee": 0,
+            "renewable": 0,
+            "tags": ["No Base Fee", "Fixed Rate"],
+            "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+            "bestValue": false
+        },
+        {
+            "id": "think-oncor-12",
+            "supplier": "Think Energy",
+            "logo": null,
+            "planName": "Think Fixed 12",
+            "area": "oncor",
+            "areaLabel": "Oncor",
+            "termMonths": 12,
+            "rateKwh": 10.8,
+            "baseFee": 4.95,
+            "renewable": 0,
+            "tags": ["Fixed Rate"],
+            "enrollUrl": "http://enroll.thinkenergy.com/?referralType=amerigy",
+            "bestValue": false
+        },
+        {
+            "id": "chariot-oncor-12",
+            "supplier": "Chariot Energy",
+            "logo": null,
+            "planName": "Solar Fixed 12",
+            "area": "oncor",
+            "areaLabel": "Oncor",
+            "termMonths": 12,
+            "rateKwh": 11.5,
+            "baseFee": 0,
+            "renewable": 100,
+            "tags": ["100% Solar", "Green Energy"],
+            "enrollUrl": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+            "bestValue": false
+        },
+        {
+            "id": "cleansky-oncor-12",
+            "supplier": "Clean Sky Energy",
+            "logo": null,
+            "planName": "Clean Fixed 12",
+            "area": "oncor",
+            "areaLabel": "Oncor",
+            "termMonths": 12,
+            "rateKwh": 11.8,
+            "baseFee": 0,
+            "renewable": 100,
+            "tags": ["100% Clean", "Green Energy"],
+            "enrollUrl": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
+            "bestValue": false
+        },
+        {
+            "id": "atlantex-cp-12",
+            "supplier": "Atlantex Power",
+            "logo": null,
+            "planName": "Atlantex Fixed 12",
+            "area": "centerpoint",
+            "areaLabel": "CenterPoint (Houston)",
+            "termMonths": 12,
+            "rateKwh": 10.7,
+            "baseFee": 0,
+            "renewable": 0,
+            "tags": ["No Base Fee", "Fixed Rate"],
+            "enrollUrl": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+            "bestValue": true
+        },
+        {
+            "id": "bkv-cp-12",
+            "supplier": "BKV Energy",
+            "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Corporation_Logo-e1704590344399.jpg",
+            "planName": "BKV Fixed 12",
+            "area": "centerpoint",
+            "areaLabel": "CenterPoint (Houston)",
+            "termMonths": 12,
+            "rateKwh": 11.2,
+            "baseFee": 0,
+            "renewable": 0,
+            "tags": ["No Base Fee", "Fixed Rate"],
+            "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+            "bestValue": false
+        },
+        {
+            "id": "think-cp-12",
+            "supplier": "Think Energy",
+            "logo": null,
+            "planName": "Think Fixed 12",
+            "area": "centerpoint",
+            "areaLabel": "CenterPoint (Houston)",
+            "termMonths": 12,
+            "rateKwh": 11.3,
+            "baseFee": 4.95,
+            "renewable": 0,
+            "tags": ["Fixed Rate"],
+            "enrollUrl": "http://enroll.thinkenergy.com/?referralType=amerigy",
+            "bestValue": false
+        },
+        {
+            "id": "frontier-cp-12",
+            "supplier": "Frontier Utilities",
+            "logo": null,
+            "planName": "Smart Budget 12",
+            "area": "centerpoint",
+            "areaLabel": "CenterPoint (Houston)",
+            "termMonths": 12,
+            "rateKwh": 11.6,
+            "baseFee": 0,
+            "renewable": 0,
+            "tags": ["Fixed Rate", "Smart Budget"],
+            "enrollUrl": "http://www.FrontierUtilities.com/Amerigy",
+            "bestValue": false
+        },
+        {
+            "id": "ironhorse-aep-12",
+            "supplier": "Ironhorse Power",
+            "logo": null,
+            "planName": "Ironhorse Fixed 12",
+            "area": "aep",
+            "areaLabel": "AEP Texas",
+            "termMonths": 12,
+            "rateKwh": 11.0,
+            "baseFee": 0,
+            "renewable": 0,
+            "tags": ["No Base Fee", "Fixed Rate"],
+            "enrollUrl": "https://signup.ironhorsepowerservices.com/amerigy7",
+            "bestValue": true
+        },
+        {
+            "id": "bkv-aep-12",
+            "supplier": "BKV Energy",
+            "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Corporation_Logo-e1704590344399.jpg",
+            "planName": "BKV Fixed 12",
+            "area": "aep",
+            "areaLabel": "AEP Texas",
+            "termMonths": 12,
+            "rateKwh": 11.4,
+            "baseFee": 0,
+            "renewable": 0,
+            "tags": ["No Base Fee", "Fixed Rate"],
+            "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+            "bestValue": false
+        },
+        {
+            "id": "apge-aep-12",
+            "supplier": "APG&E",
+            "logo": null,
+            "planName": "APG&E Fixed 12",
+            "area": "aep",
+            "areaLabel": "AEP Texas",
+            "termMonths": 12,
+            "rateKwh": 12.1,
+            "baseFee": 0,
+            "renewable": 6,
+            "tags": ["Fixed Rate", "6% Renewable"],
+            "enrollUrl": "https://www.apge.com/amerigy",
+            "bestValue": false
+        },
+        {
+            "id": "atlantex-tnmp-12",
+            "supplier": "Atlantex Power",
+            "logo": null,
+            "planName": "Atlantex Fixed 12",
+            "area": "tnmp",
+            "areaLabel": "TNMP",
+            "termMonths": 12,
+            "rateKwh": 11.5,
+            "baseFee": 0,
+            "renewable": 0,
+            "tags": ["No Base Fee", "Fixed Rate"],
+            "enrollUrl": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+            "bestValue": true
+        },
+        {
+            "id": "bkv-tnmp-12",
+            "supplier": "BKV Energy",
+            "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Corporation_Logo-e1704590344399.jpg",
+            "planName": "BKV Fixed 12",
+            "area": "tnmp",
+            "areaLabel": "TNMP",
+            "termMonths": 12,
+            "rateKwh": 11.8,
+            "baseFee": 0,
+            "renewable": 0,
+            "tags": ["No Base Fee", "Fixed Rate"],
+            "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+            "bestValue": false
+        },
+        {
+            "id": "atlantex-lub-12",
+            "supplier": "Atlantex Power",
+            "logo": null,
+            "planName": "Atlantex Fixed 12",
+            "area": "lubbock",
+            "areaLabel": "Lubbock Power & Light",
+            "termMonths": 12,
+            "rateKwh": 11.9,
+            "baseFee": 0,
+            "renewable": 0,
+            "tags": ["No Base Fee", "Fixed Rate"],
+            "enrollUrl": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+            "bestValue": true
+        },
+        {
+            "id": "payless-lub",
+            "supplier": "Payless Power",
+            "logo": null,
+            "planName": "Pay As You Go",
+            "area": "lubbock",
+            "areaLabel": "Lubbock Power & Light",
+            "termMonths": 6,
+            "rateKwh": 12.3,
+            "baseFee": 0,
+            "renewable": 0,
+            "tags": ["Pay As You Go", "Prepaid"],
+            "enrollUrl": "https://account.paylesspower.com/enroll/318875",
+            "bestValue": false
+        }
+    ]
 };
 
-// ============================================================
-// APP STATE
-// ============================================================
+// ── STATE ──────────────────────────────────────────────────────────────────
 let currentArea = 'all';
 let currentTerm = 'all';
 let currentSort = 'price';
-let filteredPlans = [];
+let filtered = [];
 
-// ============================================================
-// RENDER ENGINE
-// ============================================================
-
-function getSupplierInitials(name) {
-  return name.split(' ').map(w => w[0]).join('').slice(0,3).toUpperCase();
+// ── HELPERS ────────────────────────────────────────────────────────────────
+function initials(name) {
+  return name.split(' ').map(w => w[0]).join('').slice(0,3);
 }
 
-function formatRate(rate) {
-  const whole = Math.floor(rate);
-  const decimal = Math.round((rate - whole) * 10);
-  return { whole, decimal };
+function termLabel(m) {
+  if (m === 12) return '1 Year (12 mo)';
+  if (m === 24) return '2 Years (24 mo)';
+  if (m === 36) return '3 Years (36 mo)';
+  return m + ' Months';
 }
 
-function termLabel(months) {
-  if (months <= 6) return months + ' Mo';
-  if (months === 12) return '1 Year';
-  if (months === 24) return '2 Years';
-  if (months === 36) return '3 Years';
-  return months + ' Mo';
-}
-
-function renderPlanCard(plan, index) {
-  const { whole, decimal } = formatRate(plan.rateKwh);
-  const tags = plan.tags.map(t => {
-    const cls = t.includes('Green') || t.includes('Solar') || t.includes('Clean') || t.includes('Renewable') ? 'tag-green'
-      : t.includes('Fee') || t.includes('Budget') ? 'tag-blue' : 'tag-gold';
-    return `<span class="tag ${cls}">${t}</span>`;
-  }).join('');
-
-  const logoHtml = plan.logo
-    ? `<img src="${plan.logo}" alt="${plan.supplier}" onerror="this.parentElement.textContent='${getSupplierInitials(plan.supplier)}'">`
-    : getSupplierInitials(plan.supplier);
-
-  const bestBadge = plan.bestValue ? '<div class="best-badge">⭐ BEST VALUE</div>' : '';
-  const cardClass = plan.bestValue ? 'plan-card best-value' : 'plan-card';
-
-  return `
-    <div class="${cardClass}" style="animation-delay:${index * 0.05}s">
-      ${bestBadge}
-      <div class="card-header">
-        <div class="supplier-logo">${logoHtml}</div>
-        <div class="supplier-info">
-          <div class="supplier-name">${plan.supplier}</div>
-          <div class="plan-name">${plan.planName} · ${plan.areaLabel}</div>
-        </div>
-      </div>
-      <div class="card-price">
-        <div class="price-age">Updated ${formatTimeAgo(RATE_DATA.lastUpdated)}</div>
-        <div class="price-main">
-          <div class="price-cents-unit">¢</div>
-          <div class="price-number">${whole}</div>
-          <div class="price-decimal">.${decimal}</div>
-        </div>
-        <div class="price-unit">per kWh · includes TDU delivery</div>
-        ${plan.baseFee > 0 ? `<div class="price-note" style="color:var(--gold)">+$${plan.baseFee.toFixed(2)}/mo base fee</div>` : '<div class="price-note">No monthly base fee</div>'}
-      </div>
-      <div class="card-details">
-        <div class="detail-item">
-          <div class="detail-key">Contract</div>
-          <div class="detail-val">${termLabel(plan.termMonths)}</div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-key">Type</div>
-          <div class="detail-val">Fixed Rate</div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-key">Service Area</div>
-          <div class="detail-val">${plan.areaLabel}</div>
-        </div>
-        <div class="detail-item">
-          <div class="detail-key">Renewable</div>
-          <div class="detail-val">${plan.renewable}%</div>
-        </div>
-      </div>
-      <div class="card-tags">${tags}</div>
-      <div class="card-actions">
-        <a href="${plan.enrollUrl}" target="_blank" class="btn-enroll">ENROLL ONLINE →</a>
-        <a href="tel:8776318875" class="btn-call">📞 Call to Enroll · 877-631-8875</a>
-      </div>
-    </div>`;
-}
-
-function formatTimeAgo(isoStr) {
-  const d = new Date(isoStr);
-  const now = new Date();
-  const mins = Math.floor((now - d) / 60000);
-  if (mins < 60) return `${mins}m ago`;
+function timeAgo(iso) {
+  const mins = Math.floor((Date.now() - new Date(iso)) / 60000);
+  if (mins < 60) return `${mins} min ago`;
   const hrs = Math.floor(mins / 60);
   if (hrs < 24) return `${hrs}h ago`;
   return `${Math.floor(hrs/24)}d ago`;
 }
 
-function applyFilters() {
-  filteredPlans = RATE_DATA.plans.filter(p => {
+function fmtTime(iso) {
+  return new Date(iso).toLocaleString('en-US', {
+    month: 'short', day: 'numeric',
+    hour: 'numeric', minute: '2-digit',
+    hour12: true, timeZoneName: 'short'
+  });
+}
+
+// ── RENDER ─────────────────────────────────────────────────────────────────
+function renderCard(plan, i) {
+  const whole = Math.floor(plan.rateKwh);
+  const dec   = Math.round((plan.rateKwh - whole) * 10);
+
+  const logoHtml = plan.logo
+    ? `<img src="${plan.logo}" alt="${plan.supplier}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">`
+    : '';
+  const fallback = `<span style="${plan.logo ? 'display:none' : ''};display:flex;align-items:center;justify-content:center;width:100%;height:100%">${initials(plan.supplier)}</span>`;
+
+  const tags = plan.tags.map(t => {
+    const cls = (t.includes('Green') || t.includes('Solar') || t.includes('Clean') || t.includes('Renewable'))
+      ? 'tag-green'
+      : (t.includes('Fee') || t.includes('Fixed') || t.includes('Budget'))
+        ? 'tag-navy' : 'tag-orange';
+    return `<span class="tag ${cls}">${t}</span>`;
+  }).join('');
+
+  const feeHtml = plan.baseFee > 0
+    ? `<span class="price-fee fee-has">+$${plan.baseFee.toFixed(2)}/mo base fee</span>`
+    : `<span class="price-fee fee-none">✓ No monthly base fee</span>`;
+
+  return `
+  <div class="card${plan.bestValue ? ' best' : ''}" style="animation-delay:${i*0.04}s">
+    ${plan.bestValue ? '<div class="best-ribbon">⭐ Best Value</div>' : ''}
+    <div class="card-top">
+      <div class="supplier-icon">${logoHtml}${fallback}</div>
+      <div class="card-meta">
+        <div class="card-supplier">${plan.supplier}</div>
+        <div class="card-area"><span class="area-dot"></span>${plan.areaLabel}</div>
+      </div>
+    </div>
+    <div class="card-price-section">
+      <div class="price-display">
+        <div class="price-symbol">¢</div>
+        <div class="price-whole">${whole}</div>
+        <div class="price-dec">.${dec}</div>
+      </div>
+      <div class="price-unit">per kWh · includes TDU delivery</div>
+      ${feeHtml}
+    </div>
+    <div class="card-details">
+      <div class="detail">
+        <div class="detail-key">Contract</div>
+        <div class="detail-value">${termLabel(plan.termMonths)}</div>
+      </div>
+      <div class="detail">
+        <div class="detail-key">Rate Type</div>
+        <div class="detail-value">Fixed Rate</div>
+      </div>
+      <div class="detail">
+        <div class="detail-key">Service Area</div>
+        <div class="detail-value">${plan.areaLabel}</div>
+      </div>
+      <div class="detail">
+        <div class="detail-key">Renewable</div>
+        <div class="detail-value">${plan.renewable}%</div>
+      </div>
+    </div>
+    <div class="card-tags">${tags}</div>
+    <div class="card-actions">
+      <a href="${plan.enrollUrl}" target="_blank" class="btn-enroll">Enroll Online →</a>
+      <a href="tel:8776318875" class="btn-call-card">📞 Call to Enroll · 877-631-8875</a>
+    </div>
+  </div>`;
+}
+
+// ── FILTER + SORT ──────────────────────────────────────────────────────────
+function apply() {
+  filtered = RATE_DATA.plans.filter(p => {
     if (currentArea !== 'all' && p.area !== currentArea) return false;
-    if (currentTerm === 'short' && p.termMonths > 6) return false;
+    if (currentTerm === 'short'  && p.termMonths > 6)  return false;
     if (currentTerm === 'medium' && p.termMonths !== 12) return false;
-    if (currentTerm === 'long' && p.termMonths < 24) return false;
+    if (currentTerm === 'long'   && p.termMonths < 24) return false;
     return true;
   });
+  if (currentSort === 'price')    filtered.sort((a,b) => a.rateKwh - b.rateKwh);
+  if (currentSort === 'term')     filtered.sort((a,b) => a.termMonths - b.termMonths);
+  if (currentSort === 'supplier') filtered.sort((a,b) => a.supplier.localeCompare(b.supplier));
 
-  if (currentSort === 'price') filteredPlans.sort((a, b) => a.rateKwh - b.rateKwh);
-  if (currentSort === 'term') filteredPlans.sort((a, b) => a.termMonths - b.termMonths);
-  if (currentSort === 'supplier') filteredPlans.sort((a, b) => a.supplier.localeCompare(b.supplier));
-
-  renderPlans();
-  updateStats();
-}
-
-function renderPlans() {
   const grid = document.getElementById('plansGrid');
-  const noResults = document.getElementById('noResults');
-  if (filteredPlans.length === 0) {
-    grid.innerHTML = '';
-    noResults.style.display = 'block';
-  } else {
-    noResults.style.display = 'none';
-    grid.innerHTML = filteredPlans.map((p, i) => renderPlanCard(p, i)).join('');
-  }
+  const none = document.getElementById('noResults');
+  if (!filtered.length) { grid.innerHTML = ''; none.style.display = 'block'; }
+  else { none.style.display = 'none'; grid.innerHTML = filtered.map(renderCard).join(''); }
+
+  // stats
+  const pool = filtered.length ? filtered : RATE_DATA.plans;
+  const rates = pool.map(p => p.rateKwh);
+  document.getElementById('statLowest').textContent = Math.min(...rates).toFixed(1) + '¢';
+  document.getElementById('statAvg').textContent = (rates.reduce((a,b)=>a+b,0)/rates.length).toFixed(1) + '¢';
+  document.getElementById('statPlans').textContent = pool.length;
+  document.getElementById('statSuppliers').textContent = [...new Set(pool.map(p=>p.supplier))].length;
+
+  // toolbar subtitle
+  const areaNames = { all:'all service areas', oncor:'Oncor', centerpoint:'CenterPoint', aep:'AEP', tnmp:'TNMP', lubbock:'Lubbock' };
+  const termNames  = { all:'all term lengths', short:'3–6 month', medium:'12-month', long:'24–36 month' };
+  document.getElementById('toolbarSub').textContent =
+    `Showing ${areaNames[currentArea]}, ${termNames[currentTerm]}`;
 }
 
-function updateStats() {
-  const plans = filteredPlans.length ? filteredPlans : RATE_DATA.plans;
-  const rates = plans.map(p => p.rateKwh);
-  const lowest = Math.min(...rates).toFixed(1);
-  const avg = (rates.reduce((a, b) => a + b, 0) / rates.length).toFixed(1);
-  const suppliers = [...new Set(plans.map(p => p.supplier))].length;
-
-  document.getElementById('statPlans').textContent = plans.length;
-  document.getElementById('statLowest').textContent = lowest + '¢';
-  document.getElementById('statAvg').textContent = avg + '¢';
-  document.getElementById('statSuppliers').textContent = suppliers;
-}
-
-function updateTimestamps() {
-  const d = new Date(RATE_DATA.lastUpdated);
-  const fmt = d.toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit', hour12: true, timeZoneName: 'short' });
-  document.getElementById('lastUpdatedTime').textContent = fmt;
-  document.getElementById('bannerTime').textContent = fmt;
-
-  const nd = new Date(RATE_DATA.nextUpdate);
-  const nfmt = nd.toLocaleString('en-US', { hour: 'numeric', minute: '2-digit', hour12: true });
-  document.getElementById('nextUpdate').textContent = `Next automatic rate refresh: ${nfmt} CT`;
-}
-
-// ============================================================
-// FILTER CONTROLS
-// ============================================================
-
+// ── CONTROLS ───────────────────────────────────────────────────────────────
 function setArea(area, btn) {
   currentArea = area;
-  document.querySelectorAll('.quick-area').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.area-pill').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
-  applyFilters();
+  apply();
 }
 
 function filterTerm(term, btn) {
   currentTerm = term;
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
-  applyFilters();
+  apply();
 }
 
-function sortPlans(val) {
-  currentSort = val;
-  applyFilters();
-}
+function sortPlans(val) { currentSort = val; apply(); }
 
 function filterByZip() {
   const zip = document.getElementById('zipInput').value.trim();
-  if (zip.length !== 5) { alert('Please enter a valid 5-digit ZIP code.'); return; }
-  
-  // ZIP → area mapping (partial — expand as needed)
-  const zipMap = {
-    '75': 'oncor',   // East TX / Dallas area
-    '76': 'oncor',   // DFW
-    '77': 'centerpoint', // Houston
-    '78': 'aep',     // South/Central TX
-    '79': 'lubbock', // Lubbock area
-  };
-  
-  const prefix = zip.slice(0, 2);
-  const area = zipMap[prefix] || 'all';
-  
-  document.querySelectorAll('.quick-area').forEach(b => b.classList.remove('active'));
-  if (area !== 'all') {
-    const areaBtn = document.querySelector(`.quick-area[onclick*="${area}"]`);
-    if (areaBtn) areaBtn.classList.add('active');
-  }
-  
+  if (zip.length !== 5 || isNaN(zip)) { alert('Please enter a valid 5-digit ZIP code.'); return; }
+  const map = { '75':'oncor','76':'oncor','77':'centerpoint','78':'aep','79':'lubbock' };
+  const area = map[zip.slice(0,2)] || 'all';
+  document.querySelectorAll('.area-pill').forEach(b => b.classList.remove('active'));
+  const target = document.querySelector(`.area-pill[onclick*="'${area}'"]`);
+  if (target) target.classList.add('active');
   currentArea = area;
-  applyFilters();
-  
-  document.querySelector('.plans-container').scrollIntoView({ behavior: 'smooth' });
+  apply();
+  document.querySelector('.plans-wrap').scrollIntoView({ behavior:'smooth' });
 }
 
-// ============================================================
-// INIT
-// ============================================================
+// ── TIMESTAMPS ─────────────────────────────────────────────────────────────
+function initTimestamps() {
+  const fmt = fmtTime(RATE_DATA.lastUpdated);
+  const next = fmtTime(RATE_DATA.nextUpdate).replace(/.*,\s*/, '');
+  document.getElementById('lastUpdatedTime').textContent = fmt;
+  document.getElementById('bannerTime').textContent = fmt;
+  document.getElementById('nextUpdateTime').textContent = next;
+  document.getElementById('nextUpdateBar').textContent = `Rates verified ${timeAgo(RATE_DATA.lastUpdated)} · Next automatic refresh: ${next} CT`;
+}
+
+// ── INIT ───────────────────────────────────────────────────────────────────
 document.addEventListener('DOMContentLoaded', () => {
-  updateTimestamps();
-  applyFilters();
-  
-  // ZIP enter key
+  initTimestamps();
+  apply();
   document.getElementById('zipInput').addEventListener('keypress', e => {
     if (e.key === 'Enter') filterByZip();
   });
