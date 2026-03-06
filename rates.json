@@ -1,33 +1,8 @@
 {
-  "lastUpdated": "2026-03-05T09:13:35.812228-06:00",
-  "nextUpdate": "2026-03-05T19:00:00-06:00",
+  "lastUpdated": "2026-03-05T21:31:04.042667-06:00",
+  "nextUpdate": "2026-03-06T07:00:00-06:00",
   "errors": [
     {
-      "supplier": "bkv",
-      "area": "oncor",
-      "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001\", waiting until \"networkidle\"\n"
-    },
-    {
-      "supplier": "bkv",
-      "area": "centerpoint",
-      "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001\", waiting until \"networkidle\"\n"
-    },
-    {
-      "supplier": "bkv",
-      "area": "aep",
-      "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001\", waiting until \"networkidle\"\n"
-    },
-    {
-      "supplier": "bkv",
-      "area": "tnmp",
-      "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001\", waiting until \"networkidle\"\n"
-    },
-    {
-      "supplier": "bkv",
-      "area": "lubbock",
-      "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001\", waiting until \"networkidle\"\n"
-    },
-    {
       "supplier": "think",
       "area": "oncor",
       "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"http://enroll.thinkenergy.com/?referralType=amerigy\", waiting until \"networkidle\"\n"
@@ -41,31 +16,11 @@
       "supplier": "think",
       "area": "aep",
       "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"http://enroll.thinkenergy.com/?referralType=amerigy\", waiting until \"networkidle\"\n"
-    },
-    {
-      "supplier": "cleansky",
-      "area": "oncor",
-      "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://signup.cleanskyenergy.com/zipcode?promocode=AMER\", waiting until \"networkidle\"\n"
-    },
-    {
-      "supplier": "cleansky",
-      "area": "centerpoint",
-      "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://signup.cleanskyenergy.com/zipcode?promocode=AMER\", waiting until \"networkidle\"\n"
-    },
-    {
-      "supplier": "apge",
-      "area": "oncor",
-      "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.apge.com/amerigy\", waiting until \"networkidle\"\n"
-    },
-    {
-      "supplier": "apge",
-      "area": "aep",
-      "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://www.apge.com/amerigy\", waiting until \"networkidle\"\n"
     },
     {
       "supplier": "payless",
       "area": "oncor",
-      "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://account.paylesspower.com/enroll/318875\", waiting until \"networkidle\"\n"
+      "error": "ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n"
     },
     {
       "supplier": "payless",
