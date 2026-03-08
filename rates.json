@@ -1,6 +1,6 @@
 {
-  "lastUpdated": "2026-03-07T21:34:37.984711-06:00",
-  "nextUpdate": "2026-03-08T07:00:00-05:00",
+  "lastUpdated": "2026-03-08T08:37:58.313013-05:00",
+  "nextUpdate": "2026-03-08T19:00:00-05:00",
   "errors": [
     {
       "supplier": "think",
@@ -20,7 +20,7 @@
     {
       "supplier": "payless",
       "area": "oncor",
-      "error": "ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    58 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n"
+      "error": "ElementHandle.click: Timeout 30000ms exceeded.\nCall log:\n  - attempting click action\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n    - waiting 20ms\n    2 \u00d7 waiting for element to be visible, enabled and stable\n      - element is not visible\n    - retrying click action\n      - waiting 100ms\n    57 \u00d7 waiting for element to be visible, enabled and stable\n       - element is not visible\n     - retrying click action\n       - waiting 500ms\n    - waiting for element to be visible, enabled and stable\n"
     },
     {
       "supplier": "payless",
