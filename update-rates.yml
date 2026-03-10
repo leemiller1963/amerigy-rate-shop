@@ -1,0 +1,42 @@
+name: Update Electricity Rates
+
+on:
+  schedule:
+    - cron: '0 13 * * *'   # 7AM CT
+    - cron: '0 1 * * *'    # 7PM CT
+  workflow_dispatch:        # manual trigger from GitHub UI
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  update-rates:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run rate fetcher
+        run: python amerigy_rate_scraper.py
+        # Falls back to manual rates automatically if P2C API is unreachable
+
+      - name: Commit and push updated rates
+        run: |
+          git config user.name  "Amerigy Rate Bot"
+          git config user.email "bot@amerigyenergy.com"
+          git add index.html rates.json
+          git diff --staged --quiet || git commit -m "Update rates $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push origin main
