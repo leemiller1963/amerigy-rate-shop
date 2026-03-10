@@ -1,4 +1,4 @@
-!/usr/bin/env python3
+#!/usr/bin/env python3
 """
 Amerigy Energy Rate Scraper
 Pulls live rates from supplier APIs where available, falls back to manual rates.
@@ -365,7 +365,7 @@ def build_rates_json():
 
     output = {
         "updated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "updated_display": now.strftime("%-I:%M %p UTC, %B %-d, %Y"),
+        "updated_display": now.strftime("%I:%M %p UTC, %B %d, %Y").lstrip("0").replace(" 0", " "),
         "service_areas_live": areas_live,
         "service_areas_fallback": areas_fallback,
         "usage_kwh": 2000,
