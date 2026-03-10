@@ -1,7 +1,12 @@
 {
-  "lastUpdated": "2026-03-09T09:02:12.726265-05:00",
-  "nextUpdate": "2026-03-09T19:00:00-05:00",
+  "lastUpdated": "2026-03-09T22:30:32.124788-05:00",
+  "nextUpdate": "2026-03-10T07:00:00-05:00",
   "errors": [
+    {
+      "supplier": "bkv",
+      "area": "oncor",
+      "error": "Page.goto: Timeout 20000ms exceeded.\nCall log:\n  - navigating to \"https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001\", waiting until \"networkidle\"\n"
+    },
     {
       "supplier": "think",
       "area": "oncor",
