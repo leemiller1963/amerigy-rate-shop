@@ -1,737 +1,436 @@
 {
-  "lastUpdated": "2026-03-10T18:15:57.951550-05:00",
-  "nextUpdate": "2026-03-10T19:00:00-05:00",
-  "errors": [],
+  "updated_at": "2026-03-10T23:50:20Z",
+  "updated_display": "11:50 PM UTC, March 10, 2026",
+  "service_areas_live": [],
+  "service_areas_fallback": [
+    "Oncor (DFW / East Texas)",
+    "CenterPoint (Houston)",
+    "AEP (West / South Texas)",
+    "TNMP (Bryan / New Braunfels)",
+    "Lubbock Power & Light"
+  ],
+  "usage_kwh": 2000,
+  "live_plans": 0,
+  "total_plans": 42,
   "plans": [
     {
       "supplier": "APG&E",
+      "term": 3,
+      "rate": 11.3,
+      "renewable_pct": 6,
+      "enroll_url": "https://www.apge.com/amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 11.3,
-      "termMonths": 3,
-      "baseFee": 0,
-      "renewable": 6,
-      "enrollUrl": "https://www.apge.com/amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "Short Term"
-      ],
-      "bestValue": true,
-      "source": "manual"
-    },
-    {
-      "supplier": "APG&E",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.5,
-      "termMonths": 6,
-      "baseFee": 0,
-      "renewable": 6,
-      "enrollUrl": "https://www.apge.com/amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "Short Term"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "APG&E",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.0,
-      "termMonths": 12,
-      "baseFee": 0,
-      "renewable": 6,
-      "enrollUrl": "https://www.apge.com/amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "APG&E",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 13.8,
-      "termMonths": 15,
-      "baseFee": 0,
-      "renewable": 6,
-      "enrollUrl": "https://www.apge.com/amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "APG&E",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 13.9,
-      "termMonths": 17,
-      "baseFee": 0,
-      "renewable": 6,
-      "enrollUrl": "https://www.apge.com/amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "APG&E",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.4,
-      "termMonths": 18,
-      "baseFee": 0,
-      "renewable": 6,
-      "enrollUrl": "https://www.apge.com/amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "APG&E",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.3,
-      "termMonths": 24,
-      "baseFee": 0,
-      "renewable": 6,
-      "enrollUrl": "https://www.apge.com/amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "APG&E",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.5,
-      "termMonths": 36,
-      "baseFee": 0,
-      "renewable": 6,
-      "enrollUrl": "https://www.apge.com/amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "BKV Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.7,
-      "termMonths": 6,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "Short Term"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "BKV Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.6,
-      "termMonths": 7,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "BKV Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.4,
-      "termMonths": 8,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "BKV Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.3,
-      "termMonths": 9,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "BKV Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.3,
-      "termMonths": 12,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "BKV Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 13.9,
-      "termMonths": 15,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "BKV Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.6,
-      "termMonths": 18,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "BKV Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.6,
-      "termMonths": 24,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "BKV Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.4,
-      "termMonths": 36,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Chariot Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 13.8,
-      "termMonths": 12,
-      "baseFee": 0,
-      "renewable": 100,
-      "enrollUrl": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "100% Renewable"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Chariot Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.9,
-      "termMonths": 15,
-      "baseFee": 0,
-      "renewable": 100,
-      "enrollUrl": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "100% Renewable"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Chariot Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.8,
-      "termMonths": 18,
-      "baseFee": 0,
-      "renewable": 100,
-      "enrollUrl": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "100% Renewable"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Chariot Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 13.9,
-      "termMonths": 24,
-      "baseFee": 0,
-      "renewable": 100,
-      "enrollUrl": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "100% Renewable"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Chariot Energy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.2,
-      "termMonths": 36,
-      "baseFee": 0,
-      "renewable": 100,
-      "enrollUrl": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "100% Renewable"
-      ],
-      "bestValue": false,
-      "source": "manual"
+      "source": "manual",
+      "note": ""
     },
     {
       "supplier": "Clean Sky Energy",
+      "term": 6,
+      "rate": 12.4,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 12.4,
-      "termMonths": 6,
-      "baseFee": 0,
-      "renewable": 100,
-      "enrollUrl": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "100% Renewable",
-        "Short Term"
-      ],
-      "bestValue": false,
-      "source": "manual"
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Ironhorse Power",
+      "term": 3,
+      "rate": 13.0,
+      "renewable_pct": 0,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "source": "manual",
+      "note": ""
     },
     {
       "supplier": "Clean Sky Energy",
+      "term": 12,
+      "rate": 13.4,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 13.4,
-      "termMonths": 12,
-      "baseFee": 0,
-      "renewable": 100,
-      "enrollUrl": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "100% Renewable"
-      ],
-      "bestValue": false,
-      "source": "manual"
+      "source": "manual",
+      "note": ""
     },
     {
       "supplier": "Clean Sky Energy",
+      "term": 24,
+      "rate": 13.5,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 13.5,
-      "termMonths": 24,
-      "baseFee": 0,
-      "renewable": 100,
-      "enrollUrl": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "100% Renewable"
-      ],
-      "bestValue": false,
-      "source": "manual"
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 15,
+      "rate": 13.6,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Chariot Energy",
+      "term": 12,
+      "rate": 13.8,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "APG&E",
+      "term": 15,
+      "rate": 13.8,
+      "renewable_pct": 6,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "source": "manual",
+      "note": ""
     },
     {
       "supplier": "Atlantex Power",
+      "term": 15,
+      "rate": 13.8,
+      "renewable_pct": 0,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.9,
-      "termMonths": 12,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
+      "source": "manual",
+      "note": ""
     },
     {
-      "supplier": "Atlantex Power",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 13.8,
-      "termMonths": 15,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
+      "supplier": "APG&E",
+      "term": 17,
+      "rate": 13.9,
+      "renewable_pct": 6,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "source": "manual",
+      "note": ""
     },
     {
-      "supplier": "Atlantex Power",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.5,
-      "termMonths": 24,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
+      "supplier": "Chariot Energy",
+      "term": 24,
+      "rate": 13.9,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "source": "manual",
+      "note": ""
     },
     {
-      "supplier": "Atlantex Power",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.8,
-      "termMonths": 36,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
+      "supplier": "APG&E",
+      "term": 12,
+      "rate": 14.0,
+      "renewable_pct": 6,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 9,
+      "rate": 14.1,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 12,
+      "rate": 14.1,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Chariot Energy",
+      "term": 36,
+      "rate": 14.2,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 8,
+      "rate": 14.3,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "source": "manual",
+      "note": ""
     },
     {
       "supplier": "Think Energy",
+      "term": 12,
+      "rate": 14.3,
+      "renewable_pct": 0,
+      "note": "+$4.95/mo base fee",
+      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.3,
-      "termMonths": 12,
-      "baseFee": 4.95,
-      "renewable": 0,
-      "enrollUrl": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
       "source": "manual"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 24,
+      "rate": 14.3,
+      "renewable_pct": 6,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 24,
+      "rate": 14.3,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 36,
+      "rate": 14.3,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "APG&E",
+      "term": 18,
+      "rate": 14.4,
+      "renewable_pct": 6,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "APG&E",
+      "term": 6,
+      "rate": 14.5,
+      "renewable_pct": 6,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 7,
+      "rate": 14.5,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 18,
+      "rate": 14.5,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Atlantex Power",
+      "term": 24,
+      "rate": 14.5,
+      "renewable_pct": 0,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "APG&E",
+      "term": 36,
+      "rate": 14.5,
+      "renewable_pct": 6,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 6,
+      "rate": 14.6,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Ironhorse Power",
+      "term": 15,
+      "rate": 14.8,
+      "renewable_pct": 0,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Chariot Energy",
+      "term": 18,
+      "rate": 14.8,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Atlantex Power",
+      "term": 36,
+      "rate": 14.8,
+      "renewable_pct": 0,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Atlantex Power",
+      "term": 12,
+      "rate": 14.9,
+      "renewable_pct": 0,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Chariot Energy",
+      "term": 15,
+      "rate": 14.9,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "source": "manual",
+      "note": ""
     },
     {
       "supplier": "Think Energy",
+      "term": 36,
+      "rate": 15.0,
+      "renewable_pct": 0,
+      "note": "+$4.95/mo base fee",
+      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 15.0,
-      "termMonths": 36,
-      "baseFee": 4.95,
-      "renewable": 0,
-      "enrollUrl": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
       "source": "manual"
     },
     {
-      "supplier": "Frontier Utilities",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 15.8,
-      "termMonths": 12,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "http://www.FrontierUtilities.com/Amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
+      "supplier": "Ironhorse Power",
+      "term": 9,
+      "rate": 15.1,
+      "renewable_pct": 0,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Ironhorse Power",
+      "term": 12,
+      "rate": 15.1,
+      "renewable_pct": 0,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Ironhorse Power",
+      "term": 24,
+      "rate": 15.5,
+      "renewable_pct": 0,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Ironhorse Power",
+      "term": 6,
+      "rate": 15.7,
+      "renewable_pct": 0,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Ironhorse Power",
+      "term": 36,
+      "rate": 15.7,
+      "renewable_pct": 0,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "source": "manual",
+      "note": ""
     },
     {
       "supplier": "Frontier Utilities",
+      "term": 12,
+      "rate": 15.8,
+      "renewable_pct": 0,
+      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 16.0,
-      "termMonths": 24,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "http://www.FrontierUtilities.com/Amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Frontier Utilities",
+      "term": 24,
+      "rate": 16.0,
+      "renewable_pct": 0,
+      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
+      "source": "manual",
+      "note": ""
+    },
+    {
+      "supplier": "Payless Power",
+      "term": 6,
+      "rate": 16.7,
+      "renewable_pct": 0,
+      "note": "Prepaid \u2014 no credit check",
+      "enroll_url": "https://account.paylesspower.com/enroll/318875",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png",
       "source": "manual"
     },
     {
       "supplier": "Payless Power",
+      "term": 12,
+      "rate": 16.7,
+      "renewable_pct": 0,
+      "note": "Prepaid \u2014 no credit check",
+      "enroll_url": "https://account.paylesspower.com/enroll/318875",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 16.7,
-      "termMonths": 6,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://account.paylesspower.com/enroll/318875",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "Prepaid",
-        "Short Term"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Payless Power",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 16.7,
-      "termMonths": 12,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://account.paylesspower.com/enroll/318875",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "Prepaid"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Ironhorse Power",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 13.0,
-      "termMonths": 3,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "Short Term"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Ironhorse Power",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 15.7,
-      "termMonths": 6,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate",
-        "Short Term"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Ironhorse Power",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 15.1,
-      "termMonths": 9,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Ironhorse Power",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 15.1,
-      "termMonths": 12,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Ironhorse Power",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 14.8,
-      "termMonths": 15,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Ironhorse Power",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 15.5,
-      "termMonths": 24,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
-      "source": "manual"
-    },
-    {
-      "supplier": "Ironhorse Power",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "area": "oncor",
-      "areaLabel": "Oncor",
-      "rateKwh": 15.7,
-      "termMonths": 36,
-      "baseFee": 0,
-      "renewable": 0,
-      "enrollUrl": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "planName": "",
-      "tags": [
-        "Fixed Rate"
-      ],
-      "bestValue": false,
       "source": "manual"
     }
   ]
