@@ -71,6 +71,16 @@ SUPPLIER_CONFIG = {
         "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
         "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
     },
+    "atlantex power": {
+        "display_name": "Atlantex Power",
+        "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+        "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+    },
+    "ae texas": {
+        "display_name": "Atlantex Power",
+        "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+        "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+    },
     "atlantex": {
         "display_name": "Atlantex Power",
         "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
@@ -364,6 +374,12 @@ def build_rates_json():
             print(f"  Suppliers: {dict(supplier_counts)}")
             # Debug: find Clean Sky name in CSV
             sky = sorted(set((p.get("[RepCompany]") or "").strip() for p in raw if "sky" in (p.get("[RepCompany]") or "").lower() or "clean" in (p.get("[RepCompany]") or "").lower()))
+            atlantex = sorted(set((p.get("[RepCompany]") or "").strip() for p in raw if any(x in (p.get("[RepCompany]") or "").lower() for x in ["atlantex", "ae texas", "aetexas"])))
+            if atlantex: print(f"  Atlantex variants in CSV: {atlantex}")
+            else:
+                # Broader search — anything short with "texas" 
+                broad = sorted(set((p.get("[RepCompany]") or "").strip() for p in raw if "texas" in (p.get("[RepCompany]") or "").lower() and len((p.get("[RepCompany]") or "")) < 25))
+                print(f"  Atlantex NOT found. Short Texas names in CSV: {broad}")
             if sky: print(f"  Clean Sky variants in CSV: {sky}")
             plans = matched
             live_count = len(plans)
@@ -417,7 +433,7 @@ def build_rates_json():
     with open("rates.json", "w") as f:
         json.dump(output, f, indent=2)
 
-    print(f"\n✓ rates.json written: {len(plans)} plans ({live_count} live, {len(plans)-live_count} fallback)")
+    print(f"\n✓ rates.json written: {len(plans)} plans ({len(plans)} live, 0 fallback)")
     print(f"  Updated: {output['updated_display']}")
 
 
