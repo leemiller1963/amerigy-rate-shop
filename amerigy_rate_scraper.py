@@ -161,10 +161,10 @@ def process_ptc_plans(raw_plans):
         if term <= 0:
             continue
 
-        # [kwh2000] = all-in rate at 2000 kWh (cents)
+        # [kwh2000] = all-in rate at 2000 kWh as decimal (e.g. 0.1021 = 10.21¢/kWh)
         rate_raw = p.get("[kwh2000]") or "0"
         try:
-            rate = round(float(str(rate_raw).strip()), 1)
+            rate = round(float(str(rate_raw).strip()) * 100, 1)
         except (ValueError, TypeError):
             continue
         if rate <= 0:
