@@ -47,6 +47,106 @@ BKV_UTIL_IDS = {
 
 BKV_ENROLL_URL = f"https://enroll.bkvenergy.com/Home/Promo?Promocode={BKV_PROMO}"
 
+# ── CLEAN SKY ENERGY - DIRECT API ──────────────────────────────────────────────
+# Endpoint discovered via DevTools network analysis of signup.cleanskyenergy.com
+# Flow: POST /utility (zip+promo) → get utility_code → POST /rate (zip+utility_code+promo)
+CLEANSKY_API_BASE = "https://iyky4nwsnh.execute-api.us-east-1.amazonaws.com/prod"
+CLEANSKY_PROMO = "AMER"
+CLEANSKY_ENROLL_URL = "https://signup.cleanskyenergy.com/zipcode?promocode=AMER"
+CLEANSKY_LOGO = "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg"
+
+# ZIP codes to use per service area for utility lookup
+CLEANSKY_AREA_ZIPS = {
+    "oncor":       "75901",
+    "centerpoint": "77002",
+    "aep":         "79601",
+    "tnmp":        "76528",
+    "lubbock":     "79401",
+}
+
+
+def fetch_cleansky_rates(util_key="oncor"):
+    """Fetch live Clean Sky Energy rates via AWS API Gateway.
+    
+    Returns list of plan dicts or empty list on failure.
+    Rate field: price2000 = all-in ¢/kWh at 2000 kWh
+    Energy charge: energy_charge1 * 100 = ¢/kWh
+    """
+    zip_code = CLEANSKY_AREA_ZIPS.get(util_key, "75901")
+    headers = {
+        "Content-Type": "multipart/form-data",
+        "Origin": "https://signup.cleanskyenergy.com",
+        "Referer": "https://signup.cleanskyenergy.com/",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+    }
+
+    try:
+        # Step 1: Get utility_code for this ZIP
+        utility_resp = requests.post(
+            f"{CLEANSKY_API_BASE}/utility",
+            data={"zipcode": zip_code, "promo_code": CLEANSKY_PROMO},
+            headers=headers,
+            timeout=15,
+        )
+        utility_resp.raise_for_status()
+        utility_data = utility_resp.json()
+
+        utility_list = utility_data.get("response", {}).get("utility", [])
+        if not utility_list:
+            print(f"    Clean Sky: no utility found for ZIP {zip_code}")
+            return []
+        utility_code = utility_list[0].get("id_utility")
+        if not utility_code:
+            print(f"    Clean Sky: missing id_utility in response")
+            return []
+
+        # Step 2: Fetch plans
+        rate_resp = requests.post(
+            f"{CLEANSKY_API_BASE}/enrollment/rate",
+            data={
+                "zipcode": zip_code,
+                "utility_code": utility_code,
+                "promo_code": CLEANSKY_PROMO,
+            },
+            headers=headers,
+            timeout=15,
+        )
+        rate_resp.raise_for_status()
+        rate_data = rate_resp.json()
+
+        plans_raw = rate_data.get("response", {}).get("plans", [])
+        if not plans_raw:
+            print(f"    Clean Sky: no plans returned for {util_key}")
+            return []
+
+        plans = []
+        for p in plans_raw:
+            energy_charge = p.get("energy_charge1", 0)
+            all_in = p.get("price2000")
+            if all_in is None:
+                # Calculate from energy charge + TDU
+                all_in = tdu_allin(util_key, energy_charge * 100)
+            else:
+                all_in = float(all_in)
+
+            plans.append({
+                "supplier":      "Clean Sky Energy",
+                "term":          p.get("contract_term"),
+                "rate":          round(all_in, 1),
+                "energy_charge": round(energy_charge * 100, 3),
+                "renewable_pct": p.get("renewable", 100),
+                "enroll_url":    CLEANSKY_ENROLL_URL,
+                "logo":          CLEANSKY_LOGO,
+                "service_area":  util_key,
+                "plan_name":     p.get("plan_name", ""),
+            })
+
+        return plans
+
+    except Exception as e:
+        print(f"    Clean Sky fetch failed ({util_key}): {e}")
+        return []
+
 
 def fetch_bkv_rates(util_key="oncor"):
     """Fetch live BKV rates via GetAllPlans_V3 API."""
@@ -327,6 +427,7 @@ SERVICE_AREA_LABELS = {
 
 def build_rates_json():
     all_bkv_plans = []
+    all_cleansky_plans = []
     live_count = 0
     failed_areas = []
 
@@ -343,15 +444,34 @@ def build_rates_json():
             failed_areas.append(util_key)
             print(f"  ✗ {label}: failed — will use fallback BKV rates for this area")
 
-    # Build final plan list
-    non_bkv = [p for p in FALLBACK_PLANS if p["supplier"] != "BKV Energy"]
+    # Fetch Clean Sky live rates (Oncor only — their API covers all areas but
+    # residential plans are the same across TDUs; Oncor ZIP is representative)
+    print("\nFetching live Clean Sky Energy rates...")
+    cleansky_live = fetch_cleansky_rates("oncor")
+    if cleansky_live:
+        all_cleansky_plans = cleansky_live
+        live_count += len(cleansky_live)
+        print(f"  ✓ Clean Sky: {len(cleansky_live)} plans")
+    else:
+        print("  ✗ Clean Sky: failed — using fallback rates")
 
-    if all_bkv_plans:
-        # Use live BKV plans + fallback non-BKV plans
-        plans = non_bkv + all_bkv_plans
+    # Build final plan list
+    non_live_suppliers = [p for p in FALLBACK_PLANS
+                          if p["supplier"] not in ("BKV Energy", "Clean Sky Energy")]
+
+    if all_bkv_plans or all_cleansky_plans:
+        plans = non_live_suppliers
+        if all_bkv_plans:
+            plans = plans + all_bkv_plans
+        else:
+            plans = plans + [p for p in FALLBACK_PLANS if p["supplier"] == "BKV Energy"]
+        if all_cleansky_plans:
+            plans = plans + all_cleansky_plans
+        else:
+            plans = plans + [p for p in FALLBACK_PLANS if p["supplier"] == "Clean Sky Energy"]
     else:
         # Full fallback
-        print("  All BKV fetches failed — using full manual fallback")
+        print("  All live fetches failed — using full manual fallback")
         plans = FALLBACK_PLANS.copy()
 
     # Sort: by rate ascending, then term ascending
