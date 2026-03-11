@@ -171,7 +171,7 @@ def process_ptc_plans(raw_plans, area_key):
         if rate <= 0:
             continue
 
-        key = (config["display_name"], term)
+        key = (config["display_name"], term, area_key)
         if key in best and rate >= best[key]["rate"]:
             continue  # keep the lower rate
 
