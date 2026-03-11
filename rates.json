@@ -1,17 +1,18 @@
 {
-  "updated_at": "2026-03-11T01:54:07Z",
-  "updated_display": "1:54 AM UTC, March 11, 2026",
-  "service_areas_live": [],
-  "service_areas_fallback": [
+  "updated_at": "2026-03-11T02:10:51Z",
+  "updated_display": "2:10 AM UTC, March 11, 2026",
+  "source": "fallback",
+  "service_areas_live": [
     "Oncor (DFW / East Texas)",
     "CenterPoint (Houston)",
     "AEP (West / South Texas)",
     "TNMP (Bryan / New Braunfels)",
     "Lubbock Power & Light"
   ],
+  "service_areas_fallback": [],
   "usage_kwh": 2000,
-  "live_plans": 3,
-  "total_plans": 42,
+  "live_plans": 0,
+  "total_plans": 41,
   "plans": [
     {
       "supplier": "APG&E",
@@ -19,9 +20,7 @@
       "rate": 11.3,
       "renewable_pct": 6,
       "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg"
     },
     {
       "supplier": "Ironhorse Power",
@@ -29,19 +28,7 @@
       "rate": 13.0,
       "renewable_pct": 0,
       "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "source": "manual",
-      "note": ""
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 15,
-      "rate": 13.6,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg"
     },
     {
       "supplier": "Chariot Energy",
@@ -49,9 +36,7 @@
       "rate": 13.8,
       "renewable_pct": 100,
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png"
     },
     {
       "supplier": "APG&E",
@@ -59,9 +44,7 @@
       "rate": 13.8,
       "renewable_pct": 6,
       "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg"
     },
     {
       "supplier": "Atlantex Power",
@@ -69,19 +52,7 @@
       "rate": 13.8,
       "renewable_pct": 0,
       "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "source": "manual",
-      "note": ""
-    },
-    {
-      "supplier": "APG&E",
-      "term": 17,
-      "rate": 13.9,
-      "renewable_pct": 6,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png"
     },
     {
       "supplier": "Chariot Energy",
@@ -89,20 +60,15 @@
       "rate": 13.9,
       "renewable_pct": 100,
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png"
     },
     {
       "supplier": "Clean Sky Energy",
       "term": 6,
       "rate": 14.0,
-      "energy_charge": 8.4,
       "renewable_pct": 100,
       "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
-      "service_area": "oncor",
-      "plan_name": "Embrace Green 6"
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg"
     },
     {
       "supplier": "APG&E",
@@ -110,51 +76,23 @@
       "rate": 14.0,
       "renewable_pct": 6,
       "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg"
     },
     {
       "supplier": "Clean Sky Energy",
       "term": 12,
       "rate": 14.0,
-      "energy_charge": 7.9,
       "renewable_pct": 100,
       "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
-      "service_area": "oncor",
-      "plan_name": "Embrace Green 12"
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg"
     },
     {
       "supplier": "Clean Sky Energy",
       "term": 24,
       "rate": 14.0,
-      "energy_charge": 7.9,
       "renewable_pct": 100,
       "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
-      "service_area": "oncor",
-      "plan_name": "Embrace Green 24"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 9,
-      "rate": 14.1,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "source": "manual",
-      "note": ""
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 12,
-      "rate": 14.1,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg"
     },
     {
       "supplier": "Chariot Energy",
@@ -162,29 +100,16 @@
       "rate": 14.2,
       "renewable_pct": 100,
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "source": "manual",
-      "note": ""
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 8,
-      "rate": 14.3,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png"
     },
     {
       "supplier": "Think Energy",
       "term": 12,
       "rate": 14.3,
       "renewable_pct": 0,
-      "note": "+$4.95/mo base fee",
+      "base_fee_note": "+$4.95/mo base fee",
       "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "source": "manual"
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png"
     },
     {
       "supplier": "APG&E",
@@ -192,29 +117,15 @@
       "rate": 14.3,
       "renewable_pct": 6,
       "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg"
     },
     {
       "supplier": "BKV Energy",
-      "term": 24,
-      "rate": 14.3,
-      "renewable_pct": 29,
+      "term": 9,
+      "rate": 14.4,
+      "renewable_pct": 0,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "source": "manual",
-      "note": ""
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 36,
-      "rate": 14.3,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png"
     },
     {
       "supplier": "APG&E",
@@ -222,9 +133,7 @@
       "rate": 14.4,
       "renewable_pct": 6,
       "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg"
     },
     {
       "supplier": "APG&E",
@@ -232,29 +141,15 @@
       "rate": 14.5,
       "renewable_pct": 6,
       "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg"
     },
     {
       "supplier": "BKV Energy",
-      "term": 7,
+      "term": 8,
       "rate": 14.5,
-      "renewable_pct": 29,
+      "renewable_pct": 0,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "source": "manual",
-      "note": ""
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 18,
-      "rate": 14.5,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png"
     },
     {
       "supplier": "Atlantex Power",
@@ -262,9 +157,7 @@
       "rate": 14.5,
       "renewable_pct": 0,
       "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png"
     },
     {
       "supplier": "APG&E",
@@ -272,19 +165,39 @@
       "rate": 14.5,
       "renewable_pct": 6,
       "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg"
     },
     {
       "supplier": "BKV Energy",
       "term": 6,
-      "rate": 14.6,
-      "renewable_pct": 29,
+      "rate": 14.7,
+      "renewable_pct": 0,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 7,
+      "rate": 14.7,
+      "renewable_pct": 0,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 12,
+      "rate": 14.7,
+      "renewable_pct": 0,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 15,
+      "rate": 14.7,
+      "renewable_pct": 0,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png"
     },
     {
       "supplier": "Ironhorse Power",
@@ -292,9 +205,7 @@
       "rate": 14.8,
       "renewable_pct": 0,
       "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg"
     },
     {
       "supplier": "Chariot Energy",
@@ -302,9 +213,7 @@
       "rate": 14.8,
       "renewable_pct": 100,
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png"
     },
     {
       "supplier": "Atlantex Power",
@@ -312,9 +221,7 @@
       "rate": 14.8,
       "renewable_pct": 0,
       "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png"
     },
     {
       "supplier": "Atlantex Power",
@@ -322,9 +229,7 @@
       "rate": 14.9,
       "renewable_pct": 0,
       "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png"
     },
     {
       "supplier": "Chariot Energy",
@@ -332,19 +237,16 @@
       "rate": 14.9,
       "renewable_pct": 100,
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png"
     },
     {
       "supplier": "Think Energy",
       "term": 36,
       "rate": 15.0,
       "renewable_pct": 0,
-      "note": "+$4.95/mo base fee",
+      "base_fee_note": "+$4.95/mo base fee",
       "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "source": "manual"
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png"
     },
     {
       "supplier": "Ironhorse Power",
@@ -352,9 +254,7 @@
       "rate": 15.1,
       "renewable_pct": 0,
       "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg"
     },
     {
       "supplier": "Ironhorse Power",
@@ -362,9 +262,7 @@
       "rate": 15.1,
       "renewable_pct": 0,
       "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg"
     },
     {
       "supplier": "Ironhorse Power",
@@ -372,9 +270,7 @@
       "rate": 15.5,
       "renewable_pct": 0,
       "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg"
     },
     {
       "supplier": "Ironhorse Power",
@@ -382,9 +278,23 @@
       "rate": 15.7,
       "renewable_pct": 0,
       "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 18,
+      "rate": 15.7,
+      "renewable_pct": 0,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 36,
+      "rate": 15.7,
+      "renewable_pct": 0,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png"
     },
     {
       "supplier": "Ironhorse Power",
@@ -392,9 +302,7 @@
       "rate": 15.7,
       "renewable_pct": 0,
       "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg"
     },
     {
       "supplier": "Frontier Utilities",
@@ -402,9 +310,15 @@
       "rate": 15.8,
       "renewable_pct": 0,
       "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 24,
+      "rate": 15.8,
+      "renewable_pct": 0,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png"
     },
     {
       "supplier": "Frontier Utilities",
@@ -412,29 +326,23 @@
       "rate": 16.0,
       "renewable_pct": 0,
       "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
-      "source": "manual",
-      "note": ""
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg"
     },
     {
       "supplier": "Payless Power",
       "term": 6,
       "rate": 16.7,
       "renewable_pct": 0,
-      "note": "Prepaid \u2014 no credit check",
       "enroll_url": "https://account.paylesspower.com/enroll/318875",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png",
-      "source": "manual"
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png"
     },
     {
       "supplier": "Payless Power",
       "term": 12,
       "rate": 16.7,
       "renewable_pct": 0,
-      "note": "Prepaid \u2014 no credit check",
       "enroll_url": "https://account.paylesspower.com/enroll/318875",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png",
-      "source": "manual"
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png"
     }
   ]
 }
