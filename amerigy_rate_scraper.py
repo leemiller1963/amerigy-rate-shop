@@ -76,7 +76,8 @@ SUPPLIER_CONFIG = {
         "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
         "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
     },
-    "ae texas": {
+    "ae texas": {  # exact PTC name is "AE TEXAS"
+
         "display_name": "Atlantex Power",
         "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
         "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
@@ -89,7 +90,7 @@ SUPPLIER_CONFIG = {
     "clean sky energy": {
         "display_name": "Clean Sky Energy",
     },
-    "cleansky": {
+    "cleansky energy": {
         "display_name": "Clean Sky Energy",
         "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
         "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
