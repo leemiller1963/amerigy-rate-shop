@@ -33,7 +33,7 @@ SERVICE_AREA_LABELS = {
     "oncor":       "Oncor (DFW / East Texas)",
     "centerpoint": "CenterPoint (Houston)",
     "aep":         "AEP (West / South Texas)",
-    "tnmp":        "TNMP (Gulf Coast / West Texas)",
+    "tnmp":        "TNMP (Bryan / New Braunfels)",
     "lubbock":     "Lubbock Power & Light",
 }
 
@@ -357,6 +357,9 @@ def build_rates_json():
             for area_key, label in SERVICE_AREA_LABELS.items():
                 count = area_counts.get(area_key, 0)
                 print(f"  {label}: {count} plans matched")
+            # Debug: show all unique TDU names to verify mapping
+            all_tdus = sorted(set((p.get("[TduCompanyName]") or "").strip() for p in raw))
+            print(f"  All TDU names in CSV: {all_tdus}")
             print(f"  Suppliers: {dict(supplier_counts)}")
             plans = matched
             live_count = len(plans)
