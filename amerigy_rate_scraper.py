@@ -21,12 +21,12 @@ PTC_CSV_URL = "https://www.powertochoose.org/en-us/Plan/ExportToCsv"
 
 # TDU name strings in the CSV tdu_company_name field → our area keys
 TDU_TO_AREA = {
-    "oncor electric delivery":   "oncor",
-    "centerpoint energy":        "centerpoint",
-    "aep texas central":         "aep",
-    "aep texas north":           "aep",
-    "texas-new mexico power":    "tnmp",
-    "lubbock power & light":     "lubbock",
+    "oncor electric delivery company":          "oncor",
+    "centerpoint energy houston electric llc":  "centerpoint",
+    "aep texas central":                        "aep",
+    "aep texas north":                          "aep",
+    "texas-new mexico power company":           "tnmp",
+    "lubbock power & light system":             "lubbock",
 }
 
 SERVICE_AREA_LABELS = {
@@ -357,9 +357,7 @@ def build_rates_json():
             for area_key, label in SERVICE_AREA_LABELS.items():
                 count = area_counts.get(area_key, 0)
                 print(f"  {label}: {count} plans matched")
-            # Debug: show all unique TDU names to verify mapping
-            all_tdus = sorted(set((p.get("[TduCompanyName]") or "").strip() for p in raw))
-            print(f"  All TDU names in CSV: {all_tdus}")
+
             print(f"  Suppliers: {dict(supplier_counts)}")
             plans = matched
             live_count = len(plans)
@@ -416,4 +414,3 @@ def build_rates_json():
 
 if __name__ == "__main__":
     build_rates_json()
-
