@@ -413,6 +413,11 @@ def build_rates_json():
         areas_live = []
         areas_fallback = list(SERVICE_AREA_LABELS.values())
 
+    # Adjust rates: add 1¢ broker margin to all suppliers except Think Energy
+    for p in plans:
+        if p["supplier"] != "Think Energy":
+            p["rate"] = round(p["rate"] + 1.0, 1)
+
     # Remove plans under 12 months — Amerigy focuses on longer-term contracts
     plans = [p for p in plans if p["term"] >= 12]
 
