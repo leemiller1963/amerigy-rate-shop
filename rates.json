@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-03-11T12:12:02Z",
-  "updated_display": "12:12 PM UTC, March 11, 2026",
+  "updated_at": "2026-03-11T12:17:50Z",
+  "updated_display": "12:17 PM UTC, March 11, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -11,8 +11,8 @@
   ],
   "service_areas_fallback": [],
   "usage_kwh": 2000,
-  "live_plans": 115,
-  "total_plans": 89,
+  "live_plans": 125,
+  "total_plans": 99,
   "plans": [
     {
       "supplier": "Chariot Energy",
@@ -122,6 +122,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
       "service_area": "centerpoint",
       "plan_name": "Embrace Green 12 - New Customer Special",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "Atlantex Power",
+      "term": 15,
+      "rate": 12.6,
+      "renewable_pct": 35,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "service_area": "centerpoint",
+      "plan_name": "Smart Secure 15",
       "source": "powertochoose"
     },
     {
@@ -243,6 +254,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
       "service_area": "oncor",
       "plan_name": "Embrace Green 12 - New Customer Special",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "Atlantex Power",
+      "term": 15,
+      "rate": 13.1,
+      "renewable_pct": 35,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "service_area": "oncor",
+      "plan_name": "Smart Secure 15",
       "source": "powertochoose"
     },
     {
@@ -368,6 +390,17 @@
       "source": "powertochoose"
     },
     {
+      "supplier": "Atlantex Power",
+      "term": 15,
+      "rate": 13.4,
+      "renewable_pct": 35,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "service_area": "aep",
+      "plan_name": "Smart Secure 15",
+      "source": "powertochoose"
+    },
+    {
       "supplier": "Chariot Energy",
       "term": 15,
       "rate": 13.4,
@@ -431,6 +464,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "oncor",
       "plan_name": "TrueClassic 24",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "Atlantex Power",
+      "term": 36,
+      "rate": 13.6,
+      "renewable_pct": 35,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "service_area": "centerpoint",
+      "plan_name": "Smart Secure 36",
       "source": "powertochoose"
     },
     {
@@ -590,6 +634,17 @@
       "source": "powertochoose"
     },
     {
+      "supplier": "Atlantex Power",
+      "term": 36,
+      "rate": 14.1,
+      "renewable_pct": 35,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "service_area": "oncor",
+      "plan_name": "Smart Secure 36",
+      "source": "powertochoose"
+    },
+    {
       "supplier": "BKV Energy",
       "term": 12,
       "rate": 14.2,
@@ -634,6 +689,17 @@
       "source": "powertochoose"
     },
     {
+      "supplier": "Atlantex Power",
+      "term": 15,
+      "rate": 14.2,
+      "renewable_pct": 35,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "service_area": "tnmp",
+      "plan_name": "Smart Secure 15",
+      "source": "powertochoose"
+    },
+    {
       "supplier": "Chariot Energy",
       "term": 24,
       "rate": 14.2,
@@ -664,6 +730,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "aep",
       "plan_name": "Daisy 18",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "Atlantex Power",
+      "term": 36,
+      "rate": 14.4,
+      "renewable_pct": 35,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "service_area": "aep",
+      "plan_name": "Smart Secure 36",
       "source": "powertochoose"
     },
     {
@@ -812,6 +889,17 @@
       "plan_name": "Think Clean 36",
       "source": "powertochoose",
       "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
+      "supplier": "Atlantex Power",
+      "term": 36,
+      "rate": 15.1,
+      "renewable_pct": 35,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "service_area": "tnmp",
+      "plan_name": "Smart Secure 36",
+      "source": "powertochoose"
     },
     {
       "supplier": "BKV Energy",
@@ -970,6 +1058,17 @@
       "base_fee_note": "+$4.95/mo base fee"
     },
     {
+      "supplier": "Atlantex Power",
+      "term": 15,
+      "rate": 16.5,
+      "renewable_pct": 35,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "service_area": "lubbock",
+      "plan_name": "Smart Secure 15",
+      "source": "powertochoose"
+    },
+    {
       "supplier": "Payless Power",
       "term": 12,
       "rate": 16.6,
@@ -991,6 +1090,17 @@
       "plan_name": "Think Clean 36",
       "source": "powertochoose",
       "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
+      "supplier": "Atlantex Power",
+      "term": 36,
+      "rate": 17.5,
+      "renewable_pct": 35,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "service_area": "lubbock",
+      "plan_name": "Smart Secure 36",
+      "source": "powertochoose"
     },
     {
       "supplier": "Payless Power",
