@@ -78,6 +78,9 @@ SUPPLIER_CONFIG = {
     },
     "clean sky energy": {
         "display_name": "Clean Sky Energy",
+    },
+    "cleansky": {
+        "display_name": "Clean Sky Energy",
         "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
         "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
         "renewable_pct_override": 100,
@@ -359,6 +362,9 @@ def build_rates_json():
                 print(f"  {label}: {count} plans matched")
 
             print(f"  Suppliers: {dict(supplier_counts)}")
+            # Debug: find Clean Sky name in CSV
+            sky = sorted(set((p.get("[RepCompany]") or "").strip() for p in raw if "sky" in (p.get("[RepCompany]") or "").lower() or "clean" in (p.get("[RepCompany]") or "").lower()))
+            if sky: print(f"  Clean Sky variants in CSV: {sky}")
             plans = matched
             live_count = len(plans)
             areas_live = list(SERVICE_AREA_LABELS.values())
@@ -389,6 +395,9 @@ def build_rates_json():
         live_count = 0
         areas_live = []
         areas_fallback = list(SERVICE_AREA_LABELS.values())
+
+    # Remove plans under 12 months — Amerigy focuses on longer-term contracts
+    plans = [p for p in plans if p["term"] >= 12]
 
     plans.sort(key=lambda x: (x["rate"], x["term"]))
 
