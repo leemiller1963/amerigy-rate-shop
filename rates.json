@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-03-11T14:40:14Z",
-  "updated_display": "2:40 PM UTC, March 11, 2026",
+  "updated_at": "2026-03-11T15:35:34Z",
+  "updated_display": "3:35 PM UTC, March 11, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -337,17 +337,6 @@
       "source": "powertochoose"
     },
     {
-      "supplier": "Clean Sky Energy",
-      "term": 12,
-      "rate": 14.2,
-      "renewable_pct": 100,
-      "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
-      "service_area": "aep",
-      "plan_name": "Embrace Green 12 - New Customer Special",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "APG&E",
       "term": 12,
       "rate": 14.2,
@@ -400,6 +389,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "centerpoint",
       "plan_name": "Daisy 18",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "Clean Sky Energy",
+      "term": 12,
+      "rate": 14.4,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
+      "service_area": "aep",
+      "plan_name": "Embrace Green 12 - New Customer Special",
       "source": "powertochoose"
     },
     {
@@ -525,6 +525,17 @@
       "source": "powertochoose"
     },
     {
+      "supplier": "Chariot Energy",
+      "term": 15,
+      "rate": 14.8,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "service_area": "tnmp",
+      "plan_name": "Bright Nights 15",
+      "source": "powertochoose"
+    },
+    {
       "supplier": "Clean Sky Energy",
       "term": 24,
       "rate": 14.8,
@@ -581,6 +592,17 @@
     },
     {
       "supplier": "BKV Energy",
+      "term": 18,
+      "rate": 14.9,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "oncor",
+      "plan_name": "Daisy 18",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "BKV Energy",
       "term": 12,
       "rate": 15.0,
       "renewable_pct": 29,
@@ -588,28 +610,6 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "aep",
       "plan_name": "Daisy 12",
-      "source": "powertochoose"
-    },
-    {
-      "supplier": "Chariot Energy",
-      "term": 15,
-      "rate": 15.0,
-      "renewable_pct": 100,
-      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "service_area": "tnmp",
-      "plan_name": "Bright Nights 15",
-      "source": "powertochoose"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 18,
-      "rate": 15.0,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "oncor",
-      "plan_name": "Daisy 18",
       "source": "powertochoose"
     },
     {
@@ -645,6 +645,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
       "service_area": "lubbock",
       "plan_name": "Frontier Power Saver 12",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 13,
+      "rate": 15.1,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "aep",
+      "plan_name": "Daisy 13",
       "source": "powertochoose"
     },
     {
@@ -704,28 +715,6 @@
       "source": "powertochoose"
     },
     {
-      "supplier": "Clean Sky Energy",
-      "term": 12,
-      "rate": 15.2,
-      "renewable_pct": 100,
-      "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
-      "service_area": "lubbock",
-      "plan_name": "Embrace Green 12 - New Customer Special",
-      "source": "powertochoose"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 13,
-      "rate": 15.2,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "aep",
-      "plan_name": "Daisy 13",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 13,
       "rate": 15.2,
@@ -759,20 +748,9 @@
       "source": "powertochoose"
     },
     {
-      "supplier": "Chariot Energy",
-      "term": 24,
-      "rate": 15.3,
-      "renewable_pct": 100,
-      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "service_area": "tnmp",
-      "plan_name": "Bright Nights 24",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 18,
-      "rate": 15.4,
+      "rate": 15.3,
       "renewable_pct": 29,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
@@ -815,6 +793,17 @@
     },
     {
       "supplier": "Chariot Energy",
+      "term": 24,
+      "rate": 15.5,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "service_area": "tnmp",
+      "plan_name": "Bright Nights 24",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "Chariot Energy",
       "term": 36,
       "rate": 15.5,
       "renewable_pct": 100,
@@ -822,6 +811,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "tnmp",
       "plan_name": "Bright Nights 36",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "Clean Sky Energy",
+      "term": 12,
+      "rate": 15.6,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
+      "service_area": "lubbock",
+      "plan_name": "Embrace Green 12 - New Customer Special",
       "source": "powertochoose"
     },
     {
@@ -880,14 +880,14 @@
       "source": "powertochoose"
     },
     {
-      "supplier": "Clean Sky Energy",
-      "term": 24,
-      "rate": 16.0,
-      "renewable_pct": 100,
-      "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
+      "supplier": "BKV Energy",
+      "term": 18,
+      "rate": 16.1,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "lubbock",
-      "plan_name": "Embrace Green 24 - New Customer Special",
+      "plan_name": "Daisy 18",
       "source": "powertochoose"
     },
     {
@@ -914,14 +914,14 @@
       "base_fee_note": "+$4.95/mo base fee"
     },
     {
-      "supplier": "BKV Energy",
-      "term": 18,
-      "rate": 16.2,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "supplier": "Clean Sky Energy",
+      "term": 24,
+      "rate": 16.3,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
       "service_area": "lubbock",
-      "plan_name": "Daisy 18",
+      "plan_name": "Embrace Green 24 - New Customer Special",
       "source": "powertochoose"
     },
     {
