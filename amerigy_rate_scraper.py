@@ -73,18 +73,25 @@ def fetch_cleansky_rates(util_key="oncor"):
     Energy charge: energy_charge1 * 100 = ¢/kWh
     """
     zip_code = CLEANSKY_AREA_ZIPS.get(util_key, "75901")
+    # Do NOT set Content-Type manually — let requests set it with the boundary
+    # when using files= for true multipart/form-data (matching browser behavior)
     headers = {
-        "Content-Type": "multipart/form-data",
         "Origin": "https://signup.cleanskyenergy.com",
         "Referer": "https://signup.cleanskyenergy.com/",
-        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "en-US,en;q=0.9",
     }
+
+    def multipart(fields):
+        """Convert dict to files= format for true multipart/form-data."""
+        return {k: (None, v) for k, v in fields.items()}
 
     try:
         # Step 1: Get utility_code for this ZIP
         utility_resp = requests.post(
             f"{CLEANSKY_API_BASE}/utility",
-            data={"zipcode": zip_code, "promo_code": CLEANSKY_PROMO},
+            files=multipart({"zipcode": zip_code, "promo_code": CLEANSKY_PROMO}),
             headers=headers,
             timeout=15,
         )
@@ -103,11 +110,11 @@ def fetch_cleansky_rates(util_key="oncor"):
         # Step 2: Fetch plans
         rate_resp = requests.post(
             f"{CLEANSKY_API_BASE}/enrollment/rate",
-            data={
+            files=multipart({
                 "zipcode": zip_code,
-                "utility_code": utility_code,
+                "utility_code": str(utility_code),
                 "promo_code": CLEANSKY_PROMO,
-            },
+            }),
             headers=headers,
             timeout=15,
         )
@@ -160,32 +167,44 @@ def fetch_bkv_rates(util_key="oncor"):
     )
     headers = {
         "Accept": "application/json, text/javascript, */*; q=0.01",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Accept-Encoding": "gzip, deflate, br",
         "X-Requested-With": "XMLHttpRequest",
         "Referer": f"{BKV_API_BASE}/Home/Plans/Verbena?promocode={BKV_PROMO}",
         "User-Agent": (
             "Mozilla/5.0 (Windows NT 10.0; Win64; x64) "
             "AppleWebKit/537.36 (KHTML, like Gecko) "
-            "Chrome/122.0.0.0 Safari/537.36"
+            "Chrome/124.0.0.0 Safari/537.36"
         ),
+        "sec-ch-ua": '"Chromium";v="124", "Google Chrome";v="124", "Not-A.Brand";v="99"',
+        "sec-ch-ua-mobile": "?0",
+        "sec-ch-ua-platform": '"Windows"',
+        "Sec-Fetch-Dest": "empty",
+        "Sec-Fetch-Mode": "cors",
+        "Sec-Fetch-Site": "same-origin",
     }
 
     session = requests.Session()
 
     # Prime the session by hitting the promo landing page first
     try:
-        session.get(
+        prime_resp = session.get(
             f"{BKV_API_BASE}/Home/Promo?Promocode={BKV_PROMO}",
-            headers={"User-Agent": headers["User-Agent"]},
+            headers={"User-Agent": headers["User-Agent"], "Accept": "text/html,*/*"},
             timeout=15,
         )
-        time.sleep(1)
-    except Exception:
-        pass
+        print(f"    BKV session prime: HTTP {prime_resp.status_code}, {len(prime_resp.content)} bytes")
+        time.sleep(2)
+    except Exception as e:
+        print(f"    BKV session prime failed: {e}")
 
     try:
         resp = session.get(url, headers=headers, timeout=20)
         if resp.status_code != 200:
-            print(f"  BKV API returned HTTP {resp.status_code}")
+            print(f"  BKV API returned HTTP {resp.status_code} ({len(resp.content)} bytes)")
+            return None
+        if not resp.content:
+            print(f"  BKV API returned empty response (bot detection likely)")
             return None
 
         data = resp.json()
