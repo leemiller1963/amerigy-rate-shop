@@ -103,21 +103,17 @@ def match_supplier(company_name):
 
 
 def fetch_ptc_plans(zip_code, area_key):
-    """Fetch all plans from Power to Choose for a given ZIP code."""
-    params = {
-        "zip_code": zip_code,
-        "key": "",
-        "efficiency_type": 0,
-        "renewable_energy_id": 0,
-        "time_of_use": 0,
-        "prepaid": 0,
-        "plan_type": 0,
-        "page_number": 1,
-        "er": 0,
-    }
+    """Fetch all plans from Power to Choose for a given ZIP code.
+    
+    Uses POST to the search endpoint which returns the full plan database,
+    not just featured/sponsored plans like the GET endpoint.
+    """
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        "Accept": "application/json",
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "en-US,en;q=0.9",
+        "Content-Type": "application/json",
+        "Origin": "https://www.powertochoose.org",
         "Referer": "https://www.powertochoose.org/",
     }
 
@@ -125,9 +121,20 @@ def fetch_ptc_plans(zip_code, area_key):
     page = 1
 
     while True:
-        params["page_number"] = page
+        payload = {
+            "zip_code": zip_code,
+            "key": "",
+            "efficiency_type": "0",
+            "renewable_energy_id": "0",
+            "time_of_use": "0",
+            "prepaid": "0",
+            "plan_type": "0",
+            "page_number": page,
+            "er": "0",
+            "isEFLneeded": "0",
+        }
         try:
-            r = requests.get(PTC_API, params=params, headers=headers, timeout=20)
+            r = requests.post(PTC_API, json=payload, headers=headers, timeout=20)
             r.raise_for_status()
             data = r.json()
         except Exception as e:
@@ -141,6 +148,7 @@ def fetch_ptc_plans(zip_code, area_key):
         all_plans.extend(records)
 
         record_count = data.get("recordCount", 0)
+        print(f"    Page {page}: {len(records)} plans (total: {len(all_plans)} of {record_count})")
         if len(all_plans) >= record_count or len(records) == 0:
             break
         page += 1
@@ -364,6 +372,10 @@ def build_rates_json():
         live_count += len(matched)
 
         found = sorted(set(p["supplier"] for p in matched))
+        # Debug: show actual company names from API on first area
+        if area_key == "oncor" and not matched:
+            all_companies = sorted(set(p.get("company_name","") for p in raw))
+            print(f"    DEBUG company names in API response: {all_companies}")
         print(f"  ✓ {label}: {len(raw)} total plans, {len(matched)} matched ({', '.join(found) if found else 'none of our suppliers found'})")
 
         time.sleep(0.5)
