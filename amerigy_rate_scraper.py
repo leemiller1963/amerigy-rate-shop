@@ -33,7 +33,7 @@ SERVICE_AREA_LABELS = {
     "oncor":       "Oncor (DFW / East Texas)",
     "centerpoint": "CenterPoint (Houston)",
     "aep":         "AEP (West / South Texas)",
-    "tnmp":        "TNMP (Bryan / New Braunfels)",
+    "tnmp":        "TNMP (Gulf Coast / West Texas)",
     "lubbock":     "Lubbock Power & Light",
 }
 
@@ -135,22 +135,25 @@ def fetch_all_ptc_plans():
 
 
 def process_ptc_plans(raw_plans):
-    """Filter CSV plans for our suppliers across all service areas."""
+    """Filter CSV plans for our suppliers across all service areas.
+    
+    CSV columns use bracketed names e.g. [RepCompany], [TduCompanyName], [kwh2000].
+    """
     best = {}  # (display_name, term, area_key) -> plan dict (keep lowest rate)
 
     for p in raw_plans:
-        company = p.get("company_name", "") or p.get("Company Name", "")
+        company = (p.get("[RepCompany]") or "").strip()
         config = match_supplier(company)
         if not config:
             continue
 
         # Map TDU to service area
-        tdu = (p.get("tdu_company_name", "") or p.get("TDU Company Name", "") or "").lower().strip()
+        tdu = (p.get("[TduCompanyName]") or "").lower().strip()
         area_key = TDU_TO_AREA.get(tdu)
         if not area_key:
             continue
 
-        term_raw = p.get("term_value") or p.get("Term Value") or "0"
+        term_raw = p.get("[TermValue]") or "0"
         try:
             term = int(float(str(term_raw).strip()))
         except (ValueError, TypeError):
@@ -158,7 +161,8 @@ def process_ptc_plans(raw_plans):
         if term <= 0:
             continue
 
-        rate_raw = p.get("price_kwh") or p.get("Price KWH") or "0"
+        # [kwh2000] = all-in rate at 2000 kWh (cents)
+        rate_raw = p.get("[kwh2000]") or "0"
         try:
             rate = round(float(str(rate_raw).strip()), 1)
         except (ValueError, TypeError):
@@ -170,7 +174,7 @@ def process_ptc_plans(raw_plans):
         if key in best and rate >= best[key]["rate"]:
             continue
 
-        renewable_raw = p.get("renewable_energy_credit") or p.get("Renewable Energy Credit") or "0"
+        renewable_raw = p.get("[Renewable]") or "0"
         try:
             renewable = int(float(str(renewable_raw).strip()))
         except (ValueError, TypeError):
@@ -185,7 +189,7 @@ def process_ptc_plans(raw_plans):
             "enroll_url":    config["enroll_url"],
             "logo":          config["logo"],
             "service_area":  area_key,
-            "plan_name":     p.get("plan_name") or p.get("Plan Name") or "",
+            "plan_name":     (p.get("[Product]") or "").strip(),
             "source":        "powertochoose",
         }
         if "base_fee_note" in config:
@@ -362,13 +366,18 @@ def build_rates_json():
             print("  CSV fetched but 0 of our suppliers matched — check company names")
             # Debug: show sample company names
             companies = sorted(set(
-                (p.get("company_name") or p.get("Company Name") or "").strip()
+                (p.get("[RepCompany]") or "").strip()
                 for p in raw[:200]
             ))
             print(f"  Sample company names: {companies[:20]}")
             # Also print actual CSV column headers
             if raw:
                 print(f"  CSV columns: {list(raw[0].keys())}")
+            # Show sample RepCompany and TduCompanyName values
+            companies2 = sorted(set((p.get("[RepCompany]") or "").strip() for p in raw if p.get("[RepCompany]","").strip()))
+            tdus = sorted(set((p.get("[TduCompanyName]") or "").strip() for p in raw if p.get("[TduCompanyName]","").strip()))
+            print(f"  Sample [RepCompany]: {companies2[:15]}")
+            print(f"  All [TduCompanyName]: {tdus}")
             plans = FALLBACK_PLANS.copy()
             live_count = 0
             areas_live = []
@@ -404,3 +413,4 @@ def build_rates_json():
 
 if __name__ == "__main__":
     build_rates_json()
+
