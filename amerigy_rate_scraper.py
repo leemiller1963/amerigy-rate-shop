@@ -14,16 +14,19 @@ import requests
 import time
 from datetime import datetime, timezone
 
-# ── POWER TO CHOOSE API ────────────────────────────────────────────────────────
-PTC_API = "https://api.powertochoose.org/api/PowerToChoose/plans"
+# ── POWER TO CHOOSE CSV EXPORT ────────────────────────────────────────────────
+# Full statewide plan database as CSV — updated daily by PUCT.
+# No auth, no bot detection, works from GitHub Actions.
+PTC_CSV_URL = "https://www.powertochoose.org/en-us/Plan/ExportToCsv"
 
-# One representative ZIP per service area
-SERVICE_AREA_ZIPS = {
-    "oncor":       "75901",   # Lufkin — Oncor (DFW / East Texas)
-    "centerpoint": "77002",   # Houston — CenterPoint
-    "aep":         "79601",   # Abilene — AEP (West / South Texas)
-    "tnmp":        "76528",   # Gatesville — TNMP
-    "lubbock":     "79401",   # Lubbock — Lubbock Power & Light
+# TDU name strings in the CSV tdu_company_name field → our area keys
+TDU_TO_AREA = {
+    "oncor electric delivery":   "oncor",
+    "centerpoint energy":        "centerpoint",
+    "aep texas central":         "aep",
+    "aep texas north":           "aep",
+    "texas-new mexico power":    "tnmp",
+    "lubbock power & light":     "lubbock",
 }
 
 SERVICE_AREA_LABELS = {
@@ -102,91 +105,77 @@ def match_supplier(company_name):
     return None
 
 
-def fetch_ptc_plans(zip_code, area_key):
-    """Fetch all plans from Power to Choose for a given ZIP code.
+def fetch_all_ptc_plans():
+    """Download full Texas plan database from Power to Choose CSV export.
     
-    Uses POST to the search endpoint which returns the full plan database,
-    not just featured/sponsored plans like the GET endpoint.
+    Returns list of dicts with keys matching CSV columns, or empty list on failure.
+    CSV columns include: zip_code, company_name, plan_name, term_value,
+    price_kwh, renewable_energy_credit, tdu_company_name, plan_type_name, etc.
     """
     headers = {
         "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-        "Accept": "application/json, text/plain, */*",
-        "Accept-Language": "en-US,en;q=0.9",
-        "Content-Type": "application/json",
-        "Origin": "https://www.powertochoose.org",
+        "Accept": "text/csv,text/plain,*/*",
         "Referer": "https://www.powertochoose.org/",
     }
+    try:
+        r = requests.get(PTC_CSV_URL, headers=headers, timeout=30)
+        r.raise_for_status()
+        print(f"  PTC CSV: HTTP {r.status_code}, {len(r.content):,} bytes")
 
-    all_plans = []
-    page = 1
-
-    while True:
-        payload = {
-            "zip_code": zip_code,
-            "key": "",
-            "efficiency_type": "0",
-            "renewable_energy_id": "0",
-            "time_of_use": "0",
-            "prepaid": "0",
-            "plan_type": "0",
-            "page_number": page,
-            "er": "0",
-            "isEFLneeded": "0",
-        }
-        try:
-            r = requests.post(PTC_API, json=payload, headers=headers, timeout=20)
-            r.raise_for_status()
-            data = r.json()
-        except Exception as e:
-            print(f"    PTC fetch error (ZIP {zip_code}, page {page}): {e}")
-            break
-
-        records = data.get("data", [])
-        if not records:
-            break
-
-        all_plans.extend(records)
-
-        record_count = data.get("recordCount", 0)
-        print(f"    Page {page}: {len(records)} plans (total: {len(all_plans)} of {record_count})")
-        if len(all_plans) >= record_count or len(records) == 0:
-            break
-        page += 1
-        time.sleep(0.3)
-
-    return all_plans
+        # Parse CSV
+        import csv, io
+        text = r.content.decode("utf-8-sig")  # strip BOM if present
+        reader = csv.DictReader(io.StringIO(text))
+        plans = list(reader)
+        print(f"  PTC CSV: {len(plans):,} total plans in database")
+        return plans
+    except Exception as e:
+        print(f"  PTC CSV fetch failed: {e}")
+        return []
 
 
-def process_ptc_plans(raw_plans, area_key):
-    """Filter and format Power to Choose plans for our 9 suppliers."""
-    best = {}  # (display_name, term) -> plan dict (keep lowest rate)
+def process_ptc_plans(raw_plans):
+    """Filter CSV plans for our suppliers across all service areas."""
+    best = {}  # (display_name, term, area_key) -> plan dict (keep lowest rate)
 
     for p in raw_plans:
-        company = p.get("company_name", "")
+        company = p.get("company_name", "") or p.get("Company Name", "")
         config = match_supplier(company)
         if not config:
             continue
 
-        term = int(p.get("term_value") or 0)
+        # Map TDU to service area
+        tdu = (p.get("tdu_company_name", "") or p.get("TDU Company Name", "") or "").lower().strip()
+        area_key = TDU_TO_AREA.get(tdu)
+        if not area_key:
+            continue
+
+        term_raw = p.get("term_value") or p.get("Term Value") or "0"
+        try:
+            term = int(float(str(term_raw).strip()))
+        except (ValueError, TypeError):
+            continue
         if term <= 0:
             continue
 
-        # price_kwh = all-in rate at 2000 kWh in cents
+        rate_raw = p.get("price_kwh") or p.get("Price KWH") or "0"
         try:
-            rate = round(float(p.get("price_kwh") or 0), 1)
-        except (TypeError, ValueError):
+            rate = round(float(str(rate_raw).strip()), 1)
+        except (ValueError, TypeError):
             continue
         if rate <= 0:
             continue
 
         key = (config["display_name"], term, area_key)
         if key in best and rate >= best[key]["rate"]:
-            continue  # keep the lower rate
+            continue
 
-        renewable = (
-            config.get("renewable_pct_override")
-            or int(p.get("renewable_energy_credit") or 0)
-        )
+        renewable_raw = p.get("renewable_energy_credit") or p.get("Renewable Energy Credit") or "0"
+        try:
+            renewable = int(float(str(renewable_raw).strip()))
+        except (ValueError, TypeError):
+            renewable = 0
+        renewable = config.get("renewable_pct_override") or renewable
 
         plan = {
             "supplier":      config["display_name"],
@@ -196,7 +185,7 @@ def process_ptc_plans(raw_plans, area_key):
             "enroll_url":    config["enroll_url"],
             "logo":          config["logo"],
             "service_area":  area_key,
-            "plan_name":     p.get("plan_name", ""),
+            "plan_name":     p.get("plan_name") or p.get("Plan Name") or "",
             "source":        "powertochoose",
         }
         if "base_fee_note" in config:
@@ -351,67 +340,63 @@ FALLBACK_PLANS = [
 # ── MAIN BUILD FUNCTION ────────────────────────────────────────────────────────
 
 def build_rates_json():
-    all_live_plans = []
-    live_count = 0
-    failed_areas = []
+    print("Downloading Power to Choose CSV...")
+    raw = fetch_all_ptc_plans()
 
-    print("Fetching live rates from Power to Choose API...")
-
-    for area_key, zip_code in SERVICE_AREA_ZIPS.items():
-        label = SERVICE_AREA_LABELS[area_key]
-        print(f"  Fetching {label} (ZIP {zip_code})...")
-
-        raw = fetch_ptc_plans(zip_code, area_key)
-        if not raw:
-            failed_areas.append(area_key)
-            print(f"  ✗ {label}: no data returned")
-            continue
-
-        matched = process_ptc_plans(raw, area_key)
-        all_live_plans.extend(matched)
-        live_count += len(matched)
-
-        found = sorted(set(p["supplier"] for p in matched))
-        # Debug: show actual company names from API on first area
-        if area_key == "oncor" and not matched:
-            all_companies = sorted(set(p.get("company_name","") for p in raw))
-            print(f"    DEBUG company names in API response: {all_companies}")
-        print(f"  ✓ {label}: {len(raw)} total plans, {len(matched)} matched ({', '.join(found) if found else 'none of our suppliers found'})")
-
-        time.sleep(0.5)
-
-    if all_live_plans:
-        plans = all_live_plans
-        print(f"\n✓ Using live Power to Choose data: {len(plans)} plans")
+    if raw:
+        matched = process_ptc_plans(raw)
+        if matched:
+            # Show summary by area
+            from collections import Counter
+            area_counts = Counter(p["service_area"] for p in matched)
+            supplier_counts = Counter(p["supplier"] for p in matched)
+            for area_key, label in SERVICE_AREA_LABELS.items():
+                count = area_counts.get(area_key, 0)
+                print(f"  {label}: {count} plans matched")
+            print(f"  Suppliers: {dict(supplier_counts)}")
+            plans = matched
+            live_count = len(plans)
+            areas_live = list(SERVICE_AREA_LABELS.values())
+            areas_fallback = []
+        else:
+            print("  CSV fetched but 0 of our suppliers matched — check company names")
+            # Debug: show sample company names
+            companies = sorted(set(
+                (p.get("company_name") or p.get("Company Name") or "").strip()
+                for p in raw[:200]
+            ))
+            print(f"  Sample company names: {companies[:20]}")
+            plans = FALLBACK_PLANS.copy()
+            live_count = 0
+            areas_live = []
+            areas_fallback = list(SERVICE_AREA_LABELS.values())
     else:
-        print("\n✗ All PTC fetches failed — using full manual fallback")
+        print("  CSV fetch failed — using manual fallback")
         plans = FALLBACK_PLANS.copy()
+        live_count = 0
+        areas_live = []
+        areas_fallback = list(SERVICE_AREA_LABELS.values())
 
     plans.sort(key=lambda x: (x["rate"], x["term"]))
 
     now = datetime.now(timezone.utc)
-    areas_live = [SERVICE_AREA_LABELS[k] for k in SERVICE_AREA_LABELS if k not in failed_areas]
-    areas_fallback = [SERVICE_AREA_LABELS[k] for k in failed_areas]
-
     output = {
-        "updated_at": now.strftime("%Y-%m-%dT%H:%M:%SZ"),
-        "updated_display": now.strftime("%I:%M %p UTC, %B %d, %Y").lstrip("0").replace(" 0", " "),
-        "source": "powertochoose" if all_live_plans else "fallback",
-        "service_areas_live": areas_live,
+        "updated_at":           now.strftime("%Y-%m-%dT%H:%M:%SZ"),
+        "updated_display":      now.strftime("%I:%M %p UTC, %B %d, %Y").lstrip("0").replace(" 0", " "),
+        "source":               "powertochoose" if live_count else "fallback",
+        "service_areas_live":   areas_live,
         "service_areas_fallback": areas_fallback,
-        "usage_kwh": 2000,
-        "live_plans": live_count,
-        "total_plans": len(plans),
-        "plans": plans,
+        "usage_kwh":            2000,
+        "live_plans":           live_count,
+        "total_plans":          len(plans),
+        "plans":                plans,
     }
 
     with open("rates.json", "w") as f:
         json.dump(output, f, indent=2)
 
-    print(f"✓ rates.json written: {len(plans)} plans ({live_count} live, {len(plans)-live_count} fallback)")
+    print(f"\n✓ rates.json written: {len(plans)} plans ({live_count} live, {len(plans)-live_count} fallback)")
     print(f"  Updated: {output['updated_display']}")
-    if failed_areas:
-        print(f"  Fallback areas: {', '.join(failed_areas)}")
 
 
 if __name__ == "__main__":
