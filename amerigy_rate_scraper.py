@@ -366,6 +366,9 @@ def build_rates_json():
                 for p in raw[:200]
             ))
             print(f"  Sample company names: {companies[:20]}")
+            # Also print actual CSV column headers
+            if raw:
+                print(f"  CSV columns: {list(raw[0].keys())}")
             plans = FALLBACK_PLANS.copy()
             live_count = 0
             areas_live = []
