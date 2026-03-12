@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-03-12T15:44:11Z",
-  "updated_display": "3:44 PM UTC, March 12, 2026",
+  "updated_at": "2026-03-12T16:45:08Z",
+  "updated_display": "4:45 PM UTC, March 12, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -459,17 +459,6 @@
       "source": "powertochoose"
     },
     {
-      "supplier": "BKV Energy",
-      "term": 12,
-      "rate": 14.6,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "oncor",
-      "plan_name": "Daisy 12",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "APG&E",
       "term": 18,
       "rate": 14.6,
@@ -515,8 +504,19 @@
     },
     {
       "supplier": "BKV Energy",
-      "term": 15,
+      "term": 12,
       "rate": 14.7,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "oncor",
+      "plan_name": "Daisy 12",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 15,
+      "rate": 14.8,
       "renewable_pct": 29,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
@@ -593,23 +593,12 @@
     {
       "supplier": "BKV Energy",
       "term": 18,
-      "rate": 14.9,
+      "rate": 15.0,
       "renewable_pct": 29,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "oncor",
       "plan_name": "Daisy 18",
-      "source": "powertochoose"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 12,
-      "rate": 15.0,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "aep",
-      "plan_name": "Daisy 12",
       "source": "powertochoose"
     },
     {
@@ -645,17 +634,6 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
       "service_area": "lubbock",
       "plan_name": "Frontier Power Saver 12",
-      "source": "powertochoose"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 13,
-      "rate": 15.1,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "aep",
-      "plan_name": "Daisy 13",
       "source": "powertochoose"
     },
     {
@@ -710,19 +688,8 @@
       "renewable_pct": 29,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "lubbock",
+      "service_area": "aep",
       "plan_name": "Daisy 12",
-      "source": "powertochoose"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 13,
-      "rate": 15.2,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "lubbock",
-      "plan_name": "Daisy 13",
       "source": "powertochoose"
     },
     {
@@ -749,13 +716,35 @@
     },
     {
       "supplier": "BKV Energy",
-      "term": 18,
+      "term": 12,
+      "rate": 15.3,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "lubbock",
+      "plan_name": "Daisy 12",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 13,
       "rate": 15.3,
       "renewable_pct": 29,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "aep",
-      "plan_name": "Daisy 18",
+      "plan_name": "Daisy 13",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 13,
+      "rate": 15.3,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "lubbock",
+      "plan_name": "Daisy 13",
       "source": "powertochoose"
     },
     {
@@ -800,6 +789,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "lubbock",
       "plan_name": "TrueClassic 12",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 18,
+      "rate": 15.5,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "aep",
+      "plan_name": "Daisy 18",
       "source": "powertochoose"
     },
     {
@@ -880,17 +880,6 @@
       "source": "powertochoose"
     },
     {
-      "supplier": "BKV Energy",
-      "term": 18,
-      "rate": 16.1,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "lubbock",
-      "plan_name": "Daisy 18",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "Atlantex Power",
       "term": 36,
       "rate": 16.1,
@@ -912,6 +901,17 @@
       "plan_name": "Think Clean 12 with Smart Thermostat Connected",
       "source": "powertochoose",
       "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 18,
+      "rate": 16.2,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "lubbock",
+      "plan_name": "Daisy 18",
+      "source": "powertochoose"
     },
     {
       "supplier": "Clean Sky Energy",
@@ -1003,17 +1003,6 @@
       "source": "powertochoose"
     },
     {
-      "supplier": "BKV Energy",
-      "term": 12,
-      "rate": 16.5,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "tnmp",
-      "plan_name": "Daisy 12",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "APG&E",
       "term": 18,
       "rate": 16.5,
@@ -1033,6 +1022,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "tnmp",
       "plan_name": "TrueClassic 36",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 12,
+      "rate": 16.6,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "tnmp",
+      "plan_name": "Daisy 12",
       "source": "powertochoose"
     },
     {
