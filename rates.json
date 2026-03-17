@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-03-17T21:25:23Z",
-  "updated_display": "9:25 PM UTC, March 17, 2026",
+  "updated_at": "2026-03-17T22:20:48Z",
+  "updated_display": "10:20 PM UTC, March 17, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -159,17 +159,6 @@
       "source": "powertochoose"
     },
     {
-      "supplier": "Chariot Energy",
-      "term": 24,
-      "rate": 13.6,
-      "renewable_pct": 100,
-      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "service_area": "oncor",
-      "plan_name": "Bright Nights 24",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "Frontier Utilities",
       "term": 12,
       "rate": 13.7,
@@ -212,17 +201,6 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "aep",
       "plan_name": "Bright Nights 24",
-      "source": "powertochoose"
-    },
-    {
-      "supplier": "Chariot Energy",
-      "term": 36,
-      "rate": 13.8,
-      "renewable_pct": 100,
-      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "service_area": "oncor",
-      "plan_name": "Bright Nights 36",
       "source": "powertochoose"
     },
     {
@@ -359,6 +337,17 @@
       "source": "powertochoose"
     },
     {
+      "supplier": "Chariot Energy",
+      "term": 24,
+      "rate": 14.2,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "service_area": "oncor",
+      "plan_name": "Chariot Choice 24",
+      "source": "powertochoose"
+    },
+    {
       "supplier": "APG&E",
       "term": 18,
       "rate": 14.3,
@@ -457,6 +446,17 @@
       "plan_name": "Think Clean 36",
       "source": "powertochoose",
       "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
+      "supplier": "Chariot Energy",
+      "term": 36,
+      "rate": 14.4,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "service_area": "oncor",
+      "plan_name": "Chariot Choice 36",
+      "source": "powertochoose"
     },
     {
       "supplier": "BKV Energy",
