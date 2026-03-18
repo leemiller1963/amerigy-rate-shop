@@ -163,8 +163,14 @@ def fetch_bkv_plans():
                   "PromoCode": BKV_PROMO, "CustomerTypeID": "1"}
         try:
             r = requests.get(BKV_API_URL, params=params, headers=headers, timeout=15)
-            r.raise_for_status()
+            print(f"  BKV {area_key}: HTTP {r.status_code}, {len(r.content)} bytes")
+            if r.status_code != 200:
+                print(f"    Response: {r.text[:200]}")
+                continue
             data = r.json()
+            if not data:
+                print(f"    Empty response — promo code or key may be wrong")
+                continue
         except Exception as e:
             print(f"  BKV API error ({area_key}): {e}")
             continue
@@ -219,7 +225,10 @@ def fetch_apge_plans():
         }
         try:
             r = requests.post(APGE_API_URL, json=payload, headers=headers, timeout=15)
-            r.raise_for_status()
+            print(f"  APG&E {ldc}: HTTP {r.status_code}, {len(r.content)} bytes")
+            if r.status_code != 200:
+                print(f"    Response: {r.text[:300]}")
+                continue
             data = r.json()
         except Exception as e:
             print(f"  APG&E API error ({ldc}): {e}")
