@@ -38,7 +38,7 @@ BKV_ZIPS = {
 }
 
 # ── CHARIOT ENERGY BROKER API ─────────────────────────────────────────────────
-CHARIOT_API_URL  = "http://35.174.234.23:8084/v3/broker/GetPlans"
+CHARIOT_API_URL  = "http://35.174.234.23:8084/"
 CHARIOT_API_KEY  = "IKt1-VJEZ05li-UU5M"
 CHARIOT_PROMO    = "AMERIGY050"
 
