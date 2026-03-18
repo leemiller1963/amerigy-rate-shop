@@ -237,7 +237,7 @@ def fetch_chariot_plans():
 
     for area_key, zip_code in CHARIOT_ZIPS.items():
         params = {"Key": CHARIOT_API_KEY, "Zip": zip_code,
-                  "PromoCode": CHARIOT_PROMO, "CustomerTypeID": "1"}
+                  "PromoCode": AMERIGY050, "CustomerTypeID": "1"}
         try:
             r = requests.get(CHARIOT_API_URL, params=params, headers=headers, timeout=15)
             if r.status_code != 200:
