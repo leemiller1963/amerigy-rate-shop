@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-03-18T14:12:24Z",
-  "updated_display": "2:12 PM UTC, March 18, 2026",
+  "updated_at": "2026-03-18T15:58:15Z",
+  "updated_display": "3:58 PM UTC, March 18, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -459,17 +459,6 @@
       "source": "powertochoose"
     },
     {
-      "supplier": "BKV Energy",
-      "term": 15,
-      "rate": 14.5,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "aep",
-      "plan_name": "Daisy 15",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "APG&E",
       "term": 24,
       "rate": 14.5,
@@ -522,6 +511,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
       "service_area": "centerpoint",
       "plan_name": "Smart Secure 36",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 15,
+      "rate": 14.7,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "aep",
+      "plan_name": "Daisy 15",
       "source": "powertochoose"
     },
     {
