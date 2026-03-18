@@ -37,6 +37,24 @@ BKV_ZIPS = {
     "aep": "79601", "tnmp": "76528", "lubbock": "79401",
 }
 
+# ── CHARIOT ENERGY BROKER API ─────────────────────────────────────────────────
+CHARIOT_API_URL  = "http://35.174.234.23:8084/v3/broker/GetPlans"
+CHARIOT_API_KEY  = "IKt1-VJEZ05li-UU5M"
+CHARIOT_PROMO    = "AMERIGY050"
+
+CHARIOT_UTIL_TO_AREA = {
+    1: "aep",
+    2: "aep",
+    3: "centerpoint",
+    5: "oncor",
+    7: "tnmp",
+    8: "lubbock",
+}
+CHARIOT_ZIPS = {
+    "oncor": "75901", "centerpoint": "77002",
+    "aep": "79601", "tnmp": "76528", "lubbock": "79401",
+}
+
 # ── APG&E BROKER API ──────────────────────────────────────────────────────────
 APGE_API_URL      = "https://api.apge.com:9810/v1/OfferLookup"
 APGE_API_KEY      = "PgEkMbzhrnBAwXqHGpFB32sHY7T3Ll05"
@@ -207,6 +225,56 @@ def fetch_bkv_plans():
         print(f"  BKV {area_key}: {area_plans} plans")
 
     print(f"  BKV API total: {len(plans)} plans")
+    return plans
+
+
+def fetch_chariot_plans():
+    """Fetch Chariot Energy rates from their MedTractions Broker API."""
+    logo   = "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png"
+    enroll = "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050"
+    headers = {"User-Agent": "Mozilla/5.0"}
+    plans = []
+
+    for area_key, zip_code in CHARIOT_ZIPS.items():
+        params = {"Key": CHARIOT_API_KEY, "Zip": zip_code,
+                  "PromoCode": CHARIOT_PROMO, "CustomerTypeID": "1"}
+        try:
+            r = requests.get(CHARIOT_API_URL, params=params, headers=headers, timeout=15)
+            if r.status_code != 200:
+                print(f"  Chariot {area_key}: HTTP {r.status_code} — {r.text[:100]}")
+                continue
+            data = r.json()
+        except Exception as e:
+            print(f"  Chariot API error ({area_key}): {e}")
+            continue
+
+        area_count = 0
+        for block in data:
+            util_id = block.get("UtilityId")
+            mapped = CHARIOT_UTIL_TO_AREA.get(util_id, area_key)
+            for p in block.get("Plans", []):
+                try:
+                    term = int(p.get("Terms", 0))
+                    raw_rate = str(p.get("kWh2000", "0")).replace("¢", "").replace("$", "").strip()
+                    rate = round(float(raw_rate), 1)
+                except (ValueError, TypeError):
+                    continue
+                if term < 12 or rate <= 0:
+                    continue
+                try:
+                    renewable = int(float(p.get("Renewable", 0)))
+                except (ValueError, TypeError):
+                    renewable = 100  # Chariot is 100% solar
+                plans.append({
+                    "supplier": "Chariot Energy", "term": term, "rate": rate,
+                    "renewable_pct": renewable, "enroll_url": enroll, "logo": logo,
+                    "service_area": mapped, "plan_name": p.get("Title", ""),
+                    "source": "chariot_api",
+                })
+                area_count += 1
+        print(f"  Chariot {area_key}: {area_count} plans")
+
+    print(f"  Chariot API total: {len(plans)} plans")
     return plans
 
 
@@ -520,6 +588,9 @@ def build_rates_json():
     print("Fetching BKV rates from Broker API...")
     bkv_plans = fetch_bkv_plans()
 
+    print("Fetching Chariot rates from Broker API...")
+    chariot_plans = fetch_chariot_plans()
+
     print("Fetching APG&E rates from Broker API...")
     apge_plans = fetch_apge_plans()
 
@@ -527,7 +598,7 @@ def build_rates_json():
     raw = fetch_all_ptc_plans()
 
     if raw:
-        matched = process_ptc_plans(raw, exclude=["BKV Energy", "APG&E"])
+        matched = process_ptc_plans(raw, exclude=["BKV Energy", "APG&E", "Chariot Energy"])
         if matched:
             # Show summary by area
             from collections import Counter
@@ -547,7 +618,7 @@ def build_rates_json():
                 broad = sorted(set((p.get("[RepCompany]") or "").strip() for p in raw if "texas" in (p.get("[RepCompany]") or "").lower() and len((p.get("[RepCompany]") or "")) < 25))
                 print(f"  Atlantex NOT found. Short Texas names in CSV: {broad}")
             if sky: print(f"  Clean Sky variants in CSV: {sky}")
-            plans = matched + bkv_plans + apge_plans
+            plans = matched + bkv_plans + apge_plans + chariot_plans
             live_count = len(plans)
             areas_live = list(SERVICE_AREA_LABELS.values())
             areas_fallback = []
@@ -581,7 +652,7 @@ def build_rates_json():
     # Adjust rates: add 1¢ broker margin to PTC suppliers
     # BKV and Think Energy already return correct broker pricing via their APIs
     for p in plans:
-        if p["supplier"] not in ("Think Energy", "BKV Energy", "APG&E") and p.get("source") not in ("bkv_api", "apge_api"):
+        if p["supplier"] not in ("Think Energy", "BKV Energy", "APG&E", "Chariot Energy") and p.get("source") not in ("bkv_api", "apge_api", "chariot_api"):
             p["rate"] = round(p["rate"] + 1.0, 1)
 
     # Remove plans under 12 months — Amerigy focuses on longer-term contracts
