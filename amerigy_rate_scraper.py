@@ -37,6 +37,20 @@ BKV_ZIPS = {
     "aep": "79601", "tnmp": "76528", "lubbock": "79401",
 }
 
+# ── APG&E BROKER API ──────────────────────────────────────────────────────────
+APGE_API_URL      = "https://api.apge.com:9810/v1/OfferLookup"
+APGE_API_KEY      = "PgEkMbzhrnBAwXqHGpFB32sHY7T3Ll05"
+APGE_CAMPAIGN     = "Amerigy"
+APGE_LDC_TO_AREA  = {
+    "ONC": "oncor",
+    "CTP": "centerpoint",
+    "AEC": "aep",       # AEP Texas Central
+    "AEN": "aep",       # AEP Texas North
+    "TNP": "tnmp",
+    "LPL": "lubbock",
+}
+APGE_LDCS = list(APGE_LDC_TO_AREA.keys())
+
 # TDU name strings in the CSV tdu_company_name field → our area keys
 TDU_TO_AREA = {
     "oncor electric delivery company":          "oncor",
@@ -181,6 +195,68 @@ def fetch_bkv_plans():
         print(f"  BKV {area_key}: {area_plans} plans")
 
     print(f"  BKV API total: {len(plans)} plans")
+    return plans
+
+
+def fetch_apge_plans():
+    """Fetch APG&E rates from their Mass Market API.
+    
+    Uses POST /v1/OfferLookup per LDC.
+    pricePerKilowattHour field is already in cents (e.g. 13.2).
+    DisplayPricePerKilowattHour2000 is the all-in rate at 2000 kWh.
+    """
+    logo    = "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg"
+    enroll  = "https://www.apge.com/amerigy"
+    headers = {"ApiKey": APGE_API_KEY, "Content-Type": "application/json"}
+    plans   = []
+
+    for ldc, area_key in APGE_LDC_TO_AREA.items():
+        payload = {
+            "CampaignName": APGE_CAMPAIGN,
+            "DeploymentEndpointName": "API",
+            "Ldc": ldc,
+            "IsRenewal": False,
+        }
+        try:
+            r = requests.post(APGE_API_URL, json=payload, headers=headers, timeout=15)
+            r.raise_for_status()
+            data = r.json()
+        except Exception as e:
+            print(f"  APG&E API error ({ldc}): {e}")
+            continue
+
+        offers = (data.get("data") or {}).get("availableCampaignOffers", [])
+        area_count = 0
+        for o in offers:
+            try:
+                term = int(o.get("term", 0))
+                # Use 2000 kWh display price if available, otherwise pricePerKilowattHour
+                rate = float(o.get("displayPricePerKilowattHour2000") or o.get("pricePerKilowattHour") or 0)
+                rate = round(rate, 1)
+            except (ValueError, TypeError):
+                continue
+            if term < 12 or rate <= 0:
+                continue
+            try:
+                renewable = int(float(o.get("greenPercentage", 0)))
+            except (ValueError, TypeError):
+                renewable = 0
+
+            plans.append({
+                "supplier":      "APG&E",
+                "term":          term,
+                "rate":          rate,
+                "renewable_pct": renewable,
+                "enroll_url":    enroll,
+                "logo":          logo,
+                "service_area":  area_key,
+                "plan_name":     o.get("name", ""),
+                "source":        "apge_api",
+            })
+            area_count += 1
+        print(f"  APG&E {ldc}: {area_count} plans")
+
+    print(f"  APG&E API total: {len(plans)} plans")
     return plans
 
 
@@ -429,11 +505,14 @@ def build_rates_json():
     print("Fetching BKV rates from Broker API...")
     bkv_plans = fetch_bkv_plans()
 
+    print("Fetching APG&E rates from Broker API...")
+    apge_plans = fetch_apge_plans()
+
     print("Downloading Power to Choose CSV...")
     raw = fetch_all_ptc_plans()
 
     if raw:
-        matched = process_ptc_plans(raw, exclude=["BKV Energy"])
+        matched = process_ptc_plans(raw, exclude=["BKV Energy", "APG&E"])
         if matched:
             # Show summary by area
             from collections import Counter
@@ -453,7 +532,7 @@ def build_rates_json():
                 broad = sorted(set((p.get("[RepCompany]") or "").strip() for p in raw if "texas" in (p.get("[RepCompany]") or "").lower() and len((p.get("[RepCompany]") or "")) < 25))
                 print(f"  Atlantex NOT found. Short Texas names in CSV: {broad}")
             if sky: print(f"  Clean Sky variants in CSV: {sky}")
-            plans = matched + bkv_plans
+            plans = matched + bkv_plans + apge_plans
             live_count = len(plans)
             areas_live = list(SERVICE_AREA_LABELS.values())
             areas_fallback = []
@@ -487,7 +566,7 @@ def build_rates_json():
     # Adjust rates: add 1¢ broker margin to PTC suppliers
     # BKV and Think Energy already return correct broker pricing via their APIs
     for p in plans:
-        if p["supplier"] not in ("Think Energy", "BKV Energy") and p.get("source") != "bkv_api":
+        if p["supplier"] not in ("Think Energy", "BKV Energy", "APG&E") and p.get("source") not in ("bkv_api", "apge_api"):
             p["rate"] = round(p["rate"] + 1.0, 1)
 
     # Remove plans under 12 months — Amerigy focuses on longer-term contracts
