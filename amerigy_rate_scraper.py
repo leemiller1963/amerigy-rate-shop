@@ -171,6 +171,10 @@ def fetch_bkv_plans():
             if not data:
                 print(f"    Empty response — promo code or key may be wrong")
                 continue
+            # Debug: print raw structure on first area
+            if area_key == "oncor":
+                import json
+                print(f"    Raw sample: {json.dumps(data[0] if isinstance(data, list) else data, indent=2)[:600]}")
         except Exception as e:
             print(f"  BKV API error ({area_key}): {e}")
             continue
