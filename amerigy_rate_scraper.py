@@ -19,6 +19,24 @@ from datetime import datetime, timezone
 # No auth, no bot detection, works from GitHub Actions.
 PTC_CSV_URL = "https://www.powertochoose.org/en-us/Plan/ExportToCsv"
 
+# ── BKV BROKER API ────────────────────────────────────────────────────────────
+BKV_API_URL  = "https://brokerapi.bkvenergy.com/v3/broker/GetPlans"
+BKV_API_KEY  = "lLMq-ADt0BHRP-yUgF"
+BKV_PROMO    = "AFFAME0001"
+
+BKV_UTIL_TO_AREA = {
+    1: "aep",        # AEP Texas Central
+    2: "aep",        # AEP Texas North
+    3: "centerpoint",
+    5: "oncor",
+    7: "tnmp",
+    8: "lubbock",
+}
+BKV_ZIPS = {
+    "oncor": "75901", "centerpoint": "77002",
+    "aep": "79601", "tnmp": "76528", "lubbock": "79401",
+}
+
 # TDU name strings in the CSV tdu_company_name field → our area keys
 TDU_TO_AREA = {
     "oncor electric delivery company":          "oncor",
@@ -119,6 +137,53 @@ def match_supplier(company_name):
     return None
 
 
+def fetch_bkv_plans():
+    """Fetch BKV rates from their Broker API. Returns list of plan dicts."""
+    logo = "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png"
+    enroll = "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001"
+    headers = {"User-Agent": "Mozilla/5.0"}
+    plans = []
+
+    for area_key, zip_code in BKV_ZIPS.items():
+        params = {"Key": BKV_API_KEY, "Zip": zip_code,
+                  "PromoCode": BKV_PROMO, "CustomerTypeID": "1"}
+        try:
+            r = requests.get(BKV_API_URL, params=params, headers=headers, timeout=15)
+            r.raise_for_status()
+            data = r.json()
+        except Exception as e:
+            print(f"  BKV API error ({area_key}): {e}")
+            continue
+
+        area_plans = 0
+        for block in data:
+            util_id = block.get("UtilityId")
+            mapped = BKV_UTIL_TO_AREA.get(util_id, area_key)
+            for p in block.get("Plans", []):
+                try:
+                    term = int(p.get("Terms", 0))
+                    rate = round(float(p.get("kWh2000", 0)), 1)
+                except (ValueError, TypeError):
+                    continue
+                if term < 12 or rate <= 0:
+                    continue
+                try:
+                    renewable = int(float(p.get("Renewable", 0)))
+                except (ValueError, TypeError):
+                    renewable = 0
+                plans.append({
+                    "supplier": "BKV Energy", "term": term, "rate": rate,
+                    "renewable_pct": renewable, "enroll_url": enroll, "logo": logo,
+                    "service_area": mapped, "plan_name": p.get("Title", ""),
+                    "source": "bkv_api",
+                })
+                area_plans += 1
+        print(f"  BKV {area_key}: {area_plans} plans")
+
+    print(f"  BKV API total: {len(plans)} plans")
+    return plans
+
+
 def fetch_all_ptc_plans():
     """Download full Texas plan database from Power to Choose CSV export.
     
@@ -148,17 +213,20 @@ def fetch_all_ptc_plans():
         return []
 
 
-def process_ptc_plans(raw_plans):
+def process_ptc_plans(raw_plans, exclude=None):
     """Filter CSV plans for our suppliers across all service areas.
     
     CSV columns use bracketed names e.g. [RepCompany], [TduCompanyName], [kwh2000].
     """
     best = {}  # (display_name, term, area_key) -> plan dict (keep lowest rate)
 
+    excl = [x.lower() for x in (exclude or [])]
     for p in raw_plans:
         company = (p.get("[RepCompany]") or "").strip()
         config = match_supplier(company)
         if not config:
+            continue
+        if any(x in config["display_name"].lower() for x in excl):
             continue
 
         # Map TDU to service area
@@ -358,11 +426,14 @@ FALLBACK_PLANS = [
 # ── MAIN BUILD FUNCTION ────────────────────────────────────────────────────────
 
 def build_rates_json():
+    print("Fetching BKV rates from Broker API...")
+    bkv_plans = fetch_bkv_plans()
+
     print("Downloading Power to Choose CSV...")
     raw = fetch_all_ptc_plans()
 
     if raw:
-        matched = process_ptc_plans(raw)
+        matched = process_ptc_plans(raw, exclude=["BKV Energy"])
         if matched:
             # Show summary by area
             from collections import Counter
@@ -382,7 +453,7 @@ def build_rates_json():
                 broad = sorted(set((p.get("[RepCompany]") or "").strip() for p in raw if "texas" in (p.get("[RepCompany]") or "").lower() and len((p.get("[RepCompany]") or "")) < 25))
                 print(f"  Atlantex NOT found. Short Texas names in CSV: {broad}")
             if sky: print(f"  Clean Sky variants in CSV: {sky}")
-            plans = matched
+            plans = matched + bkv_plans
             live_count = len(plans)
             areas_live = list(SERVICE_AREA_LABELS.values())
             areas_fallback = []
@@ -413,9 +484,10 @@ def build_rates_json():
         areas_live = []
         areas_fallback = list(SERVICE_AREA_LABELS.values())
 
-    # Adjust rates: add 1¢ broker margin to all suppliers except Think Energy
+    # Adjust rates: add 1¢ broker margin to PTC suppliers
+    # BKV and Think Energy already return correct broker pricing via their APIs
     for p in plans:
-        if p["supplier"] != "Think Energy":
+        if p["supplier"] not in ("Think Energy", "BKV Energy") and p.get("source") != "bkv_api":
             p["rate"] = round(p["rate"] + 1.0, 1)
 
     # Remove plans under 12 months — Amerigy focuses on longer-term contracts
