@@ -186,7 +186,9 @@ def fetch_bkv_plans():
             for p in block.get("Plans", []):
                 try:
                     term = int(p.get("Terms", 0))
-                    rate = round(float(p.get("kWh2000", 0)), 1)
+                    # BKV returns kWh2000 as "14.5¢" — strip non-numeric chars
+                    raw_rate = str(p.get("kWh2000", "0")).replace("¢", "").replace("$", "").strip()
+                    rate = round(float(raw_rate), 1)
                 except (ValueError, TypeError):
                     continue
                 if term < 12 or rate <= 0:
