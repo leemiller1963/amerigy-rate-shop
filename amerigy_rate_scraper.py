@@ -55,6 +55,26 @@ CHARIOT_ZIPS = {
     "aep": "79601", "tnmp": "76528", "lubbock": "79401",
 }
 
+# ── ATLANTIC ENERGY (ATLANTEX POWER) API ─────────────────────────────────────
+# Docs: Atlantic Energy Enrollment API v2.2
+# Auth: HTTP Basic (username + password)
+# Rate endpoint: POST /GetRates with postal_code + promo_code + tdsp_duns_number
+# Rate field: rate_average_2000 (already in cents, e.g. 17.15)
+ATLANTIC_API_BASE = "https://api.atl.energy/test/sales/api/atlantexpower"  # switch to /prod/ after testing
+ATLANTIC_USER     = "amerigy"
+ATLANTIC_PASS     = "KLj654FhB"
+ATLANTIC_PROMO    = "APITEST"   # swap to "AMERIGY" for production
+
+# TDSP DUNS numbers → area keys (from Atlantic Energy API docs + ERCOT registry)
+ATLANTIC_DUNS_TO_AREA = {
+    "007922436": "oncor",        # Oncor Electric Delivery
+    "957877905": "centerpoint",  # CenterPoint Energy Houston Electric
+    "007924772": "aep",          # AEP Texas Central
+    "007923311": "aep",          # AEP Texas North
+    "007926928": "tnmp",         # Texas-New Mexico Power
+    "084722056": "lubbock",      # Lubbock Power & Light
+}
+
 # ── APG&E BROKER API ──────────────────────────────────────────────────────────
 APGE_API_URL      = "https://api.apge.com:9810/v1/OfferLookup"
 APGE_API_KEY      = "6KUugqm0HGJJyliOk25Xutzwb4bNKUwKoTwiakA2XAG8p3VQScaeSvuqrk1ow2tM"
@@ -286,6 +306,77 @@ def fetch_chariot_plans():
 
     print(f"  Chariot API total: {len(plans)} plans")
     return plans
+
+def fetch_atlantic_plans():
+    """Fetch Atlantex Power rates from Atlantic Energy Broker API.
+    
+    Uses POST /GetRates with Basic Auth.
+    rate_average_2000 is the all-in rate at 2000 kWh in cents.
+    """
+    logo   = "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png"
+    enroll = "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY"
+    auth   = (ATLANTIC_USER, ATLANTIC_PASS)
+    headers = {"Content-Type": "application/json"}
+    plans  = []
+
+    # Get rates for each service area by DUNS number
+    for duns, area_key in ATLANTIC_DUNS_TO_AREA.items():
+        payload = {
+            "postal_code": {"oncor":"75901","centerpoint":"77002","aep":"79601","tnmp":"76528","lubbock":"79401"}[area_key],
+            "promo_code": ATLANTIC_PROMO,
+            "tdsp_duns_number": duns,
+            "commodity": "Electric",
+        }
+        try:
+            r = requests.post(f"{ATLANTIC_API_BASE}/GetRates",
+                            json={"request": payload},
+                            auth=auth, headers=headers, timeout=15)
+            if r.status_code != 200:
+                print(f"  Atlantic {area_key} ({duns}): HTTP {r.status_code} — {r.text[:150]}")
+                continue
+            data = r.json()
+            if data.get("status_code") != 200:
+                print(f"  Atlantic {area_key}: API error — {data.get('message','')[:100]}")
+                continue
+        except Exception as e:
+            print(f"  Atlantic API error ({area_key}): {e}")
+            continue
+
+        offers = data.get("response", [])
+        area_count = 0
+        for o in offers:
+            try:
+                term = int(o.get("term", 0))
+                rate = round(float(o.get("rate_average_2000", 0)), 1)
+            except (ValueError, TypeError):
+                continue
+            if term < 12 or rate <= 0:
+                continue
+            # Skip non-electric plans
+            if "gas" in (o.get("plan_name") or "").lower():
+                continue
+            try:
+                renewable = int(float(o.get("renewable_percent", 0)))
+            except (ValueError, TypeError):
+                renewable = 0
+            plans.append({
+                "supplier":      "Atlantex Power",
+                "term":          term,
+                "rate":          rate,
+                "renewable_pct": renewable,
+                "enroll_url":    enroll,
+                "logo":          logo,
+                "service_area":  area_key,
+                "plan_name":     o.get("plan_display_name", ""),
+                "source":        "atlantic_api",
+            })
+            area_count += 1
+        if area_count > 0:
+            print(f"  Atlantic {area_key}: {area_count} plans")
+
+    print(f"  Atlantic API total: {len(plans)} plans")
+    return plans
+
 
 def fetch_apge_plans():
     """Fetch APG&E rates from their Mass Market API.
@@ -600,6 +691,9 @@ def build_rates_json():
     print("Fetching Chariot rates from Broker API...")
     chariot_plans = fetch_chariot_plans()
 
+    print("Fetching Atlantex rates from Broker API...")
+    atlantic_plans = fetch_atlantic_plans()
+
     print("Fetching APG&E rates from Broker API...")
     apge_plans = fetch_apge_plans()
 
@@ -607,7 +701,7 @@ def build_rates_json():
     raw = fetch_all_ptc_plans()
 
     if raw:
-        matched = process_ptc_plans(raw, exclude=["BKV Energy", "APG&E", "Chariot Energy"])
+        matched = process_ptc_plans(raw, exclude=["BKV Energy", "APG&E", "Chariot Energy", "Atlantex Power"])
         if matched:
             # Show summary by area
             from collections import Counter
@@ -627,7 +721,7 @@ def build_rates_json():
                 broad = sorted(set((p.get("[RepCompany]") or "").strip() for p in raw if "texas" in (p.get("[RepCompany]") or "").lower() and len((p.get("[RepCompany]") or "")) < 25))
                 print(f"  Atlantex NOT found. Short Texas names in CSV: {broad}")
             if sky: print(f"  Clean Sky variants in CSV: {sky}")
-            plans = matched + bkv_plans + apge_plans + chariot_plans
+            plans = matched + bkv_plans + apge_plans + chariot_plans + atlantic_plans
             live_count = len(plans)
             areas_live = list(SERVICE_AREA_LABELS.values())
             areas_fallback = []
@@ -661,7 +755,7 @@ def build_rates_json():
     # Adjust rates: add 1¢ broker margin to PTC suppliers
     # BKV and Think Energy already return correct broker pricing via their APIs
     for p in plans:
-        if p["supplier"] not in ("Think Energy", "BKV Energy", "APG&E", "Chariot Energy") and p.get("source") not in ("bkv_api", "apge_api", "chariot_api"):
+        if p["supplier"] not in ("Think Energy", "BKV Energy", "APG&E", "Chariot Energy", "Atlantex Power") and p.get("source") not in ("bkv_api", "apge_api", "chariot_api", "atlantic_api"):
             p["rate"] = round(p["rate"] + 1.0, 1)
 
     # Remove plans under 12 months — Amerigy focuses on longer-term contracts
