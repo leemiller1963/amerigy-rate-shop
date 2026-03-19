@@ -60,10 +60,10 @@ CHARIOT_ZIPS = {
 # Auth: HTTP Basic (username + password)
 # Rate endpoint: POST /GetRates with postal_code + promo_code + tdsp_duns_number
 # Rate field: rate_average_2000 (already in cents, e.g. 17.15)
-ATLANTIC_API_BASE = "https://api.atl.energy/test/sales/api/atlantexpower"  # switch to /prod/ after testing
+ATLANTIC_API_BASE = "https://api.atl.energy/prod/sales/api/atlantexpower"
 ATLANTIC_USER     = "amerigy"
 ATLANTIC_PASS     = "KLj654FhB"
-ATLANTIC_PROMO    = "APITEST"   # swap to "AMERIGY" for production
+ATLANTIC_PROMO    = "AMERIGY"
 
 # TDSP DUNS numbers → area keys (from Atlantic Energy API docs + ERCOT registry)
 ATLANTIC_DUNS_TO_AREA = {
@@ -755,7 +755,7 @@ def build_rates_json():
     # Adjust rates: add 1¢ broker margin to PTC suppliers
     # BKV and Think Energy already return correct broker pricing via their APIs
     for p in plans:
-        if p["supplier"] not in ("Think Energy", "BKV Energy", "APG&E", "Chariot Energy", "Atlantex Power") and p.get("source") not in ("bkv_api", "apge_api", "chariot_api", "atlantic_api"):
+        if p["supplier"] not in ("Think Energy", "BKV Energy", "APG&E", "Chariot Energy", "Atlantex Power", "Clean Sky Energy") and p.get("source") not in ("bkv_api", "apge_api", "chariot_api", "atlantic_api"):
             p["rate"] = round(p["rate"] + 1.0, 1)
 
     # Remove plans under 12 months — Amerigy focuses on longer-term contracts
