@@ -38,9 +38,9 @@ BKV_ZIPS = {
 }
 
 # ── CHARIOT ENERGY BROKER API ─────────────────────────────────────────────────
-CHARIOT_API_URL  = "http://35.174.234.23:8084/"
-CHARIOT_API_KEY  = "IKt1-VJEZ05li-UU5M"
-CHARIOT_PROMO    = "AMERIGY050"
+CHARIOT_API_URL  = "http://35.174.234.23:8084/v3/broker/GetPlans"
+CHARIOT_API_KEY  = "dHq6-Kx4297ny-mBkE"
+CHARIOT_PROMO    = "AMERIGY001"
 
 CHARIOT_UTIL_TO_AREA = {
     1: "aep",
@@ -57,7 +57,7 @@ CHARIOT_ZIPS = {
 
 # ── APG&E BROKER API ──────────────────────────────────────────────────────────
 APGE_API_URL      = "https://api.apge.com:9810/v1/OfferLookup"
-APGE_API_KEY      = "PgEkMbzhrnBAwXqHGpFB32sHY7T3Ll05"
+APGE_API_KEY      = "6KUugqm0HGJJyliOk25Xutzwb4bNKUwKoTwiakA2XAG8p3VQScaeSvuqrk1ow2tM"
 APGE_CAMPAIGN     = "Amerigy"
 APGE_LDC_TO_AREA  = {
     "ONC": "oncor",
@@ -189,10 +189,7 @@ def fetch_bkv_plans():
             if not data:
                 print(f"    Empty response — promo code or key may be wrong")
                 continue
-            # Debug: print raw structure on first area
-            if area_key == "oncor":
-                import json
-                print(f"    Raw sample: {json.dumps(data[0] if isinstance(data, list) else data, indent=2)[:600]}")
+
         except Exception as e:
             print(f"  BKV API error ({area_key}): {e}")
             continue
@@ -229,23 +226,36 @@ def fetch_bkv_plans():
 
 
 def fetch_chariot_plans():
-    """Fetch Chariot Energy rates from their MedTractions Broker API."""
+    """Fetch Chariot Energy rates from their Broker API."""
     logo   = "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png"
     enroll = "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050"
     headers = {"User-Agent": "Mozilla/5.0"}
     plans = []
 
+    # Try v3 then v1 endpoint
+    endpoints = [
+        ("http://35.174.234.23:8084/v3/broker/GetPlans", "Key"),
+        ("http://35.174.234.23:8084/v1/broker/GetPlans", "Key"),
+        ("http://35.174.234.23:8084/v3/broker/GetPlans", "APIToken"),
+    ]
+
     for area_key, zip_code in CHARIOT_ZIPS.items():
-        params = {"Key": CHARIOT_API_KEY, "Zip": zip_code,
-                  "PromoCode": CHARIOT_PROMO, "CustomerTypeID": "1"}
-        try:
-            r = requests.get(CHARIOT_API_URL, params=params, headers=headers, timeout=15)
-            if r.status_code != 200:
-                print(f"  Chariot {area_key}: HTTP {r.status_code} — {r.text[:100]}")
-                continue
-            data = r.json()
-        except Exception as e:
-            print(f"  Chariot API error ({area_key}): {e}")
+        data = None
+        for url, key_param in endpoints:
+            params = {key_param: CHARIOT_API_KEY, "Zip": zip_code,
+                      "PromoCode": CHARIOT_PROMO, "CustomerTypeID": "1"}
+            try:
+                r = requests.get(url, params=params, headers=headers, timeout=15)
+                if r.status_code == 200:
+                    data = r.json()
+                    break
+                elif r.status_code not in (404, 403):
+                    print(f"  Chariot {area_key}: HTTP {r.status_code} — {r.text[:80]}")
+            except Exception as e:
+                print(f"  Chariot {area_key}: {e}")
+
+        if not data:
+            print(f"  Chariot {area_key}: all endpoints failed")
             continue
 
         area_count = 0
@@ -264,7 +274,7 @@ def fetch_chariot_plans():
                 try:
                     renewable = int(float(p.get("Renewable", 0)))
                 except (ValueError, TypeError):
-                    renewable = 100  # Chariot is 100% solar
+                    renewable = 100
                 plans.append({
                     "supplier": "Chariot Energy", "term": term, "rate": rate,
                     "renewable_pct": renewable, "enroll_url": enroll, "logo": logo,
@@ -276,7 +286,6 @@ def fetch_chariot_plans():
 
     print(f"  Chariot API total: {len(plans)} plans")
     return plans
-
 
 def fetch_apge_plans():
     """Fetch APG&E rates from their Mass Market API.
