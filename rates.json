@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-03-20T17:27:37Z",
-  "updated_display": "5:27 PM UTC, March 20, 2026",
+  "updated_at": "2026-03-20T18:30:17Z",
+  "updated_display": "6:30 PM UTC, March 20, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -126,6 +126,17 @@
       "source": "powertochoose"
     },
     {
+      "supplier": "BKV Energy",
+      "term": 12,
+      "rate": 13.6,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "centerpoint",
+      "plan_name": "Verbena 12",
+      "source": "bkv_api"
+    },
+    {
       "supplier": "Frontier Utilities",
       "term": 12,
       "rate": 13.7,
@@ -135,17 +146,6 @@
       "service_area": "oncor",
       "plan_name": "Frontier Power Saver 12",
       "source": "powertochoose"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 12,
-      "rate": 13.7,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "centerpoint",
-      "plan_name": "Verbena 12",
-      "source": "bkv_api"
     },
     {
       "supplier": "APG&E",
@@ -180,6 +180,17 @@
       "plan_name": "Think Clean 12 with Smart Thermostat Connected",
       "source": "powertochoose",
       "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 12,
+      "rate": 13.8,
+      "renewable_pct": 100,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "centerpoint",
+      "plan_name": "Verbena Green 12",
+      "source": "bkv_api"
     },
     {
       "supplier": "APG&E",
@@ -249,17 +260,6 @@
       "base_fee_note": "+$4.95/mo base fee"
     },
     {
-      "supplier": "BKV Energy",
-      "term": 12,
-      "rate": 13.9,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "centerpoint",
-      "plan_name": "Verbena Green 12",
-      "source": "bkv_api"
-    },
-    {
       "supplier": "APG&E",
       "term": 15,
       "rate": 13.9,
@@ -305,6 +305,17 @@
     },
     {
       "supplier": "BKV Energy",
+      "term": 18,
+      "rate": 14.0,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "centerpoint",
+      "plan_name": "Verbena 18",
+      "source": "bkv_api"
+    },
+    {
+      "supplier": "BKV Energy",
       "term": 36,
       "rate": 14.0,
       "renewable_pct": 100,
@@ -335,17 +346,6 @@
       "service_area": "aep",
       "plan_name": "Amerigy 12",
       "source": "apge_api"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 18,
-      "rate": 14.1,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "centerpoint",
-      "plan_name": "Verbena 18",
-      "source": "bkv_api"
     },
     {
       "supplier": "APG&E",
@@ -458,6 +458,17 @@
       "source": "bkv_api"
     },
     {
+      "supplier": "BKV Energy",
+      "term": 15,
+      "rate": 14.4,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "aep",
+      "plan_name": "Verbena 15",
+      "source": "bkv_api"
+    },
+    {
       "supplier": "APG&E",
       "term": 15,
       "rate": 14.4,
@@ -544,17 +555,6 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "aep",
       "plan_name": "Verbena 12",
-      "source": "bkv_api"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 15,
-      "rate": 14.5,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "aep",
-      "plan_name": "Verbena 15",
       "source": "bkv_api"
     },
     {
@@ -668,6 +668,17 @@
       "source": "bkv_api"
     },
     {
+      "supplier": "BKV Energy",
+      "term": 12,
+      "rate": 14.7,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "lubbock",
+      "plan_name": "Verbena 12",
+      "source": "bkv_api"
+    },
+    {
       "supplier": "APG&E",
       "term": 12,
       "rate": 14.7,
@@ -712,17 +723,6 @@
       "source": "bkv_api"
     },
     {
-      "supplier": "BKV Energy",
-      "term": 12,
-      "rate": 14.8,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "lubbock",
-      "plan_name": "Verbena 12",
-      "source": "bkv_api"
-    },
-    {
       "supplier": "APG&E",
       "term": 15,
       "rate": 14.8,
@@ -736,7 +736,7 @@
     {
       "supplier": "BKV Energy",
       "term": 12,
-      "rate": 15.0,
+      "rate": 14.9,
       "renewable_pct": 100,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
@@ -969,6 +969,17 @@
     },
     {
       "supplier": "BKV Energy",
+      "term": 18,
+      "rate": 15.7,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "lubbock",
+      "plan_name": "Verbena 18",
+      "source": "bkv_api"
+    },
+    {
+      "supplier": "BKV Energy",
       "term": 24,
       "rate": 15.7,
       "renewable_pct": 100,
@@ -1010,17 +1021,6 @@
       "service_area": "aep",
       "plan_name": "SimpleSaver 12",
       "source": "apge_api"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 18,
-      "rate": 15.8,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "lubbock",
-      "plan_name": "Verbena 18",
-      "source": "bkv_api"
     },
     {
       "supplier": "APG&E",
@@ -1068,6 +1068,17 @@
     },
     {
       "supplier": "BKV Energy",
+      "term": 15,
+      "rate": 15.9,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "tnmp",
+      "plan_name": "Verbena 15",
+      "source": "bkv_api"
+    },
+    {
+      "supplier": "BKV Energy",
       "term": 36,
       "rate": 15.9,
       "renewable_pct": 100,
@@ -1087,17 +1098,6 @@
       "service_area": "lubbock",
       "plan_name": "SimpleSaver 12",
       "source": "apge_api"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 15,
-      "rate": 16.0,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "tnmp",
-      "plan_name": "Verbena 15",
-      "source": "bkv_api"
     },
     {
       "supplier": "BKV Energy",
@@ -1136,7 +1136,7 @@
     {
       "supplier": "BKV Energy",
       "term": 12,
-      "rate": 16.4,
+      "rate": 16.3,
       "renewable_pct": 29,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
@@ -1158,6 +1158,17 @@
     },
     {
       "supplier": "BKV Energy",
+      "term": 12,
+      "rate": 16.5,
+      "renewable_pct": 100,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "tnmp",
+      "plan_name": "Verbena Green 12",
+      "source": "bkv_api"
+    },
+    {
+      "supplier": "BKV Energy",
       "term": 36,
       "rate": 16.5,
       "renewable_pct": 29,
@@ -1165,17 +1176,6 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "tnmp",
       "plan_name": "Verbena 36",
-      "source": "bkv_api"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 12,
-      "rate": 16.6,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "tnmp",
-      "plan_name": "Verbena Green 12",
       "source": "bkv_api"
     },
     {
