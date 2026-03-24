@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-03-24T17:45:02Z",
-  "updated_display": "5:45 PM UTC, March 24, 2026",
+  "updated_at": "2026-03-24T18:43:55Z",
+  "updated_display": "6:43 PM UTC, March 24, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -17,7 +17,7 @@
     {
       "supplier": "Clean Sky Energy",
       "term": 12,
-      "rate": 12.3,
+      "rate": 12.2,
       "renewable_pct": 100,
       "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
