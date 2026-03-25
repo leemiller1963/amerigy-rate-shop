@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-03-25T18:39:55Z",
-  "updated_display": "6:39 PM UTC, March 25, 2026",
+  "updated_at": "2026-03-25T19:37:50Z",
+  "updated_display": "7:37 PM UTC, March 25, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -37,6 +37,17 @@
       "source": "powertochoose"
     },
     {
+      "supplier": "BKV Energy",
+      "term": 15,
+      "rate": 12.9,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "centerpoint",
+      "plan_name": "Verbena 15",
+      "source": "bkv_api"
+    },
+    {
       "supplier": "APG&E",
       "term": 15,
       "rate": 12.9,
@@ -57,17 +68,6 @@
       "service_area": "aep",
       "plan_name": "Embrace Green 12 - New Customer Special",
       "source": "powertochoose"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 15,
-      "rate": 13.0,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "centerpoint",
-      "plan_name": "Verbena 15",
-      "source": "bkv_api"
     },
     {
       "supplier": "Clean Sky Energy",
