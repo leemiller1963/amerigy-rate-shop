@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-03-25T17:47:00Z",
-  "updated_display": "5:47 PM UTC, March 25, 2026",
+  "updated_at": "2026-03-25T18:39:55Z",
+  "updated_display": "6:39 PM UTC, March 25, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -11,7 +11,7 @@
   ],
   "service_areas_fallback": [],
   "usage_kwh": 2000,
-  "live_plans": 160,
+  "live_plans": 158,
   "total_plans": 149,
   "plans": [
     {
