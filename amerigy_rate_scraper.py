@@ -289,6 +289,9 @@ def fetch_chariot_plans():
                     continue
                 if term < 12 or rate <= 0:
                     continue
+                # Only show fixed rate plans
+                if (p.get("CategoryName") or "").lower() != "fixed":
+                    continue
                 try:
                     renewable = int(float(p.get("Renewable", 0)))
                 except (ValueError, TypeError):
@@ -306,6 +309,13 @@ def fetch_chariot_plans():
     return plans
 
 def fetch_atlantic_plans():
+    """Atlantex Power — disabled pending production credentials from Ashley.
+    TODO: set ATLANTIC_API_BASE to prod URL and ATLANTIC_PROMO to AMERIGY when ready.
+    """
+    print("  Atlantex: disabled pending production credentials")
+    return []
+
+def fetch_atlantic_plans_disabled():
     """Fetch Atlantex Power rates from Atlantic Energy Broker API.
     
     Uses POST /GetRates with Basic Auth.
