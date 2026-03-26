@@ -349,11 +349,17 @@ def fetch_atlantic_plans():
             continue
 
         offers = data.get("response", [])
+        # Debug first area to verify rate format
+        if area_key == "oncor" and offers:
+            o = offers[0]
+            print(f"    Atlantic debug: term={o.get('term')} rate_average_2000={o.get('rate_average_2000')} plan={o.get('plan_display_name')}")
         area_count = 0
         for o in offers:
             try:
                 term = int(o.get("term", 0))
-                rate = round(float(o.get("rate_average_2000", 0)), 1)
+                raw = float(o.get("rate_average_2000", 0))
+                # If rate is < 5 it's a decimal (e.g. 0.158) needing *100, else already in cents
+                rate = round(raw * 100 if raw < 5 else raw, 1)
             except (ValueError, TypeError):
                 continue
             if term < 12 or rate <= 0:
@@ -761,7 +767,7 @@ def build_rates_json():
     # Adjust rates: add 1¢ broker margin to PTC suppliers
     # BKV and Think Energy already return correct broker pricing via their APIs
     for p in plans:
-        if p["supplier"] not in ("Think Energy", "BKV Energy", "APG&E", "Chariot Energy", "Atlantex Power", "Clean Sky Energy") and p.get("source") not in ("bkv_api", "apge_api", "chariot_api", "atlantic_api"):
+        if p["supplier"] not in ("Think Energy", "BKV Energy", "APG&E", "Chariot Energy", "Atlantex Power") and p.get("source") not in ("bkv_api", "apge_api", "chariot_api", "atlantic_api"):
             p["rate"] = round(p["rate"] + 1.0, 1)
 
     # Remove plans under 12 months — Amerigy focuses on longer-term contracts
