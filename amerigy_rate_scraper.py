@@ -218,7 +218,7 @@ def fetch_bkv_plans():
         for block in data:
             util_id = block.get("UtilityId")
             mapped = BKV_UTIL_TO_AREA.get(util_id, area_key)
-            for p in block.get("Plans", []):
+            for p in (block.get("Plans") or []):
                 try:
                     term = int(p.get("Terms", 0))
                     # BKV returns kWh2000 as "14.5¢" — strip non-numeric chars
@@ -280,7 +280,7 @@ def fetch_chariot_plans():
         for block in data:
             util_id = block.get("UtilityId")
             mapped = CHARIOT_UTIL_TO_AREA.get(util_id, area_key)
-            for p in block.get("Plans", []):
+            for p in (block.get("Plans") or []):
                 try:
                     term = int(p.get("Terms", 0))
                     raw_rate = str(p.get("kWh2000", "0")).replace("¢", "").replace("$", "").strip()
