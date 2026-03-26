@@ -292,6 +292,9 @@ def fetch_chariot_plans():
                 # Only show fixed rate plans
                 if (p.get("CategoryName") or "").lower() != "fixed":
                     continue
+                # Only standard contract lengths
+                if term not in (12, 15, 18, 24, 36):
+                    continue
                 try:
                     renewable = int(float(p.get("Renewable", 0)))
                 except (ValueError, TypeError):
@@ -320,12 +323,14 @@ def fetch_atlantic_plans():
     headers = {"Content-Type": "application/json"}
     plans  = []
 
-    # Get rates for each service area by DUNS number
-    for duns, area_key in ATLANTIC_DUNS_TO_AREA.items():
+    # Get rates per area using representative ZIP codes
+    for area_key, zip_code in {
+        "oncor": "75901", "centerpoint": "77002",
+        "aep": "79601", "tnmp": "76528", "lubbock": "79401"
+    }.items():
         payload = {
-            "postal_code": {"oncor":"75901","centerpoint":"77002","aep":"79601","tnmp":"76528","lubbock":"79401"}[area_key],
+            "postal_code": zip_code,
             "promo_code": ATLANTIC_PROMO,
-            "tdsp_duns_number": duns,
             "commodity": "Electric",
         }
         try:
@@ -333,7 +338,7 @@ def fetch_atlantic_plans():
                             json={"request": payload},
                             auth=auth, headers=headers, timeout=15)
             if r.status_code != 200:
-                print(f"  Atlantic {area_key} ({duns}): HTTP {r.status_code} — {r.text[:150]}")
+                print(f"  Atlantic {area_key}: HTTP {r.status_code} — {r.text[:150]}")
                 continue
             data = r.json()
             if data.get("status_code") != 200:
