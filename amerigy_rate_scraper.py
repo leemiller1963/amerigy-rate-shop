@@ -39,8 +39,8 @@ BKV_ZIPS = {
 
 # ── CHARIOT ENERGY BROKER API ─────────────────────────────────────────────────
 CHARIOT_API_URL  = "http://35.174.234.23:8084/v3/broker/GetPlans"
-CHARIOT_API_KEY  = "dHq6-Kx4297ny-mBkE"
-CHARIOT_PROMO    = "AMERIGY001"
+CHARIOT_API_KEY  = "IKt1-VJEZ05li-UU5M"
+CHARIOT_PROMO    = "AMERIGY050"
 
 CHARIOT_UTIL_TO_AREA = {
     1: "aep",
@@ -60,10 +60,10 @@ CHARIOT_ZIPS = {
 # Auth: HTTP Basic (username + password)
 # Rate endpoint: POST /GetRates with postal_code + promo_code + tdsp_duns_number
 # Rate field: rate_average_2000 (already in cents, e.g. 17.15)
-ATLANTIC_API_BASE = "https://api.atl.energy/prod/sales/api/atlantexpower"
+ATLANTIC_API_BASE = "https://api.atl.energy/test/sales/api/atlantexpower"  # TODO: switch to /prod/ when Ashley provides prod credentials
 ATLANTIC_USER     = "amerigy"
 ATLANTIC_PASS     = "KLj654FhB"
-ATLANTIC_PROMO    = "AMERIGY"
+ATLANTIC_PROMO    = "APITEST"  # TODO: switch to AMERIGY for production
 
 # TDSP DUNS numbers → area keys (from Atlantic Energy API docs + ERCOT registry)
 ATLANTIC_DUNS_TO_AREA = {
@@ -252,11 +252,9 @@ def fetch_chariot_plans():
     headers = {"User-Agent": "Mozilla/5.0"}
     plans = []
 
-    # Try v3 then v1 endpoint
+    # Correct endpoint confirmed by Chariot
     endpoints = [
-        ("http://35.174.234.23:8084/v3/broker/GetPlans", "Key"),
-        ("http://35.174.234.23:8084/v1/broker/GetPlans", "Key"),
-        ("http://35.174.234.23:8084/v3/broker/GetPlans", "APIToken"),
+        ("http://35.174.234.23:8084/api/broker/GetPlans", "Key"),
     ]
 
     for area_key, zip_code in CHARIOT_ZIPS.items():
