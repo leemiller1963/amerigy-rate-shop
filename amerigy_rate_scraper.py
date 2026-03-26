@@ -295,6 +295,9 @@ def fetch_chariot_plans():
                 # Only standard contract lengths
                 if term not in (12, 15, 18, 24, 36):
                     continue
+                # Filter out rates below 12.5¢
+                if rate < 12.5:
+                    continue
                 try:
                     renewable = int(float(p.get("Renewable", 0)))
                 except (ValueError, TypeError):
