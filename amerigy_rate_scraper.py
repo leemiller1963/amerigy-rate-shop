@@ -60,10 +60,10 @@ CHARIOT_ZIPS = {
 # Auth: HTTP Basic (username + password)
 # Rate endpoint: POST /GetRates with postal_code + promo_code + tdsp_duns_number
 # Rate field: rate_average_2000 (already in cents, e.g. 17.15)
-ATLANTIC_API_BASE = "https://api.atl.energy/test/sales/api/atlantexpower"  # TODO: switch to /prod/ when Ashley provides prod credentials
+ATLANTIC_API_BASE = "https://api.atl.energy/prod/sales/api/atlantexpower"
 ATLANTIC_USER     = "amerigy"
-ATLANTIC_PASS     = "KLj654FhB"
-ATLANTIC_PROMO    = "APITEST"  # TODO: switch to AMERIGY for production
+ATLANTIC_PASS     = "XwMyYhkOq3aHoZKP"
+ATLANTIC_PROMO    = "AMERIGY"
 
 # TDSP DUNS numbers → area keys (from Atlantic Energy API docs + ERCOT registry)
 ATLANTIC_DUNS_TO_AREA = {
@@ -309,13 +309,6 @@ def fetch_chariot_plans():
     return plans
 
 def fetch_atlantic_plans():
-    """Atlantex Power — disabled pending production credentials from Ashley.
-    TODO: set ATLANTIC_API_BASE to prod URL and ATLANTIC_PROMO to AMERIGY when ready.
-    """
-    print("  Atlantex: disabled pending production credentials")
-    return []
-
-def fetch_atlantic_plans_disabled():
     """Fetch Atlantex Power rates from Atlantic Energy Broker API.
     
     Uses POST /GetRates with Basic Auth.
