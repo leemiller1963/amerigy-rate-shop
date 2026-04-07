@@ -716,7 +716,7 @@ def build_rates_json():
     raw = fetch_all_ptc_plans()
 
     if raw:
-        matched = process_ptc_plans(raw, exclude=["BKV Energy", "APG&E", "Chariot Energy", "Atlantex Power"])
+        matched = process_ptc_plans(raw, exclude=["BKV Energy", "APG&E", "Chariot Energy", "Atlantex Power", "Clean Sky Energy"])
         if matched:
             # Show summary by area
             from collections import Counter
