@@ -157,6 +157,15 @@ SUPPLIER_CONFIG = {
         "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
         "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
     },
+    "clean sky energy": {
+        "display_name": "Clean Sky Energy",
+    },
+    "cleansky energy": {
+        "display_name": "Clean Sky Energy",
+        "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg",
+        "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
+        "renewable_pct_override": 100,
+    },
     "think energy": {
         "display_name": "Think Energy",
         "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
@@ -617,6 +626,16 @@ FALLBACK_PLANS = [
     {"supplier": "Chariot Energy", "term": 36, "rate": 14.2, "renewable_pct": 100,
      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png"},
+    # Clean Sky Energy
+    {"supplier": "Clean Sky Energy", "term": 6,  "rate": 14.0, "renewable_pct": 100,
+     "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
+     "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg"},
+    {"supplier": "Clean Sky Energy", "term": 12, "rate": 14.0, "renewable_pct": 100,
+     "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
+     "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg"},
+    {"supplier": "Clean Sky Energy", "term": 24, "rate": 14.0, "renewable_pct": 100,
+     "enroll_url": "https://signup.cleanskyenergy.com/zipcode?promocode=AMER",
+     "logo": "https://amerigyenergy.com/wp-content/uploads/2025/02/logo.svg"},
     # Atlantex Power
     {"supplier": "Atlantex Power", "term": 12, "rate": 14.9, "renewable_pct": 0,
      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
@@ -709,6 +728,7 @@ def build_rates_json():
 
             print(f"  Suppliers: {dict(supplier_counts)}")
             # Debug: find Clean Sky name in CSV
+            sky = sorted(set((p.get("[RepCompany]") or "").strip() for p in raw if "sky" in (p.get("[RepCompany]") or "").lower() or "clean" in (p.get("[RepCompany]") or "").lower()))
             atlantex = sorted(set((p.get("[RepCompany]") or "").strip() for p in raw if any(x in (p.get("[RepCompany]") or "").lower() for x in ["atlantex", "ae texas", "aetexas"])))
             if atlantex: print(f"  Atlantex variants in CSV: {atlantex}")
             else:
