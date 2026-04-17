@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-04-16T14:53:44Z",
-  "updated_display": "2:53 PM UTC, April 16, 2026",
+  "updated_at": "2026-04-17T04:13:56Z",
+  "updated_display": "4:13 AM UTC, April 17, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -11,8 +11,8 @@
   ],
   "service_areas_fallback": [],
   "usage_kwh": 2000,
-  "live_plans": 306,
-  "total_plans": 297,
+  "live_plans": 274,
+  "total_plans": 265,
   "plans": [
     {
       "supplier": "BKV Energy",
@@ -46,6 +46,18 @@
       "service_area": "centerpoint",
       "plan_name": "Frontier Power Saver 12",
       "source": "powertochoose"
+    },
+    {
+      "supplier": "Think Energy",
+      "term": 12,
+      "rate": 12.8,
+      "renewable_pct": 100,
+      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
+      "service_area": "centerpoint",
+      "plan_name": "Think Clean 12 with Smart Thermostat Connected",
+      "source": "powertochoose",
+      "base_fee_note": "+$4.95/mo base fee"
     },
     {
       "supplier": "BKV Energy",
@@ -101,17 +113,6 @@
       "service_area": "centerpoint",
       "plan_name": "Chariot Test Nights & Weekends",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 12.9,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
     },
     {
       "supplier": "APG&E",
@@ -191,17 +192,6 @@
       "source": "bkv_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 13.1,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "APG&E",
       "term": 18,
       "rate": 13.1,
@@ -233,6 +223,18 @@
       "service_area": "centerpoint",
       "plan_name": "Amerigy 36",
       "source": "apge_api"
+    },
+    {
+      "supplier": "Think Energy",
+      "term": 12,
+      "rate": 13.2,
+      "renewable_pct": 100,
+      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
+      "service_area": "aep",
+      "plan_name": "Think Clean 12 with Smart Thermostat Connected",
+      "source": "powertochoose",
+      "base_fee_note": "+$4.95/mo base fee"
     },
     {
       "supplier": "Frontier Utilities",
@@ -367,40 +369,6 @@
       "source": "powertochoose"
     },
     {
-      "supplier": "Think Energy",
-      "term": 12,
-      "rate": 13.3,
-      "renewable_pct": 100,
-      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "service_area": "centerpoint",
-      "plan_name": "Think Clean 12 with Smart Thermostat Connected",
-      "source": "powertochoose",
-      "base_fee_note": "+$4.95/mo base fee"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 13.3,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 13.3,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "APG&E",
       "term": 15,
       "rate": 13.3,
@@ -421,6 +389,18 @@
       "service_area": "aep",
       "plan_name": "Amerigy 18",
       "source": "apge_api"
+    },
+    {
+      "supplier": "Think Energy",
+      "term": 12,
+      "rate": 13.4,
+      "renewable_pct": 100,
+      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
+      "service_area": "oncor",
+      "plan_name": "Think Clean 12 with Smart Thermostat Connected",
+      "source": "powertochoose",
+      "base_fee_note": "+$4.95/mo base fee"
     },
     {
       "supplier": "BKV Energy",
@@ -467,6 +447,18 @@
       "source": "apge_api"
     },
     {
+      "supplier": "Think Energy",
+      "term": 24,
+      "rate": 13.4,
+      "renewable_pct": 100,
+      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
+      "service_area": "centerpoint",
+      "plan_name": "Think Clean With Smart Thermostat 24",
+      "source": "powertochoose",
+      "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
       "supplier": "APG&E",
       "term": 24,
       "rate": 13.4,
@@ -498,28 +490,6 @@
       "service_area": "aep",
       "plan_name": "Amerigy 12",
       "source": "apge_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 13.5,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 13.5,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "APG&E",
@@ -665,17 +635,6 @@
       "source": "bkv_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 13.6,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "APG&E",
       "term": 36,
       "rate": 13.6,
@@ -718,17 +677,6 @@
       "service_area": "centerpoint",
       "plan_name": "Free Nights 12",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 13.7,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "Chariot Energy",
@@ -896,6 +844,18 @@
       "source": "apge_api"
     },
     {
+      "supplier": "Think Energy",
+      "term": 24,
+      "rate": 13.8,
+      "renewable_pct": 100,
+      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
+      "service_area": "aep",
+      "plan_name": "Think Simple with Smart Thermostat 24",
+      "source": "powertochoose",
+      "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
       "supplier": "BKV Energy",
       "term": 24,
       "rate": 13.8,
@@ -940,29 +900,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 13.8,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Think Energy",
-      "term": 12,
-      "rate": 13.9,
-      "renewable_pct": 100,
-      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "service_area": "oncor",
-      "plan_name": "Think Clean 12 with Smart Thermostat Connected",
-      "source": "powertochoose",
-      "base_fee_note": "+$4.95/mo base fee"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 12,
       "rate": 13.9,
@@ -983,17 +920,6 @@
       "service_area": "centerpoint",
       "plan_name": "Chariot Choice 12",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 13.9,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "APG&E",
@@ -1029,28 +955,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 13.9,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 13.9,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 36,
       "rate": 13.9,
@@ -1060,18 +964,6 @@
       "service_area": "oncor",
       "plan_name": "Verbena Green 36",
       "source": "bkv_api"
-    },
-    {
-      "supplier": "Think Energy",
-      "term": 12,
-      "rate": 14.0,
-      "renewable_pct": 100,
-      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "service_area": "aep",
-      "plan_name": "Think Clean 12 with Smart Thermostat Connected",
-      "source": "powertochoose",
-      "base_fee_note": "+$4.95/mo base fee"
     },
     {
       "supplier": "APG&E",
@@ -1113,7 +1005,7 @@
       "renewable_pct": 100,
       "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "service_area": "centerpoint",
+      "service_area": "oncor",
       "plan_name": "Think Clean With Smart Thermostat 24",
       "source": "powertochoose",
       "base_fee_note": "+$4.95/mo base fee"
@@ -1161,6 +1053,18 @@
       "service_area": "centerpoint",
       "plan_name": "Limitless 36",
       "source": "chariot_api"
+    },
+    {
+      "supplier": "Think Energy",
+      "term": 12,
+      "rate": 14.1,
+      "renewable_pct": 100,
+      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
+      "service_area": "lubbock",
+      "plan_name": "Think Clean 12 with Smart Thermostat Connected",
+      "source": "powertochoose",
+      "base_fee_note": "+$4.95/mo base fee"
     },
     {
       "supplier": "APG&E",
@@ -1537,28 +1441,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 14.2,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 14.2,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 12,
       "rate": 14.3,
@@ -1735,17 +1617,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 14.3,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "Frontier Utilities",
       "term": 12,
       "rate": 14.4,
@@ -1845,17 +1716,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 14.4,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "APG&E",
       "term": 15,
       "rate": 14.4,
@@ -1933,18 +1793,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Think Energy",
-      "term": 24,
-      "rate": 14.5,
-      "renewable_pct": 100,
-      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "service_area": "oncor",
-      "plan_name": "Think Clean With Smart Thermostat 24",
-      "source": "powertochoose",
-      "base_fee_note": "+$4.95/mo base fee"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 12,
       "rate": 14.6,
@@ -1976,29 +1824,6 @@
       "service_area": "oncor",
       "plan_name": "Blaze 12",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 14.6,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Think Energy",
-      "term": 24,
-      "rate": 14.6,
-      "renewable_pct": 100,
-      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "service_area": "aep",
-      "plan_name": "Think Simple with Smart Thermostat 24",
-      "source": "powertochoose",
-      "base_fee_note": "+$4.95/mo base fee"
     },
     {
       "supplier": "BKV Energy",
@@ -2067,17 +1892,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 14.6,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 12,
       "rate": 14.7,
@@ -2100,6 +1914,18 @@
       "source": "chariot_api"
     },
     {
+      "supplier": "Think Energy",
+      "term": 24,
+      "rate": 14.7,
+      "renewable_pct": 100,
+      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
+      "service_area": "lubbock",
+      "plan_name": "Think Clean With Smart Thermostat 24",
+      "source": "powertochoose",
+      "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
       "supplier": "BKV Energy",
       "term": 12,
       "rate": 14.8,
@@ -2120,17 +1946,6 @@
       "service_area": "centerpoint",
       "plan_name": "Shine 12",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 14.8,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "BKV Energy",
@@ -2177,6 +1992,18 @@
       "source": "chariot_api"
     },
     {
+      "supplier": "Think Energy",
+      "term": 12,
+      "rate": 14.9,
+      "renewable_pct": 100,
+      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
+      "service_area": "tnmp",
+      "plan_name": "Think Clean 12 with Smart Thermostat Connected",
+      "source": "powertochoose",
+      "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
       "supplier": "Chariot Energy",
       "term": 12,
       "rate": 14.9,
@@ -2210,17 +2037,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 15.0,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 18,
       "rate": 15.0,
@@ -2241,17 +2057,6 @@
       "service_area": "tnmp",
       "plan_name": "Verbena Green 24",
       "source": "bkv_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 15.0,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
     },
     {
       "supplier": "BKV Energy",
@@ -2386,29 +2191,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 15.3,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Think Energy",
-      "term": 12,
-      "rate": 15.4,
-      "renewable_pct": 100,
-      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "service_area": "lubbock",
-      "plan_name": "Think Clean 12 with Smart Thermostat Connected",
-      "source": "powertochoose",
-      "base_fee_note": "+$4.95/mo base fee"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 12,
       "rate": 15.4,
@@ -2497,17 +2279,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 15.4,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 12,
       "rate": 15.5,
@@ -2517,6 +2288,17 @@
       "service_area": "centerpoint",
       "plan_name": "TXPowerSwitch19 12",
       "source": "chariot_api"
+    },
+    {
+      "supplier": "Atlantex Power",
+      "term": 14,
+      "rate": 15.5,
+      "renewable_pct": 35,
+      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "service_area": "lubbock",
+      "plan_name": "Luminous",
+      "source": "atlantic_api"
     },
     {
       "supplier": "Chariot Energy",
@@ -2541,35 +2323,25 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 15.7,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 15.7,
+      "supplier": "Think Energy",
+      "term": 24,
+      "rate": 15.6,
       "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
+      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
       "service_area": "tnmp",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
+      "plan_name": "Think Clean With Smart Thermostat 24",
+      "source": "powertochoose",
+      "base_fee_note": "+$4.95/mo base fee"
     },
     {
       "supplier": "Atlantex Power",
       "term": 12,
-      "rate": 15.8,
+      "rate": 15.7,
       "renewable_pct": 35,
       "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
+      "service_area": "lubbock",
       "plan_name": "Luminous",
       "source": "atlantic_api"
     },
@@ -2587,11 +2359,11 @@
     {
       "supplier": "Atlantex Power",
       "term": 14,
-      "rate": 16.0,
+      "rate": 15.9,
       "renewable_pct": 100,
       "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
+      "service_area": "lubbock",
       "plan_name": "Luminous Green",
       "source": "atlantic_api"
     },
@@ -2607,32 +2379,20 @@
       "source": "powertochoose"
     },
     {
-      "supplier": "Think Energy",
-      "term": 24,
-      "rate": 16.1,
-      "renewable_pct": 100,
-      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "service_area": "lubbock",
-      "plan_name": "Think Clean With Smart Thermostat 24",
-      "source": "powertochoose",
-      "base_fee_note": "+$4.95/mo base fee"
-    },
-    {
       "supplier": "Atlantex Power",
       "term": 12,
-      "rate": 16.2,
+      "rate": 16.1,
       "renewable_pct": 100,
       "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
+      "service_area": "lubbock",
       "plan_name": "Luminous Green",
       "source": "atlantic_api"
     },
     {
       "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 16.2,
+      "term": 24,
+      "rate": 16.1,
       "renewable_pct": 35,
       "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
@@ -2652,71 +2412,48 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Think Energy",
-      "term": 12,
-      "rate": 16.3,
-      "renewable_pct": 100,
-      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "service_area": "tnmp",
-      "plan_name": "Think Clean 12 with Smart Thermostat Connected",
-      "source": "powertochoose",
-      "base_fee_note": "+$4.95/mo base fee"
+      "supplier": "Chariot Energy",
+      "term": 18,
+      "rate": 16.4,
+      "renewable_pct": 6,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "service_area": "centerpoint",
+      "plan_name": "Chariot Preferred 18",
+      "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 16.3,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
+      "supplier": "Chariot Energy",
+      "term": 18,
+      "rate": 16.4,
+      "renewable_pct": 6,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "service_area": "centerpoint",
+      "plan_name": "Chariot Preferred 18",
+      "source": "chariot_api"
+    },
+    {
+      "supplier": "Chariot Energy",
+      "term": 18,
+      "rate": 16.4,
+      "renewable_pct": 6,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "service_area": "centerpoint",
+      "plan_name": "Chariot Preferred 18",
+      "source": "chariot_api"
     },
     {
       "supplier": "Atlantex Power",
       "term": 24,
-      "rate": 16.3,
-      "renewable_pct": 35,
+      "rate": 16.4,
+      "renewable_pct": 100,
       "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous",
+      "service_area": "lubbock",
+      "plan_name": "Luminous Green",
       "source": "atlantic_api"
-    },
-    {
-      "supplier": "Chariot Energy",
-      "term": 18,
-      "rate": 16.4,
-      "renewable_pct": 6,
-      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "service_area": "centerpoint",
-      "plan_name": "Chariot Preferred 18",
-      "source": "chariot_api"
-    },
-    {
-      "supplier": "Chariot Energy",
-      "term": 18,
-      "rate": 16.4,
-      "renewable_pct": 6,
-      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "service_area": "centerpoint",
-      "plan_name": "Chariot Preferred 18",
-      "source": "chariot_api"
-    },
-    {
-      "supplier": "Chariot Energy",
-      "term": 18,
-      "rate": 16.4,
-      "renewable_pct": 6,
-      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "service_area": "centerpoint",
-      "plan_name": "Chariot Preferred 18",
-      "source": "chariot_api"
     },
     {
       "supplier": "Payless Power",
@@ -2731,13 +2468,13 @@
     },
     {
       "supplier": "Atlantex Power",
-      "term": 14,
+      "term": 36,
       "rate": 16.5,
-      "renewable_pct": 100,
+      "renewable_pct": 35,
       "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
       "service_area": "lubbock",
-      "plan_name": "Luminous Green",
+      "plan_name": "Luminous",
       "source": "atlantic_api"
     },
     {
@@ -2764,46 +2501,13 @@
     },
     {
       "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 16.7,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 16.7,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
       "term": 36,
-      "rate": 16.7,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 24,
       "rate": 16.8,
-      "renewable_pct": 35,
+      "renewable_pct": 100,
       "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
       "service_area": "lubbock",
-      "plan_name": "Luminous",
+      "plan_name": "Luminous Green",
       "source": "atlantic_api"
     },
     {
@@ -2860,18 +2564,6 @@
       "service_area": "centerpoint",
       "plan_name": "Green Saver 36",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Think Energy",
-      "term": 24,
-      "rate": 17.0,
-      "renewable_pct": 100,
-      "enroll_url": "http://enroll.thinkenergy.com/?referralType=amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/08/think-ntx.e2c6be7f.png",
-      "service_area": "tnmp",
-      "plan_name": "Think Clean With Smart Thermostat 24",
-      "source": "powertochoose",
-      "base_fee_note": "+$4.95/mo base fee"
     },
     {
       "supplier": "Chariot Energy",
@@ -2951,28 +2643,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 17.1,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 17.2,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 36,
       "rate": 17.2,
@@ -2993,17 +2663,6 @@
       "service_area": "centerpoint",
       "plan_name": "Helios 36",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 17.2,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
     },
     {
       "supplier": "Chariot Energy",
@@ -3015,17 +2674,6 @@
       "service_area": "centerpoint",
       "plan_name": "Shine 12_Req Auto Pay w/o Ebill-Copy",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 17.6,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "Payless Power",
