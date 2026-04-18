@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-04-17T14:20:17Z",
-  "updated_display": "2:20 PM UTC, April 17, 2026",
+  "updated_at": "2026-04-18T03:48:17Z",
+  "updated_display": "3:48 AM UTC, April 18, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -1242,17 +1242,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Frontier Utilities",
-      "term": 12,
-      "rate": 14.1,
-      "renewable_pct": 30,
-      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
-      "service_area": "lubbock",
-      "plan_name": "Frontier Power Saver 12",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "Think Energy",
       "term": 12,
       "rate": 14.1,
@@ -1263,6 +1252,17 @@
       "plan_name": "Think Clean 12 with Smart Thermostat Connected",
       "source": "powertochoose",
       "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
+      "supplier": "Frontier Utilities",
+      "term": 12,
+      "rate": 14.1,
+      "renewable_pct": 30,
+      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
+      "service_area": "lubbock",
+      "plan_name": "Frontier Power Saver 12",
+      "source": "powertochoose"
     },
     {
       "supplier": "Atlantex Power",
