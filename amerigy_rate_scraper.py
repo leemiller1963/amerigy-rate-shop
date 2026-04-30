@@ -278,6 +278,8 @@ def fetch_chariot_plans():
 
         area_count = 0
         for block in data:
+            if not isinstance(block, dict):
+                continue
             util_id = block.get("UtilityId")
             mapped = CHARIOT_UTIL_TO_AREA.get(util_id, area_key)
             for p in (block.get("Plans") or []):
