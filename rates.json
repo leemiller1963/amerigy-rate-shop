@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-13T15:42:25Z",
-  "updated_display": "3:42 PM UTC, May 13, 2026",
+  "updated_at": "2026-05-14T04:43:26Z",
+  "updated_display": "4:43 AM UTC, May 14, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -11,8 +11,8 @@
   ],
   "service_areas_fallback": [],
   "usage_kwh": 2000,
-  "live_plans": 302,
-  "total_plans": 298,
+  "live_plans": 311,
+  "total_plans": 307,
   "plans": [
     {
       "supplier": "Think Energy",
@@ -25,6 +25,28 @@
       "plan_name": "Think Clean 12 with Smart Thermostat Connected",
       "source": "powertochoose",
       "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 14,
+      "rate": 12.8,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "centerpoint",
+      "plan_name": "Verbena 14",
+      "source": "bkv_api"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 13,
+      "rate": 12.9,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "centerpoint",
+      "plan_name": "Verbena 13",
+      "source": "bkv_api"
     },
     {
       "supplier": "Chariot Energy",
@@ -382,6 +404,17 @@
       "source": "atlantic_api"
     },
     {
+      "supplier": "BKV Energy",
+      "term": 14,
+      "rate": 13.6,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "oncor",
+      "plan_name": "Verbena 14",
+      "source": "bkv_api"
+    },
+    {
       "supplier": "APG&E",
       "term": 15,
       "rate": 13.6,
@@ -413,6 +446,17 @@
       "service_area": "oncor",
       "plan_name": "Luminous",
       "source": "atlantic_api"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 13,
+      "rate": 13.7,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "oncor",
+      "plan_name": "Verbena 13",
+      "source": "bkv_api"
     },
     {
       "supplier": "APG&E",
@@ -645,6 +689,28 @@
       "service_area": "centerpoint",
       "plan_name": "Free Nights 12",
       "source": "chariot_api"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 13,
+      "rate": 13.9,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "aep",
+      "plan_name": "Verbena 13",
+      "source": "bkv_api"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 14,
+      "rate": 13.9,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "aep",
+      "plan_name": "Verbena 14",
+      "source": "bkv_api"
     },
     {
       "supplier": "Atlantex Power",
@@ -1705,6 +1771,28 @@
       "source": "apge_api"
     },
     {
+      "supplier": "BKV Energy",
+      "term": 13,
+      "rate": 14.6,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "lubbock",
+      "plan_name": "Verbena 13",
+      "source": "bkv_api"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 14,
+      "rate": 14.6,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "lubbock",
+      "plan_name": "Verbena 14",
+      "source": "bkv_api"
+    },
+    {
       "supplier": "Atlantex Power",
       "term": 14,
       "rate": 14.6,
@@ -1771,6 +1859,17 @@
       "source": "apge_api"
     },
     {
+      "supplier": "BKV Energy",
+      "term": 14,
+      "rate": 14.7,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "tnmp",
+      "plan_name": "Verbena 14",
+      "source": "bkv_api"
+    },
+    {
       "supplier": "Think Energy",
       "term": 24,
       "rate": 14.7,
@@ -1825,6 +1924,17 @@
       "service_area": "tnmp",
       "plan_name": "Luminous",
       "source": "atlantic_api"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 13,
+      "rate": 14.8,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "tnmp",
+      "plan_name": "Verbena 13",
+      "source": "bkv_api"
     },
     {
       "supplier": "APG&E",
@@ -1925,17 +2035,6 @@
       "service_area": "centerpoint",
       "plan_name": "Test SBB Index",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 14,
-      "rate": 14.9,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "tnmp",
-      "plan_name": "Verbena 14",
-      "source": "bkv_api"
     },
     {
       "supplier": "BKV Energy",
