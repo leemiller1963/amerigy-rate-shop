@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-18T05:06:50Z",
-  "updated_display": "5:06 AM UTC, May 18, 2026",
+  "updated_at": "2026-05-18T16:20:54Z",
+  "updated_display": "4:20 PM UTC, May 18, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -93,6 +93,17 @@
       "source": "atlantic_api"
     },
     {
+      "supplier": "BKV Energy",
+      "term": 15,
+      "rate": 13.0,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "centerpoint",
+      "plan_name": "Verbena 15",
+      "source": "bkv_api"
+    },
+    {
       "supplier": "APG&E",
       "term": 12,
       "rate": 13.1,
@@ -113,17 +124,6 @@
       "service_area": "centerpoint",
       "plan_name": "Chariot Test Nights & Weekends",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 15,
-      "rate": 13.1,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "centerpoint",
-      "plan_name": "Verbena 15",
-      "source": "bkv_api"
     },
     {
       "supplier": "Think Energy",
@@ -449,17 +449,6 @@
     },
     {
       "supplier": "APG&E",
-      "term": 15,
-      "rate": 13.7,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "aep",
-      "plan_name": "Amerigy 15",
-      "source": "apge_api"
-    },
-    {
-      "supplier": "APG&E",
       "term": 24,
       "rate": 13.7,
       "renewable_pct": 5,
@@ -543,6 +532,17 @@
       "enroll_url": "https://www.apge.com/amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "oncor",
+      "plan_name": "Amerigy 15",
+      "source": "apge_api"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 15,
+      "rate": 13.8,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "aep",
       "plan_name": "Amerigy 15",
       "source": "apge_api"
     },
@@ -1254,17 +1254,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "APG&E",
-      "term": 15,
-      "rate": 14.3,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "aep",
-      "plan_name": "SimpleSaver 15",
-      "source": "apge_api"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 15,
       "rate": 14.3,
@@ -1525,6 +1514,17 @@
       "enroll_url": "https://www.apge.com/amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "oncor",
+      "plan_name": "SimpleSaver 15",
+      "source": "apge_api"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 15,
+      "rate": 14.4,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "aep",
       "plan_name": "SimpleSaver 15",
       "source": "apge_api"
     },
@@ -2775,17 +2775,6 @@
       "source": "bkv_api"
     },
     {
-      "supplier": "Payless Power",
-      "term": 12,
-      "rate": 16.3,
-      "renewable_pct": 26,
-      "enroll_url": "https://account.paylesspower.com/enroll/318875",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "PTC 12 Month - Prepaid",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "Atlantex Power",
       "term": 12,
       "rate": 16.3,
@@ -2896,17 +2885,6 @@
       "source": "atlantic_api"
     },
     {
-      "supplier": "Payless Power",
-      "term": 12,
-      "rate": 16.7,
-      "renewable_pct": 26,
-      "enroll_url": "https://account.paylesspower.com/enroll/318875",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png",
-      "service_area": "oncor",
-      "plan_name": "PTC 12 Month - Prepaid",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 12,
       "rate": 16.8,
@@ -3006,17 +2984,6 @@
       "source": "atlantic_api"
     },
     {
-      "supplier": "Payless Power",
-      "term": 12,
-      "rate": 17.1,
-      "renewable_pct": 26,
-      "enroll_url": "https://account.paylesspower.com/enroll/318875",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png",
-      "service_area": "aep",
-      "plan_name": "PTC 12 Month - Prepaid",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 24,
       "rate": 17.1,
@@ -3048,6 +3015,17 @@
       "service_area": "centerpoint",
       "plan_name": "TXPowerSwitch21 36",
       "source": "chariot_api"
+    },
+    {
+      "supplier": "Payless Power",
+      "term": 12,
+      "rate": 17.2,
+      "renewable_pct": 26,
+      "enroll_url": "https://account.paylesspower.com/enroll/318875",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png",
+      "service_area": "centerpoint",
+      "plan_name": "PTC 12 Month - Prepaid",
+      "source": "powertochoose"
     },
     {
       "supplier": "Chariot Energy",
@@ -3127,6 +3105,17 @@
       "source": "atlantic_api"
     },
     {
+      "supplier": "Payless Power",
+      "term": 12,
+      "rate": 17.7,
+      "renewable_pct": 26,
+      "enroll_url": "https://account.paylesspower.com/enroll/318875",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png",
+      "service_area": "oncor",
+      "plan_name": "PTC 12 Month - Prepaid",
+      "source": "powertochoose"
+    },
+    {
       "supplier": "Chariot Energy",
       "term": 12,
       "rate": 17.8,
@@ -3144,7 +3133,7 @@
       "renewable_pct": 26,
       "enroll_url": "https://account.paylesspower.com/enroll/318875",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png",
-      "service_area": "tnmp",
+      "service_area": "aep",
       "plan_name": "PTC 12 Month - Prepaid",
       "source": "powertochoose"
     },
@@ -3180,6 +3169,17 @@
       "service_area": "centerpoint",
       "plan_name": "REQ_AUTOPAY",
       "source": "chariot_api"
+    },
+    {
+      "supplier": "Payless Power",
+      "term": 12,
+      "rate": 19.0,
+      "renewable_pct": 26,
+      "enroll_url": "https://account.paylesspower.com/enroll/318875",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/11/payless-power-logo.png",
+      "service_area": "tnmp",
+      "plan_name": "PTC 12 Month - Prepaid",
+      "source": "powertochoose"
     },
     {
       "supplier": "Chariot Energy",
