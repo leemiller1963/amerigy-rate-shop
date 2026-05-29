@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-28T16:53:17Z",
-  "updated_display": "4:53 PM UTC, May 28, 2026",
+  "updated_at": "2026-05-29T05:15:08Z",
+  "updated_display": "5:15 AM UTC, May 29, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -11,8 +11,8 @@
   ],
   "service_areas_fallback": [],
   "usage_kwh": 2000,
-  "live_plans": 311,
-  "total_plans": 307,
+  "live_plans": 271,
+  "total_plans": 267,
   "plans": [
     {
       "supplier": "Think Energy",
@@ -49,17 +49,6 @@
       "source": "bkv_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 12.9,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 13,
       "rate": 12.9,
@@ -91,17 +80,6 @@
       "service_area": "centerpoint",
       "plan_name": "Amerigy 12",
       "source": "apge_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 13.0,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
     },
     {
       "supplier": "BKV Energy",
@@ -169,17 +147,6 @@
       "service_area": "oncor",
       "plan_name": "Frontier Power Saver 12",
       "source": "powertochoose"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 13.3,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "BKV Energy",
@@ -260,28 +227,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 13.4,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 13.4,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "APG&E",
       "term": 18,
       "rate": 13.4,
@@ -305,17 +250,6 @@
       "base_fee_note": "+$4.95/mo base fee"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 13.4,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "APG&E",
       "term": 12,
       "rate": 13.5,
@@ -325,17 +259,6 @@
       "service_area": "oncor",
       "plan_name": "Amerigy 12",
       "source": "apge_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 13.5,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
     },
     {
       "supplier": "APG&E",
@@ -459,17 +382,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 13.7,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 12,
       "rate": 13.8,
@@ -523,17 +435,6 @@
       "service_area": "centerpoint",
       "plan_name": "TXPowerSwitch22 12",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 13.8,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "BKV Energy",
@@ -625,28 +526,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 13.8,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 13.8,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 36,
       "rate": 13.8,
@@ -700,17 +579,6 @@
       "service_area": "oncor",
       "plan_name": "Verbena 14",
       "source": "bkv_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 13.9,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "APG&E",
@@ -1023,17 +891,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 14.1,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "centerpoint",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 15,
       "rate": 14.2,
@@ -1133,17 +990,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 14.2,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 36,
       "rate": 14.2,
@@ -1175,17 +1021,6 @@
       "service_area": "centerpoint",
       "plan_name": "Sunflare 36",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 14.2,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
     },
     {
       "supplier": "Chariot Energy",
@@ -1694,17 +1529,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 14.5,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 13,
       "rate": 14.5,
@@ -1804,17 +1628,6 @@
       "source": "apge_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 14.6,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "APG&E",
       "term": 15,
       "rate": 14.6,
@@ -1835,17 +1648,6 @@
       "service_area": "centerpoint",
       "plan_name": "GridPlus 18",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 14.6,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "BKV Energy",
@@ -2015,17 +1817,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 14.9,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 14,
       "rate": 14.9,
@@ -2059,17 +1850,6 @@
       "source": "apge_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 14.9,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 12,
       "rate": 15.0,
@@ -2090,17 +1870,6 @@
       "service_area": "centerpoint",
       "plan_name": "Shine 12",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 15.0,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "APG&E",
@@ -2290,17 +2059,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 15.3,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "APG&E",
       "term": 36,
       "rate": 15.3,
@@ -2332,17 +2090,6 @@
       "service_area": "centerpoint",
       "plan_name": "GridEdge 36",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 15.3,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
     },
     {
       "supplier": "Chariot Energy",
@@ -2532,28 +2279,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 15.6,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 15.6,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "APG&E",
       "term": 15,
       "rate": 15.6,
@@ -2676,17 +2401,6 @@
       "source": "bkv_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 15.7,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "tnmp",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 12,
       "rate": 15.8,
@@ -2696,28 +2410,6 @@
       "service_area": "centerpoint",
       "plan_name": "EcoSBB12 CNP",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 16.0,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 16.0,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "Chariot Energy",
@@ -2742,39 +2434,6 @@
       "source": "bkv_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 16.1,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 16.1,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 16.1,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 36,
       "rate": 16.2,
@@ -2797,28 +2456,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 16.5,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 14,
-      "rate": 16.5,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 18,
       "rate": 16.5,
@@ -2850,39 +2487,6 @@
       "service_area": "centerpoint",
       "plan_name": "Chariot Preferred 18",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 16.5,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 16.6,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 16.6,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
     },
     {
       "supplier": "Chariot Energy",
@@ -2929,17 +2533,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 17.0,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 36,
       "rate": 17.0,
@@ -2960,17 +2553,6 @@
       "service_area": "centerpoint",
       "plan_name": "Green Saver 36",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 17.0,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "aep",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "Chariot Energy",
@@ -3004,17 +2586,6 @@
       "service_area": "centerpoint",
       "plan_name": "TXPowerSwitch21 36",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 17.1,
-      "renewable_pct": 35,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
     },
     {
       "supplier": "Payless Power",
@@ -3092,17 +2663,6 @@
       "service_area": "centerpoint",
       "plan_name": "Helios 36",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 17.5,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "lubbock",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "Payless Power",
