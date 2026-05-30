@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-05-29T16:40:57Z",
-  "updated_display": "4:40 PM UTC, May 29, 2026",
+  "updated_at": "2026-05-30T04:53:33Z",
+  "updated_display": "4:53 AM UTC, May 30, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -566,7 +566,7 @@
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "centerpoint",
-      "plan_name": "TXPowerSwitch22 36",
+      "plan_name": "Chariot Choice 36",
       "source": "chariot_api"
     },
     {
@@ -577,7 +577,7 @@
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "centerpoint",
-      "plan_name": "Chariot Choice 36",
+      "plan_name": "TXPowerSwitch22 36",
       "source": "chariot_api"
     },
     {
@@ -2264,7 +2264,7 @@
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "centerpoint",
-      "plan_name": "MT Import-Copy",
+      "plan_name": "GridEdge 36",
       "source": "chariot_api"
     },
     {
@@ -2275,7 +2275,7 @@
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "centerpoint",
-      "plan_name": "GridEdge 36",
+      "plan_name": "MT Import-Copy",
       "source": "chariot_api"
     },
     {
