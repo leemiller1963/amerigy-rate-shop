@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-03T17:58:55Z",
-  "updated_display": "5:58 PM UTC, June 3, 2026",
+  "updated_at": "2026-06-04T05:57:17Z",
+  "updated_display": "5:57 AM UTC, June 4, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -724,17 +724,6 @@
       "source": "atlantic_api"
     },
     {
-      "supplier": "BKV Energy",
-      "term": 13,
-      "rate": 13.9,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "oncor",
-      "plan_name": "Verbena 13",
-      "source": "bkv_api"
-    },
-    {
       "supplier": "Atlantex Power",
       "term": 14,
       "rate": 13.9,
@@ -899,6 +888,17 @@
       "plan_name": "Think Clean 12 with Smart Thermostat Connected",
       "source": "powertochoose",
       "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 13,
+      "rate": 14.1,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "oncor",
+      "plan_name": "Verbena 13",
+      "source": "bkv_api"
     },
     {
       "supplier": "BKV Energy",
