@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-08T16:47:03Z",
-  "updated_display": "4:47 PM UTC, June 8, 2026",
+  "updated_at": "2026-06-09T05:07:04Z",
+  "updated_display": "5:07 AM UTC, June 9, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -71,6 +71,17 @@
       "source": "atlantic_api"
     },
     {
+      "supplier": "BKV Energy",
+      "term": 13,
+      "rate": 12.9,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "centerpoint",
+      "plan_name": "Verbena 13",
+      "source": "bkv_api"
+    },
+    {
       "supplier": "Atlantex Power",
       "term": 14,
       "rate": 12.9,
@@ -135,17 +146,6 @@
       "service_area": "centerpoint",
       "plan_name": "Chariot Test Nights & Weekends",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 13,
-      "rate": 13.1,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "centerpoint",
-      "plan_name": "Verbena 13",
-      "source": "bkv_api"
     },
     {
       "supplier": "Atlantex Power",
@@ -697,6 +697,17 @@
       "renewable_pct": 29,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "oncor",
+      "plan_name": "Verbena 13",
+      "source": "bkv_api"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 13,
+      "rate": 13.9,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "aep",
       "plan_name": "Verbena 13",
       "source": "bkv_api"
@@ -1141,17 +1152,6 @@
       "service_area": "tnmp",
       "plan_name": "Luminous Green",
       "source": "atlantic_api"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 13,
-      "rate": 14.3,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "oncor",
-      "plan_name": "Verbena 13",
-      "source": "bkv_api"
     },
     {
       "supplier": "Atlantex Power",
