@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-17T16:37:46Z",
-  "updated_display": "4:37 PM UTC, June 17, 2026",
+  "updated_at": "2026-06-18T05:56:08Z",
+  "updated_display": "5:56 AM UTC, June 18, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -423,6 +423,17 @@
       "service_area": "oncor",
       "plan_name": "Amerigy 12",
       "source": "apge_api"
+    },
+    {
+      "supplier": "BKV Energy",
+      "term": 13,
+      "rate": 13.7,
+      "renewable_pct": 29,
+      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
+      "service_area": "oncor",
+      "plan_name": "Verbena 13",
+      "source": "bkv_api"
     },
     {
       "supplier": "BKV Energy",
@@ -876,17 +887,6 @@
       "service_area": "centerpoint",
       "plan_name": "Chariot Choice 12",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "BKV Energy",
-      "term": 13,
-      "rate": 14.0,
-      "renewable_pct": 29,
-      "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
-      "service_area": "oncor",
-      "plan_name": "Verbena 13",
-      "source": "bkv_api"
     },
     {
       "supplier": "Atlantex Power",
