@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-06-18T16:27:33Z",
-  "updated_display": "4:27 PM UTC, June 18, 2026",
+  "updated_at": "2026-06-19T06:21:12Z",
+  "updated_display": "6:21 AM UTC, June 19, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -1304,7 +1304,7 @@
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "centerpoint",
-      "plan_name": "Blaze 18",
+      "plan_name": "Solarize 18",
       "source": "chariot_api"
     },
     {
@@ -1315,7 +1315,7 @@
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "centerpoint",
-      "plan_name": "Solarize 18",
+      "plan_name": "Blaze 18",
       "source": "chariot_api"
     },
     {
@@ -1579,7 +1579,7 @@
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "centerpoint",
-      "plan_name": "Solarize 15",
+      "plan_name": "Blaze 15",
       "source": "chariot_api"
     },
     {
@@ -1590,7 +1590,7 @@
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "centerpoint",
-      "plan_name": "Blaze 15",
+      "plan_name": "Solarize 15",
       "source": "chariot_api"
     },
     {
@@ -1623,17 +1623,6 @@
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "centerpoint",
-      "plan_name": "Solarize 24",
-      "source": "chariot_api"
-    },
-    {
-      "supplier": "Chariot Energy",
-      "term": 24,
-      "rate": 14.4,
-      "renewable_pct": 100,
-      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
-      "service_area": "centerpoint",
       "plan_name": "Blaze 24",
       "source": "chariot_api"
     },
@@ -1657,6 +1646,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "centerpoint",
       "plan_name": "Blaze 24",
+      "source": "chariot_api"
+    },
+    {
+      "supplier": "Chariot Energy",
+      "term": 24,
+      "rate": 14.4,
+      "renewable_pct": 100,
+      "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
+      "service_area": "centerpoint",
+      "plan_name": "Solarize 24",
       "source": "chariot_api"
     },
     {
@@ -1711,7 +1711,7 @@
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "centerpoint",
-      "plan_name": "Blaze 12",
+      "plan_name": "Solarize 12",
       "source": "chariot_api"
     },
     {
@@ -1722,7 +1722,7 @@
       "enroll_url": "https://signup.chariotenergy.com/Home/?Promocode=AMERIGY050",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/chariot.png",
       "service_area": "centerpoint",
-      "plan_name": "Solarize 12",
+      "plan_name": "Blaze 12",
       "source": "chariot_api"
     },
     {
