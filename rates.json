@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-06T05:12:08Z",
-  "updated_display": "5:12 AM UTC, July 6, 2026",
+  "updated_at": "2026-07-06T16:18:11Z",
+  "updated_display": "4:18 PM UTC, July 6, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -70,17 +70,6 @@
       "source": "apge_api"
     },
     {
-      "supplier": "APG&E",
-      "term": 12,
-      "rate": 12.8,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "aep",
-      "plan_name": "Amerigy 12",
-      "source": "apge_api"
-    },
-    {
       "supplier": "Frontier Utilities",
       "term": 12,
       "rate": 12.9,
@@ -113,6 +102,17 @@
       "service_area": "centerpoint",
       "plan_name": "Verbena 12",
       "source": "bkv_api"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 12,
+      "rate": 12.9,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "aep",
+      "plan_name": "Amerigy 12",
+      "source": "apge_api"
     },
     {
       "supplier": "Chariot Energy",
@@ -320,17 +320,6 @@
       "renewable_pct": 5,
       "enroll_url": "https://www.apge.com/amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "aep",
-      "plan_name": "SimpleSaver 12",
-      "source": "apge_api"
-    },
-    {
-      "supplier": "APG&E",
-      "term": 12,
-      "rate": 13.4,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "lubbock",
       "plan_name": "Amerigy 12",
       "source": "apge_api"
@@ -402,17 +391,6 @@
       "source": "apge_api"
     },
     {
-      "supplier": "APG&E",
-      "term": 18,
-      "rate": 13.4,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "aep",
-      "plan_name": "Amerigy 18",
-      "source": "apge_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 24,
       "rate": 13.4,
@@ -457,6 +435,17 @@
       "source": "atlantic_api"
     },
     {
+      "supplier": "APG&E",
+      "term": 12,
+      "rate": 13.5,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "aep",
+      "plan_name": "SimpleSaver 12",
+      "source": "apge_api"
+    },
+    {
       "supplier": "Atlantex Power",
       "term": 12,
       "rate": 13.5,
@@ -488,6 +477,17 @@
       "service_area": "centerpoint",
       "plan_name": "Verbena 18",
       "source": "bkv_api"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 18,
+      "rate": 13.5,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "aep",
+      "plan_name": "Amerigy 18",
+      "source": "apge_api"
     },
     {
       "supplier": "Think Energy",
@@ -857,17 +857,6 @@
     },
     {
       "supplier": "APG&E",
-      "term": 18,
-      "rate": 13.9,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "lubbock",
-      "plan_name": "Amerigy 18",
-      "source": "apge_api"
-    },
-    {
-      "supplier": "APG&E",
       "term": 24,
       "rate": 13.9,
       "renewable_pct": 5,
@@ -985,6 +974,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "centerpoint",
       "plan_name": "SimpleSaver 15",
+      "source": "apge_api"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 18,
+      "rate": 14.0,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "lubbock",
+      "plan_name": "Amerigy 18",
       "source": "apge_api"
     },
     {
