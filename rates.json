@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-07-29T04:12:36Z",
-  "updated_display": "4:12 AM UTC, July 29, 2026",
+  "updated_at": "2026-07-29T15:06:59Z",
+  "updated_display": "3:06 PM UTC, July 29, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -11,8 +11,8 @@
   ],
   "service_areas_fallback": [],
   "usage_kwh": 2000,
-  "live_plans": 307,
-  "total_plans": 298,
+  "live_plans": 312,
+  "total_plans": 303,
   "plans": [
     {
       "supplier": "Atlantex Power",
@@ -26,9 +26,20 @@
       "source": "atlantic_api"
     },
     {
-      "supplier": "APG&E",
+      "supplier": "Frontier Utilities",
       "term": 12,
       "rate": 12.0,
+      "renewable_pct": 30,
+      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
+      "service_area": "centerpoint",
+      "plan_name": "Frontier Power Saver 12",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 12,
+      "rate": 12.1,
       "renewable_pct": 5,
       "enroll_url": "https://www.apge.com/amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
@@ -92,6 +103,17 @@
       "source": "atlantic_api"
     },
     {
+      "supplier": "Frontier Utilities",
+      "term": 12,
+      "rate": 12.4,
+      "renewable_pct": 30,
+      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
+      "service_area": "aep",
+      "plan_name": "Frontier Power Saver 12",
+      "source": "powertochoose"
+    },
+    {
       "supplier": "BKV Energy",
       "term": 12,
       "rate": 12.4,
@@ -125,17 +147,6 @@
       "source": "apge_api"
     },
     {
-      "supplier": "APG&E",
-      "term": 18,
-      "rate": 12.5,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "centerpoint",
-      "plan_name": "Amerigy 18",
-      "source": "apge_api"
-    },
-    {
       "supplier": "Atlantex Power",
       "term": 36,
       "rate": 12.5,
@@ -145,17 +156,6 @@
       "service_area": "centerpoint",
       "plan_name": "Luminous",
       "source": "atlantic_api"
-    },
-    {
-      "supplier": "APG&E",
-      "term": 12,
-      "rate": 12.6,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "centerpoint",
-      "plan_name": "SimpleSaver 12",
-      "source": "apge_api"
     },
     {
       "supplier": "APG&E",
@@ -170,6 +170,17 @@
     },
     {
       "supplier": "APG&E",
+      "term": 18,
+      "rate": 12.6,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "centerpoint",
+      "plan_name": "Amerigy 18",
+      "source": "apge_api"
+    },
+    {
+      "supplier": "APG&E",
       "term": 24,
       "rate": 12.6,
       "renewable_pct": 5,
@@ -177,6 +188,28 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "centerpoint",
       "plan_name": "Amerigy 24",
+      "source": "apge_api"
+    },
+    {
+      "supplier": "Frontier Utilities",
+      "term": 12,
+      "rate": 12.7,
+      "renewable_pct": 30,
+      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
+      "service_area": "oncor",
+      "plan_name": "Frontier Power Saver 12",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 12,
+      "rate": 12.7,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "centerpoint",
+      "plan_name": "SimpleSaver 12",
       "source": "apge_api"
     },
     {
@@ -721,6 +754,17 @@
       "source": "atlantic_api"
     },
     {
+      "supplier": "Frontier Utilities",
+      "term": 12,
+      "rate": 13.5,
+      "renewable_pct": 30,
+      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
+      "service_area": "tnmp",
+      "plan_name": "Frontier Power Saver 12",
+      "source": "powertochoose"
+    },
+    {
       "supplier": "BKV Energy",
       "term": 12,
       "rate": 13.5,
@@ -742,6 +786,17 @@
       "plan_name": "Think Clean 24 With Smart Thermostat",
       "source": "powertochoose",
       "base_fee_note": "+$4.95/mo base fee"
+    },
+    {
+      "supplier": "Frontier Utilities",
+      "term": 12,
+      "rate": 13.6,
+      "renewable_pct": 30,
+      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
+      "service_area": "lubbock",
+      "plan_name": "Frontier Power Saver 12",
+      "source": "powertochoose"
     },
     {
       "supplier": "BKV Energy",
@@ -786,6 +841,28 @@
       "service_area": "oncor",
       "plan_name": "Luminous Green",
       "source": "atlantic_api"
+    },
+    {
+      "supplier": "Ironhorse Power",
+      "term": 18,
+      "rate": 13.7,
+      "renewable_pct": 6,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "service_area": "centerpoint",
+      "plan_name": "Giddy Up 18",
+      "source": "powertochoose"
+    },
+    {
+      "supplier": "Ironhorse Power",
+      "term": 24,
+      "rate": 13.7,
+      "renewable_pct": 6,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "service_area": "centerpoint",
+      "plan_name": "Giddy Up 24",
+      "source": "powertochoose"
     },
     {
       "supplier": "Atlantex Power",
@@ -1065,17 +1142,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "Ironhorse Power",
-      "term": 24,
-      "rate": 13.9,
-      "renewable_pct": 6,
-      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "service_area": "centerpoint",
-      "plan_name": "Giddy Up 24",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 24,
       "rate": 13.9,
@@ -1175,17 +1241,6 @@
       "source": "bkv_api"
     },
     {
-      "supplier": "Ironhorse Power",
-      "term": 18,
-      "rate": 14.0,
-      "renewable_pct": 6,
-      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "service_area": "centerpoint",
-      "plan_name": "Giddy Up 18",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 18,
       "rate": 14.0,
@@ -1206,6 +1261,17 @@
       "service_area": "oncor",
       "plan_name": "Verbena 24",
       "source": "bkv_api"
+    },
+    {
+      "supplier": "Ironhorse Power",
+      "term": 36,
+      "rate": 14.0,
+      "renewable_pct": 6,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "service_area": "centerpoint",
+      "plan_name": "Giddy Up 36",
+      "source": "powertochoose"
     },
     {
       "supplier": "Atlantex Power",
@@ -1460,17 +1526,6 @@
       "service_area": "tnmp",
       "plan_name": "Luminous Green",
       "source": "atlantic_api"
-    },
-    {
-      "supplier": "Ironhorse Power",
-      "term": 36,
-      "rate": 14.2,
-      "renewable_pct": 6,
-      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "service_area": "centerpoint",
-      "plan_name": "Giddy Up 36",
-      "source": "powertochoose"
     },
     {
       "supplier": "BKV Energy",
@@ -2024,6 +2079,17 @@
       "source": "atlantic_api"
     },
     {
+      "supplier": "Ironhorse Power",
+      "term": 18,
+      "rate": 14.6,
+      "renewable_pct": 6,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "service_area": "oncor",
+      "plan_name": "Giddy Up 18",
+      "source": "powertochoose"
+    },
+    {
       "supplier": "Chariot Energy",
       "term": 18,
       "rate": 14.6,
@@ -2033,6 +2099,17 @@
       "service_area": "centerpoint",
       "plan_name": "GridPlus 18",
       "source": "chariot_api"
+    },
+    {
+      "supplier": "Ironhorse Power",
+      "term": 24,
+      "rate": 14.6,
+      "renewable_pct": 6,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "service_area": "oncor",
+      "plan_name": "Giddy Up 24",
+      "source": "powertochoose"
     },
     {
       "supplier": "Atlantex Power",
@@ -2113,17 +2190,6 @@
       "base_fee_note": "+$4.95/mo base fee"
     },
     {
-      "supplier": "Ironhorse Power",
-      "term": 24,
-      "rate": 14.7,
-      "renewable_pct": 6,
-      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "service_area": "oncor",
-      "plan_name": "Giddy Up 24",
-      "source": "powertochoose"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 24,
       "rate": 14.7,
@@ -2188,17 +2254,6 @@
       "service_area": "lubbock",
       "plan_name": "Verbena 14",
       "source": "bkv_api"
-    },
-    {
-      "supplier": "Ironhorse Power",
-      "term": 18,
-      "rate": 14.8,
-      "renewable_pct": 6,
-      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "service_area": "oncor",
-      "plan_name": "Giddy Up 18",
-      "source": "powertochoose"
     },
     {
       "supplier": "Chariot Energy",
@@ -2288,6 +2343,17 @@
       "service_area": "lubbock",
       "plan_name": "Verbena 24",
       "source": "bkv_api"
+    },
+    {
+      "supplier": "Ironhorse Power",
+      "term": 36,
+      "rate": 14.9,
+      "renewable_pct": 6,
+      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
+      "service_area": "oncor",
+      "plan_name": "Giddy Up 36",
+      "source": "powertochoose"
     },
     {
       "supplier": "BKV Energy",
@@ -2431,17 +2497,6 @@
       "service_area": "lubbock",
       "plan_name": "Luminous",
       "source": "atlantic_api"
-    },
-    {
-      "supplier": "Ironhorse Power",
-      "term": 36,
-      "rate": 15.1,
-      "renewable_pct": 6,
-      "enroll_url": "https://signup.ironhorsepowerservices.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/Ironhorse.svg",
-      "service_area": "oncor",
-      "plan_name": "Giddy Up 36",
-      "source": "powertochoose"
     },
     {
       "supplier": "Atlantex Power",
