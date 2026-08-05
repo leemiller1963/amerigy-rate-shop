@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-08-04T15:22:32Z",
-  "updated_display": "3:22 PM UTC, August 4, 2026",
+  "updated_at": "2026-08-05T04:10:08Z",
+  "updated_display": "4:10 AM UTC, August 5, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -11,8 +11,8 @@
   ],
   "service_areas_fallback": [],
   "usage_kwh": 2000,
-  "live_plans": 306,
-  "total_plans": 297,
+  "live_plans": 300,
+  "total_plans": 291,
   "plans": [
     {
       "supplier": "Atlantex Power",
@@ -189,17 +189,6 @@
       "service_area": "oncor",
       "plan_name": "Frontier Power Saver 12",
       "source": "powertochoose"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 12.6,
-      "renewable_pct": 23,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
     },
     {
       "supplier": "BKV Energy",
@@ -456,17 +445,6 @@
       "source": "bkv_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 13.0,
-      "renewable_pct": 23,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 12,
       "rate": 13.1,
@@ -487,17 +465,6 @@
       "service_area": "centerpoint",
       "plan_name": "Chariot Test Nights & Weekends",
       "source": "chariot_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 12,
-      "rate": 13.1,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "APG&E",
@@ -666,17 +633,6 @@
       "source": "apge_api"
     },
     {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 13.3,
-      "renewable_pct": 23,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous",
-      "source": "atlantic_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 12,
       "rate": 13.4,
@@ -786,17 +742,6 @@
       "plan_name": "Think Clean 24 With Smart Thermostat",
       "source": "powertochoose",
       "base_fee_note": "+$4.95/mo base fee"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 24,
-      "rate": 13.5,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "Frontier Utilities",
@@ -1239,17 +1184,6 @@
       "service_area": "oncor",
       "plan_name": "Amerigy 36",
       "source": "apge_api"
-    },
-    {
-      "supplier": "Atlantex Power",
-      "term": 36,
-      "rate": 13.9,
-      "renewable_pct": 100,
-      "enroll_url": "https://enroll.atlantexpower.com/Enrollment/Default.aspx?promoCode=AMERIGY",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2024/10/ae-texas-temp-logo.png",
-      "service_area": "oncor",
-      "plan_name": "Luminous Green",
-      "source": "atlantic_api"
     },
     {
       "supplier": "Atlantex Power",
