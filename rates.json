@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-07T05:44:42Z",
-  "updated_display": "5:44 AM UTC, September 7, 2026",
+  "updated_at": "2026-09-07T18:04:31Z",
+  "updated_display": "6:04 PM UTC, September 7, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -104,17 +104,6 @@
       "source": "apge_api"
     },
     {
-      "supplier": "APG&E",
-      "term": 18,
-      "rate": 12.3,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "aep",
-      "plan_name": "Amerigy 18",
-      "source": "apge_api"
-    },
-    {
       "supplier": "Frontier Utilities",
       "term": 12,
       "rate": 12.4,
@@ -124,6 +113,17 @@
       "service_area": "oncor",
       "plan_name": "Frontier Power Saver 12",
       "source": "powertochoose"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 18,
+      "rate": 12.4,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "aep",
+      "plan_name": "Amerigy 18",
+      "source": "apge_api"
     },
     {
       "supplier": "APG&E",
