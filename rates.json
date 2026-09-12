@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-12T05:26:44Z",
-  "updated_display": "5:26 AM UTC, September 12, 2026",
+  "updated_at": "2026-09-12T15:58:50Z",
+  "updated_display": "3:58 PM UTC, September 12, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -106,7 +106,7 @@
     {
       "supplier": "APG&E",
       "term": 17,
-      "rate": 12.4,
+      "rate": 12.5,
       "renewable_pct": 5,
       "enroll_url": "https://www.apge.com/amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
