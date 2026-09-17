@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-16T17:26:48Z",
-  "updated_display": "5:26 PM UTC, September 16, 2026",
+  "updated_at": "2026-09-17T05:49:25Z",
+  "updated_display": "5:49 AM UTC, September 17, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -11,7 +11,7 @@
   ],
   "service_areas_fallback": [],
   "usage_kwh": 2000,
-  "live_plans": 310,
+  "live_plans": 315,
   "total_plans": 297,
   "plans": [
     {
@@ -38,6 +38,17 @@
       "base_fee_note": "+$4.95/mo base fee"
     },
     {
+      "supplier": "Frontier Utilities",
+      "term": 12,
+      "rate": 12.3,
+      "renewable_pct": 30,
+      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
+      "service_area": "oncor",
+      "plan_name": "Frontier Power Saver 12",
+      "source": "powertochoose"
+    },
+    {
       "supplier": "APG&E",
       "term": 15,
       "rate": 12.3,
@@ -47,17 +58,6 @@
       "service_area": "aep",
       "plan_name": "Amerigy 15",
       "source": "apge_api"
-    },
-    {
-      "supplier": "Frontier Utilities",
-      "term": 12,
-      "rate": 12.4,
-      "renewable_pct": 30,
-      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
-      "service_area": "oncor",
-      "plan_name": "Frontier Power Saver 12",
-      "source": "powertochoose"
     },
     {
       "supplier": "APG&E",
@@ -173,6 +173,17 @@
       "base_fee_note": "+$4.95/mo base fee"
     },
     {
+      "supplier": "Frontier Utilities",
+      "term": 12,
+      "rate": 12.9,
+      "renewable_pct": 30,
+      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
+      "service_area": "lubbock",
+      "plan_name": "Frontier Power Saver 12",
+      "source": "powertochoose"
+    },
+    {
       "supplier": "APG&E",
       "term": 15,
       "rate": 12.9,
@@ -223,7 +234,7 @@
       "renewable_pct": 30,
       "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
-      "service_area": "lubbock",
+      "service_area": "centerpoint",
       "plan_name": "Frontier Power Saver 12",
       "source": "powertochoose"
     },
@@ -248,17 +259,6 @@
       "service_area": "aep",
       "plan_name": "Amerigy 24",
       "source": "apge_api"
-    },
-    {
-      "supplier": "Frontier Utilities",
-      "term": 12,
-      "rate": 13.1,
-      "renewable_pct": 30,
-      "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
-      "service_area": "centerpoint",
-      "plan_name": "Frontier Power Saver 12",
-      "source": "powertochoose"
     },
     {
       "supplier": "Think Energy",
