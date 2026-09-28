@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-28T06:21:44Z",
-  "updated_display": "6:21 AM UTC, September 28, 2026",
+  "updated_at": "2026-09-28T19:58:39Z",
+  "updated_display": "7:58 PM UTC, September 28, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -216,17 +216,6 @@
       "source": "apge_api"
     },
     {
-      "supplier": "APG&E",
-      "term": 24,
-      "rate": 12.8,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "aep",
-      "plan_name": "Amerigy 24",
-      "source": "apge_api"
-    },
-    {
       "supplier": "Think Energy",
       "term": 12,
       "rate": 12.9,
@@ -302,6 +291,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "oncor",
       "plan_name": "Amerigy 18",
+      "source": "apge_api"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 24,
+      "rate": 12.9,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "aep",
+      "plan_name": "Amerigy 24",
       "source": "apge_api"
     },
     {
