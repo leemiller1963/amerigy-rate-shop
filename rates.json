@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-09-28T19:58:39Z",
-  "updated_display": "7:58 PM UTC, September 28, 2026",
+  "updated_at": "2026-09-29T06:37:09Z",
+  "updated_display": "6:37 AM UTC, September 29, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -17,7 +17,7 @@
     {
       "supplier": "Frontier Utilities",
       "term": 12,
-      "rate": 12.1,
+      "rate": 12.0,
       "renewable_pct": 30,
       "enroll_url": "http://www.FrontierUtilities.com/Amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2020/03/Frontier-Utilities.jpg",
