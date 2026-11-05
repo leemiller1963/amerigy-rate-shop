@@ -2,7 +2,26 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Shop Texas Electricity Rates — Amerigy Energy</title>
+<title>Compare Texas Electricity Rates & Plans | Amerigy Energy</title>
+<meta name="description" content="Compare fixed-rate Texas electricity plans from 7 suppliers in Oncor, CenterPoint, AEP, TNMP and Lubbock areas. Amerigy is a PUCT-licensed broker (#BR190721) in Lufkin, TX.">
+<link rel="canonical" href="https://shop.amerigyenergy.com/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Amerigy Energy">
+<meta property="og:title" content="Compare Texas Electricity Rates & Plans | Amerigy Energy">
+<meta property="og:description" content="Fixed-rate Texas electricity plans from 7 suppliers, compared by utility area. PUCT-licensed broker #BR190721.">
+<meta property="og:url" content="https://shop.amerigyenergy.com/">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+ {"@type":"WebPage","name":"Compare Texas Electricity Rates & Plans","url":"https://shop.amerigyenergy.com/","isPartOf":{"@type":"WebSite","name":"Amerigy Energy","url":"https://amerigyenergy.com/"}},
+ {"@type":"FAQPage","mainEntity":[
+  {"@type":"Question","name":"How do I know which utility area I'm in?","acceptedAnswer":{"@type":"Answer","text":"Your utility (the transmission and distribution company) is printed on your electric bill. Common ones are Oncor, CenterPoint, AEP Texas, TNMP and Lubbock Power & Light. It stays the same when you switch electricity suppliers."}},
+  {"@type":"Question","name":"Why compare only within my own utility area?","acceptedAnswer":{"@type":"Answer","text":"The rates shown include delivery charges, and those charges are different in each utility area. A rate in one area can't be compared directly with a rate in another."}},
+  {"@type":"Question","name":"Can I choose my electricity supplier everywhere in Texas?","acceptedAnswer":{"@type":"Answer","text":"No. Cities with their own municipal utility, such as Austin and San Antonio, and areas served by electric co-ops or non-competitive utilities, don't have retail choice. Some cities, such as Lufkin and Nacogdoches, are split, so it depends on your address."}},
+  {"@type":"Question","name":"What should I check before I enroll?","acceptedAnswer":{"@type":"Answer","text":"Open the plan's Electricity Facts Label from the supplier. It lists the rate at different usage levels, monthly fees, the early-termination fee and the contract length."}}
+ ]}
+]}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
@@ -755,6 +774,20 @@
   footer strong { color: rgba(255,255,255,0.85); }
   footer a { color: #e88080; text-decoration: none; }
 
+  .zip-msg { max-width: 560px; margin: -8px auto 16px; padding: 0 12px; font-size: 14px; line-height: 1.5; color: #fff; min-height: 0; }
+  .zip-msg:empty { display: none; }
+  .zip-msg a { color: #fff; text-decoration: underline; font-weight: 700; }
+  .more-wrap { text-align: center; margin: 24px 0 8px; }
+  .more-wrap button { background: var(--primary); color: #fff; border: 0; border-radius: var(--radius); padding: 12px 28px; font-family: 'Quicksand', sans-serif; font-size: 15px; font-weight: 700; cursor: pointer; }
+  .more-wrap button:hover { background: var(--primary-dk); }
+  .quote-sec { background: var(--white); border-top: 1px solid var(--border); padding: 48px 24px; }
+  .quote-inner, .faq-inner { max-width: 760px; margin: 0 auto; }
+  .quote-inner h2, .faq-inner h2 { font-family: 'Montserrat', sans-serif; font-size: 26px; font-weight: 800; color: var(--primary); margin-bottom: 12px; line-height: 1.25; }
+  .quote-inner p { color: var(--gray-text); margin-bottom: 20px; line-height: 1.6; }
+  .quote-inner a { color: var(--primary); font-weight: 700; }
+  .faq-sec { background: var(--off-white); border-top: 1px solid var(--border); padding: 48px 24px; }
+  .faq-inner h3 { font-family: 'Montserrat', sans-serif; font-size: 17px; font-weight: 700; margin: 24px 0 6px; }
+  .faq-inner p { color: var(--gray-text); line-height: 1.65; }
   .next-update-bar {
     background: var(--gray-light);
     border-top: 1px solid var(--border);
@@ -781,19 +814,18 @@
 <!-- ═══ HEADER ══════════════════════════════════════════════════════════════ -->
 <header>
   <div class="header-inner">
-    <a href="https://amerigyenergy.com/a-new-home/" class="logo">
+    <a href="https://amerigyenergy.com/" class="logo">
       <img src="https://amerigyenergy.com/wp-content/smush-webp/2026/03/Secondary_White.png.webp" alt="Amerigy Energy" style="height:42px;width:auto;display:block;">
     </a>
     <div class="header-center">
       <div class="live-badge">
         <div class="live-dot"></div>
-        <span>Prices updated hourly —<span id="lastUpdatedTime">loading...</span></span>
+        <span>Rates updated <span id="lastUpdatedTime">loading...</span></span>
       </div>
     </div>
     <div class="header-right">
       <div class="updated-text">
-        <strong id="updateStatus">● LIVE RATES</strong>
-        Next refresh: <span id="nextUpdateTime">—</span>
+        <strong id="updateStatus">● AUTO-UPDATED</strong>
       </div>
       <a href="tel:8776318875" class="btn-call-header">📞 877-631-8875</a>
     </div>
@@ -803,11 +835,11 @@
 <!-- ═══ NAV ══════════════════════════════════════════════════════════════════ -->
 <nav class="nav-strip">
   <div class="nav-inner">
-    <a href="https://amerigyenergy.com/a-new-home/" class="nav-link">Home</a>
+    <a href="https://amerigyenergy.com/" class="nav-link">Home</a>
     <a href="https://amerigyenergy.com/commercial/" class="nav-link">Commercial</a>
-    <a href="#" class="nav-link active">Rate Shop</a>
+    <a href="https://shop.amerigyenergy.com/" class="nav-link active">Rate Shop</a>
     <a href="https://amerigyenergy.com/about/" class="nav-link">About</a>
-    <a href="https://amerigyenergy.com/contact-2/" class="nav-link">Contact</a>
+    <a href="https://amerigyenergy.com/contact/" class="nav-link">Contact</a>
   </div>
 </nav>
 
@@ -821,6 +853,7 @@
     <input type="text" id="zipInput" placeholder="Enter your ZIP code" maxlength="5" inputmode="numeric">
     <button onclick="filterByZip()">FIND RATES</button>
   </div>
+  <div id="zipMsg" class="zip-msg" role="status" aria-live="polite"></div>
 
   <div class="area-pills">
     <button class="area-pill active" onclick="setArea('all', this)">All Areas</button>
@@ -837,15 +870,15 @@
   <div class="stats-inner">
     <div class="stat-cell">
       <div class="stat-val highlight" id="statLowest">—</div>
-      <div class="stat-lbl">Lowest Rate ¢/kWh</div>
+      <div class="stat-lbl" id="lblLowest">Lowest Rate ¢/kWh</div>
     </div>
     <div class="stat-cell">
       <div class="stat-val" id="statAvg">—</div>
-      <div class="stat-lbl">Average Rate ¢/kWh</div>
+      <div class="stat-lbl" id="lblAvg">Average Rate ¢/kWh</div>
     </div>
     <div class="stat-cell">
       <div class="stat-val" id="statPlans">—</div>
-      <div class="stat-lbl">Plans Available</div>
+      <div class="stat-lbl" id="lblPlans">Plans Available</div>
     </div>
     <div class="stat-cell">
       <div class="stat-val" id="statSuppliers">—</div>
@@ -885,6 +918,7 @@
 <!-- ═══ PLANS ══════════════════════════════════════════════════════════════════ -->
 <div class="plans-wrap">
   <div class="plans-grid" id="plansGrid"></div>
+  <div class="more-wrap" id="moreWrap"></div>
   <div class="no-results" id="noResults">
     <h3>No plans match your filters</h3>
     <p>Try adjusting your area or term, or call us at <a href="tel:8776318875">877-631-8875</a> and we'll find your best deal.</p>
@@ -892,15 +926,39 @@
 </div>
 
 <!-- ═══ NEXT UPDATE ════════════════════════════════════════════════════════════ -->
-<div class="next-update-bar" id="nextUpdateBar">Next automatic rate refresh: checking...</div>
+
+<!-- ═══ QUOTE ══════════════════════════════════════════════════════════════════ -->
+<section class="quote-sec" id="quote">
+  <div class="quote-inner">
+    <h2>Not sure which plan fits? Let a broker compare for you.</h2>
+    <p>Tell us where you are and who you pay now. A licensed Amerigy broker will check your address, confirm your utility, and send the plans that fit. Prefer to talk? Call <a href="tel:8776318875">877-631-8875</a>, Monday to Friday, 8am to 6pm. Own a business? See <a href="https://amerigyenergy.com/commercial/">commercial electricity</a>.</p>
+    <iframe src="https://api.leadconnectorhq.com/widget/form/xkzxHXo246CU8vZIB9ud" style="width:100%;min-height:760px;border:none;border-radius:3px" id="inline-xkzxHXo246CU8vZIB9ud" data-layout="{'id':'INLINE'}" data-trigger-type="alwaysShow" data-activation-type="alwaysActivated" data-deactivation-type="neverDeactivate" data-form-name="Amerigy Rate Shop Quote" data-height="760" data-layout-iframe-id="inline-xkzxHXo246CU8vZIB9ud" data-form-id="xkzxHXo246CU8vZIB9ud" title="Get a free electricity quote" loading="lazy"></iframe>
+    <script src="https://link.msgsndr.com/js/form_embed.js" async></script>
+  </div>
+</section>
+
+<!-- ═══ FAQ ════════════════════════════════════════════════════════════════════ -->
+<section class="faq-sec">
+  <div class="faq-inner">
+    <h2>Questions about comparing Texas electricity plans</h2>
+    <h3>How do I know which utility area I'm in?</h3>
+    <p>Your utility is printed on your electric bill. Common ones are Oncor, CenterPoint, AEP Texas, TNMP and Lubbock Power &amp; Light. It stays the same when you switch suppliers. The utility still delivers your power and fixes outages.</p>
+    <h3>Why compare only within my own utility area?</h3>
+    <p>The rates here include delivery charges, and delivery charges differ by utility. A 12¢ plan in one area isn't comparable to a 12¢ plan in another, so pick your area first.</p>
+    <h3>Can I choose my supplier everywhere in Texas?</h3>
+    <p>No. Cities with their own municipal utility, such as Austin and San Antonio, and areas served by electric co-ops don't have retail choice. Some cities, such as Lufkin and Nacogdoches, are split, so it depends on the address. If you aren't sure, a broker can check it for you.</p>
+    <h3>What should I check before I enroll?</h3>
+    <p>Open the plan's Electricity Facts Label on the supplier's enroll page. It shows the rate at different usage levels, any monthly fee, the early-termination fee and the contract length. Rates here are for 2,000 kWh a month, so your bill will be different if you use more or less.</p>
+  </div>
+</section>
 
 <!-- ═══ FOOTER ═════════════════════════════════════════════════════════════════ -->
 <footer>
   <strong>Amerigy Energy LLC</strong> · 1511 S Chestnut St, Lufkin TX 75901 · <a href="tel:8776318875">1-877-631-8875</a> · PUCT #BR190721<br>
-  Rates update twice daily (7AM &amp; 7PM CT). All plans are fixed-rate and include TDU delivery charges unless noted. Electricity is a commodity — like the stock market, prices can change at any moment. <a href="https://amerigyenergy.com/disclosures">Disclosures</a>
+  Rates refresh automatically; the time at the top of the page shows the last update. All plans are fixed-rate and include TDU delivery charges unless noted. Electricity is a commodity — like the stock market, prices can change at any moment. <a href="https://amerigyenergy.com/disclosures">Disclosures</a>
 </footer>
 
-<!-- rates.json is fetched at runtime — updated twice daily by GitHub Actions -->
+<!-- rates.json is fetched at runtime and refreshed by GitHub Actions -->
 <script>
 let RATE_DATA = null;
 // ── STATE ──────────────────────────────────────────────────────────────────
@@ -908,6 +966,8 @@ let currentArea = 'all';
 let currentTerm = 'all';
 let currentSort = 'price';
 let filtered = [];
+let shown = 24;
+const PAGE = 24;
 
 // ── HELPERS ────────────────────────────────────────────────────────────────
 function initials(name) {
@@ -1020,14 +1080,31 @@ function apply() {
 
   const grid = document.getElementById('plansGrid');
   const none = document.getElementById('noResults');
-  if (!filtered.length) { grid.innerHTML = ''; none.style.display = 'block'; }
-  else { none.style.display = 'none'; grid.innerHTML = filtered.map(renderCard).join(''); }
+  const more = document.getElementById('moreWrap');
+  if (!filtered.length) { grid.innerHTML = ''; none.style.display = 'block'; more.innerHTML = ''; }
+  else {
+    none.style.display = 'none';
+    grid.innerHTML = filtered.slice(0, shown).map(renderCard).join('');
+    more.innerHTML = filtered.length > shown
+      ? `<button onclick="showMore()">Show more plans (${filtered.length - shown} left)</button>` : '';
+  }
 
   // stats
   const pool = filtered.length ? filtered : RATE_DATA.plans;
   const rates = pool.map(p => p.rateKwh);
   document.getElementById('statLowest').textContent = Math.min(...rates).toFixed(1) + '¢';
-  document.getElementById('statAvg').textContent = (rates.reduce((a,b)=>a+b,0)/rates.length).toFixed(1) + '¢';
+  if (currentArea === 'all') {
+    // Rates include delivery charges that differ by utility, so a blended average is misleading.
+    document.getElementById('lblLowest').textContent = 'Lowest Rate, Any Area';
+    document.getElementById('statAvg').textContent = [...new Set(pool.map(p => p.area))].length;
+    document.getElementById('lblAvg').textContent = 'Utility Areas';
+    document.getElementById('lblPlans').textContent = 'Plans Compared';
+  } else {
+    document.getElementById('lblLowest').textContent = 'Lowest Rate ¢/kWh';
+    document.getElementById('statAvg').textContent = (rates.reduce((a,b)=>a+b,0)/rates.length).toFixed(1) + '¢';
+    document.getElementById('lblAvg').textContent = 'Average Rate ¢/kWh';
+    document.getElementById('lblPlans').textContent = 'Plans Available';
+  }
   document.getElementById('statPlans').textContent = pool.length;
   document.getElementById('statSuppliers').textContent = [...new Set(pool.map(p=>p.supplier))].length;
 
@@ -1039,31 +1116,68 @@ function apply() {
 }
 
 // ── CONTROLS ───────────────────────────────────────────────────────────────
+function showMore() { shown += PAGE; apply(); }
+
 function setArea(area, btn) {
-  currentArea = area;
+  currentArea = area; shown = PAGE;
+  const zm = document.getElementById('zipMsg'); if (zm) zm.textContent = '';
   document.querySelectorAll('.area-pill').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
   apply();
 }
 
 function filterTerm(term, btn) {
-  currentTerm = term;
+  currentTerm = term; shown = PAGE;
   document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
   if (btn) btn.classList.add('active');
   apply();
 }
 
-function sortPlans(val) { currentSort = val; apply(); }
+function sortPlans(val) { currentSort = val; shown = PAGE; apply(); }
+
+// ZIP → utility area. Matched on the first 3 digits, with exceptions for ZIPs inside a prefix.
+// 'check' = utility depends on the address; 'none' = mostly no retail choice.
+const ZIP_AREA = {
+  oncor: ['750','751','752','753','754','757','758','760','761','765','766','767','797'],
+  centerpoint: ['770','771','772'],
+  aep: ['783','784'],
+  none: ['755','756','776','777','778','782','787','790','791','799'],
+  check: ['759','762','763','764','768','769','773','774','775','779','780','781','785','786','788','789','793','794','795','796','798']
+};
+const ZIP_EXACT = { '76528':'tnmp', '78130':'tnmp', '78131':'tnmp', '78132':'tnmp' };
+function lubbockCityZip(z) { const n = +z; return (n >= 79401 && n <= 79416) || n === 79423 || n === 79424; }
+function classifyZip(z) {
+  if (ZIP_EXACT[z]) return ZIP_EXACT[z];
+  if (lubbockCityZip(z)) return 'lubbock';
+  const pre = z.slice(0,3);
+  for (const k of Object.keys(ZIP_AREA)) if (ZIP_AREA[k].includes(pre)) return k;
+  return 'unknown';
+}
 
 function filterByZip() {
   const zip = document.getElementById('zipInput').value.trim();
-  if (zip.length !== 5 || isNaN(zip)) { alert('Please enter a valid 5-digit ZIP code.'); return; }
-  const map = { '75':'oncor','76':'oncor','77':'centerpoint','78':'aep','79':'lubbock' };
-  const area = map[zip.slice(0,2)] || 'all';
+  const msg = document.getElementById('zipMsg');
+  const say = html => { msg.innerHTML = html; };
+  if (!/^\d{5}$/.test(zip)) { say('Enter a 5-digit ZIP code.'); return; }
+  const call = '<a href="tel:8776318875">877-631-8875</a>';
+  const labels = { oncor:'Oncor', centerpoint:'CenterPoint', aep:'AEP Texas', tnmp:'TNMP', lubbock:'Lubbock Power & Light' };
+  let area = classifyZip(zip);
+  if (['oncor','centerpoint','aep','tnmp','lubbock'].includes(area)) {
+    say(`Showing ${labels[area]} plans for ${zip}. Your utility is printed on your bill. If it's a different one, pick it below or call ${call}.`);
+  } else if (area === 'none') {
+    say(`Most of ${zip} is served by a municipal utility, co-op or other utility with no retail choice, so you probably can't pick a supplier. Call ${call} or <a href="#quote">ask a broker to check your address</a>.`);
+    area = 'all';
+  } else if (area === 'check') {
+    say(`In the ${zip} area your utility depends on your address. Check your bill, call ${call}, or <a href="#quote">ask a broker to check</a>. Showing all areas below.`);
+    area = 'all';
+  } else {
+    say(`We couldn't match ${zip} to a utility area. Pick your utility below, call ${call}, or <a href="#quote">ask a broker to check</a>.`);
+    area = 'all';
+  }
   document.querySelectorAll('.area-pill').forEach(b => b.classList.remove('active'));
   const target = document.querySelector(`.area-pill[onclick*="'${area}'"]`);
   if (target) target.classList.add('active');
-  currentArea = area;
+  currentArea = area; shown = PAGE;
   apply();
   document.querySelector('.plans-wrap').scrollIntoView({ behavior:'smooth' });
 }
@@ -1091,8 +1205,6 @@ function updateTimestamps() {
 
   if (lastEl)   lastEl.textContent   = fmt;
   if (bannerEl) bannerEl.textContent = fmt;
-  if (nextEl)   nextEl.textContent   = next + countdown;
-  if (barEl)    barEl.textContent    = `Rates verified ${ago} · Next automatic refresh: ${next} CT${countdown}`;
 }
 function initTimestamps() {
   updateTimestamps();
