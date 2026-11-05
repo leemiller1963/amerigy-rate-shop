@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://shop.amerigyenergy.com/sitemap.xml
