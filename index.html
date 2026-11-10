@@ -808,6 +808,16 @@
     .toolbar { flex-direction: column; align-items: flex-start; }
   }
 </style>
+<!-- Google tag (gtag.js) GA4 + conversion events. Added 2026-11-10 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z3STEFFP0D"></script>
+<script>
+window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}
+gtag('js',new Date());gtag('config','G-Z3STEFFP0D');
+document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('a[href]');if(!a)return;var h=a.getAttribute('href')||'';
+if(a.classList.contains('btn-enroll')){var host='';try{host=new URL(a.href).hostname;}catch(err){}gtag('event','enroll_click',{supplier_host:host});}
+else if(h.indexOf('tel:')===0){gtag('event','phone_click',{link_text:(a.textContent||'').trim().slice(0,60),page_path:location.pathname});}},true);
+var amxLeadSent=false;window.addEventListener('message',function(e){try{if(amxLeadSent)return;if(!/leadconnectorhq\.com|msgsndr\.com/.test(e.origin||''))return;var d=e.data;if(Array.isArray(d)&&d[0]==='set-sticky-contacts'){amxLeadSent=true;gtag('event','generate_lead',{form_name:'Shop quote form',page_path:location.pathname});}}catch(err){}});
+</script>
 </head>
 <body>
 
