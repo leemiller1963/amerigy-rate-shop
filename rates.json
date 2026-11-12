@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-11T19:59:21Z",
-  "updated_display": "7:59 PM UTC, November 11, 2026",
+  "updated_at": "2026-11-12T07:59:09Z",
+  "updated_display": "7:59 AM UTC, November 12, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -1686,22 +1686,22 @@
       "supplier": "BKV Energy",
       "term": 24,
       "rate": 14.4,
-      "renewable_pct": 29,
+      "renewable_pct": 100,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "oncor",
-      "plan_name": "Verbena 24",
+      "plan_name": "Verbena Green 24",
       "source": "bkv_api"
     },
     {
       "supplier": "BKV Energy",
       "term": 24,
       "rate": 14.4,
-      "renewable_pct": 100,
+      "renewable_pct": 29,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "oncor",
-      "plan_name": "Verbena Green 24",
+      "plan_name": "Verbena 24",
       "source": "bkv_api"
     },
     {
@@ -2557,22 +2557,22 @@
       "supplier": "BKV Energy",
       "term": 24,
       "rate": 15.6,
-      "renewable_pct": 29,
+      "renewable_pct": 100,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "tnmp",
-      "plan_name": "Verbena 24",
+      "plan_name": "Verbena Green 24",
       "source": "bkv_api"
     },
     {
       "supplier": "BKV Energy",
       "term": 24,
       "rate": 15.6,
-      "renewable_pct": 100,
+      "renewable_pct": 29,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "tnmp",
-      "plan_name": "Verbena Green 24",
+      "plan_name": "Verbena 24",
       "source": "bkv_api"
     },
     {
