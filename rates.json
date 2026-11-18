@@ -1,6 +1,6 @@
 {
-  "updated_at": "2026-11-17T21:29:15Z",
-  "updated_display": "9:29 PM UTC, November 17, 2026",
+  "updated_at": "2026-11-18T08:14:39Z",
+  "updated_display": "8:14 AM UTC, November 18, 2026",
   "source": "powertochoose",
   "service_areas_live": [
     "Oncor (DFW / East Texas)",
@@ -82,17 +82,6 @@
     },
     {
       "supplier": "APG&E",
-      "term": 17,
-      "rate": 12.3,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "aep",
-      "plan_name": "Amerigy 17",
-      "source": "apge_api"
-    },
-    {
-      "supplier": "APG&E",
       "term": 18,
       "rate": 12.3,
       "renewable_pct": 5,
@@ -111,6 +100,17 @@
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "aep",
       "plan_name": "Amerigy 15",
+      "source": "apge_api"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 17,
+      "rate": 12.4,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "aep",
+      "plan_name": "Amerigy 17",
       "source": "apge_api"
     },
     {
@@ -392,17 +392,6 @@
       "source": "apge_api"
     },
     {
-      "supplier": "APG&E",
-      "term": 18,
-      "rate": 13.4,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "centerpoint",
-      "plan_name": "Amerigy 18",
-      "source": "apge_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 12,
       "rate": 13.5,
@@ -459,17 +448,6 @@
     },
     {
       "supplier": "APG&E",
-      "term": 15,
-      "rate": 13.5,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "centerpoint",
-      "plan_name": "Amerigy 15",
-      "source": "apge_api"
-    },
-    {
-      "supplier": "APG&E",
       "term": 17,
       "rate": 13.5,
       "renewable_pct": 5,
@@ -487,6 +465,17 @@
       "enroll_url": "https://www.apge.com/amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "oncor",
+      "plan_name": "Amerigy 18",
+      "source": "apge_api"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 18,
+      "rate": 13.5,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "centerpoint",
       "plan_name": "Amerigy 18",
       "source": "apge_api"
     },
@@ -520,6 +509,17 @@
       "enroll_url": "https://www.apge.com/amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "oncor",
+      "plan_name": "Amerigy 15",
+      "source": "apge_api"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 15,
+      "rate": 13.6,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "centerpoint",
       "plan_name": "Amerigy 15",
       "source": "apge_api"
     },
@@ -657,17 +657,6 @@
       "source": "chariot_api"
     },
     {
-      "supplier": "APG&E",
-      "term": 24,
-      "rate": 13.8,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "centerpoint",
-      "plan_name": "Amerigy 24",
-      "source": "apge_api"
-    },
-    {
       "supplier": "Chariot Energy",
       "term": 24,
       "rate": 13.8,
@@ -763,6 +752,17 @@
       "enroll_url": "https://www.apge.com/amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "oncor",
+      "plan_name": "Amerigy 24",
+      "source": "apge_api"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 24,
+      "rate": 13.9,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "centerpoint",
       "plan_name": "Amerigy 24",
       "source": "apge_api"
     },
@@ -945,17 +945,6 @@
       "source": "bkv_api"
     },
     {
-      "supplier": "APG&E",
-      "term": 15,
-      "rate": 14.1,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "centerpoint",
-      "plan_name": "SimpleSaver 15",
-      "source": "apge_api"
-    },
-    {
       "supplier": "BKV Energy",
       "term": 18,
       "rate": 14.1,
@@ -1036,22 +1025,22 @@
       "supplier": "BKV Energy",
       "term": 36,
       "rate": 14.1,
-      "renewable_pct": 100,
+      "renewable_pct": 29,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "centerpoint",
-      "plan_name": "Verbena Green 36",
+      "plan_name": "Verbena 36",
       "source": "bkv_api"
     },
     {
       "supplier": "BKV Energy",
       "term": 36,
       "rate": 14.1,
-      "renewable_pct": 29,
+      "renewable_pct": 100,
       "enroll_url": "https://enroll.bkvenergy.com/Home/Promo?Promocode=AFFAME0001",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2023/09/BKV_Logo_Vertical_RGB.png",
       "service_area": "centerpoint",
-      "plan_name": "Verbena 36",
+      "plan_name": "Verbena Green 36",
       "source": "bkv_api"
     },
     {
@@ -1128,6 +1117,17 @@
       "enroll_url": "https://www.apge.com/amerigy",
       "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
       "service_area": "oncor",
+      "plan_name": "SimpleSaver 15",
+      "source": "apge_api"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 15,
+      "rate": 14.2,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "centerpoint",
       "plan_name": "SimpleSaver 15",
       "source": "apge_api"
     },
@@ -1229,17 +1229,6 @@
       "service_area": "centerpoint",
       "plan_name": "Luminous",
       "source": "atlantic_api"
-    },
-    {
-      "supplier": "APG&E",
-      "term": 36,
-      "rate": 14.2,
-      "renewable_pct": 5,
-      "enroll_url": "https://www.apge.com/amerigy",
-      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
-      "service_area": "oncor",
-      "plan_name": "Amerigy 36",
-      "source": "apge_api"
     },
     {
       "supplier": "APG&E",
@@ -1515,6 +1504,17 @@
       "service_area": "centerpoint",
       "plan_name": "Sunflare 24",
       "source": "chariot_api"
+    },
+    {
+      "supplier": "APG&E",
+      "term": 36,
+      "rate": 14.3,
+      "renewable_pct": 5,
+      "enroll_url": "https://www.apge.com/amerigy",
+      "logo": "https://amerigyenergy.com/wp-content/uploads/2021/01/APGE2_result-e1611274352488.jpg",
+      "service_area": "oncor",
+      "plan_name": "Amerigy 36",
+      "source": "apge_api"
     },
     {
       "supplier": "Chariot Energy",
